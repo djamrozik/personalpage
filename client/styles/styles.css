@@ -1,0 +1,137 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  font-family: 'PT Sans', sans-serif;
+}
+.u {
+  text-decoration: underline;
+}
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.header {
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.ad-container {
+  text-align: center;
+}
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  border-top: 2px solid #000;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+@media screen and (min-width: 950px) {
+  .footer .disclaimer {
+    float: left;
+    padding-left: 15px;
+  }
+  .footer .attribute {
+    float: right;
+    padding-right: 15px;
+  }
+}
+.input-box-container {
+  display: block;
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+.ad-container {
+  margin-top: 35px;
+  text-align: center;
+  padding-bottom: 90px;
+}
+.container {
+  text-align: center;
+  margin-top: 35px;
+  padding-bottom: 20px;
+}
+.gif-container {
+  display: inline-block;
+  margin-left: 5px;
+}
+.gif-container .gif {
+  margin: auto;
+}
+.gif-container.loading {
+  border: 1px solid #999;
+  width: 50%;
+  padding: 15px;
+}
+.input-box {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: #297ACC;
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px #888888;
+          box-shadow: 5px 5px 5px #888888;
+  color: white;
+}
+.input-box input {
+  display: block;
+  margin: auto;
+  height: 20px;
+  width: 300px;
+  font-size: 1.2em;
+}
+.input-box button {
+  margin-top: 2.25rem;
+  margin-bottom: 15px;
+  border: 0 none;
+  border-radius: 36px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 12px 45px;
+  text-transform: none;
+  -webkit-transition: all 100ms ease-in-out;
+          transition: all 100ms ease-in-out;
+  width: auto;
+  /* auto */
+  text-align: center;
+  /* DELETE WHEN WIDTH AUTO */
+  background: blue;
+  color: white;
+  font-weight: 700;
+}
+.input-box button:hover {
+  opacity: .7;
+}
+.input-box .input-box-text {
+  font-size: 1.3em;
+}
+.input-box .errorMessage {
+  color: orangered;
+  font-size: 1.2em;
+}
+.navbar {
+  height: 3.5em;
+  width: 100%;
+  background-color: #333;
+  border-bottom: 1px solid #999;
+  text-align: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+.navbar p {
+  margin: 0;
+  padding-top: 0.2em;
+  font-size: 2em;
+  color: white;
+}

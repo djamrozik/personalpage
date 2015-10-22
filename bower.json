@@ -1,0 +1,21 @@
+{
+  "name": "danjamrozik.me",
+  "description": "personal portfolio",
+  "main": "index.js",
+  "authors": [
+    "Daniel Jamrozik"
+  ],
+  "license": "BSD-2-Clause",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,15 +1,27 @@
 {
   "name": "danjamrozik.me",
-  "version": "1.0.0",
-  "description": "home page along with some apps",
+  "version": "0.0.0",
+  "description": "personal website acting as a portfolio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dan",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.12.4",
-    "express": "^4.12.3"
+  "author": "Daniel Jamrozik",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "express": "~4.13.3",
+    "mongoose": "~4.1.9",
+    "nan": "~2.0.9",
+    "gulp": "~3.9.0",
+    "livereload": "~0.3.7",
+    "gulp-notify": "~2.2.0",
+    "gulp-less": "~3.0.3",
+    "gulp-plumber": "~1.0.1",
+    "gulp-autoprefixer": "~3.0.2",
+    "gulp-watch": "~4.3.5",
+    "gulp-livereload": "~3.8.1",
+    "gulp-nodemon": "~2.0.4",
+    "gif-encoder": "~0.4.1",
+    "moment": "~2.10.6"
   }
 }

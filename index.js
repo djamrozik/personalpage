@@ -1,29 +1,24 @@
-/* global __dirname */
 
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
+'use strict';
 
-//PRODUCTION 
-//var server = app.listen(8000, '10.132.20.226', function(){
-//var host = server.address().address;
-//var port = server.address().port;
-//console.log('Example app listening at http://%s:%s', host, port)
-//});
+var express     = require('express');
+var mongoose    = require('mongoose');
 
-//DEVELOPMENT
-var server = app.listen(8000, function(){
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('App listening at http://%s:%s', host, port);
-});
+var local_codes = require('./local_codes');
+var app         = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use('/client', express.static(__dirname + '/client'));
-  
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/client/index.html');
-});
+//environment defaults to development
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
+//static files
+app.use(express.static('client')); 
+
+//routes
+require('./server/routes')(app);
+
+/*
+Config and settings file. Leave as last because this will actually 
+start the server
+*/
+require('./server/config')(app);
 
