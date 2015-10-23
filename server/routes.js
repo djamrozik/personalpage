@@ -1,26 +1,18 @@
+
 /* global process */
 /* global __dirname */
 
 var path = require('path');
 
-var GifController = require('./controllers/GifController');
-
 module.exports = function(app){
 	
-	//return the home page
+	//homepage static html page
 	app.get('/', function(req, res){
-		res.sendFile(path.resolve(__dirname + '/../client/views/home.html'));
+		res.sendFile(path.resolve(__dirname + '/../client/app/views/index.html'));
 	});
-
-	app.get('/api/reverse/:url', GifController.reverseGif); //reverse a gif and return the url where it is saved
-
-	app.get('/api/check/:url', GifController.checkGif);
-
-	app.get('/gif/:gifId', GifController.returnGif);
-
-	app.get('/reverse/*', function(req, res){
-		//just return the page to show the gif
-		res.sendFile(path.resolve(__dirname + '/../client/views/gif.html'));
-	}); 
 	
-}
+	//mergely sandbox static html page
+	app.get('/mergely_sandbox', function(req, res){
+		res.sendFile(path.resolve(__dirname + '/../client/app/views/mergely-sandbox.html'));
+	});
+};

@@ -23,5 +23,8 @@
     "gulp-nodemon": "~2.0.4",
     "gif-encoder": "~0.4.1",
     "moment": "~2.10.6"
+  },
+  "dependencies": {
+    "express": "~4.13.3"
   }
 }

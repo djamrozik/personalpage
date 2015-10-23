@@ -1,4 +1,4 @@
 /* global angular */
 
-var factories = factories || angular.module('GifProject.factories', []);
+var factories = factories || angular.module('PortfolioWebsite.factories', []);
 

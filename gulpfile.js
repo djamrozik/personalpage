@@ -40,6 +40,6 @@ gulp.task('less', function() {
           paths: ['./', './overrides/']
         }))
         .pipe(prefix("last 8 version", "> 1%", "ie 8", "ie 7"), {cascade:true})
-        .pipe(gulp.dest('./client/content/'))
+        .pipe(gulp.dest('./client/styles/'))
         .pipe(livereload());
 });

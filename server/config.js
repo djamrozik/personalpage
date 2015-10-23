@@ -1,7 +1,7 @@
 
 var mongoose = require('mongoose');
 
-var local_codes = require('../../local_codes');
+var local_codes = require('../local_codes');
 
 module.exports = function(app) {
 
