@@ -1,6 +1,4 @@
 
-var mongoose = require('mongoose');
-
 var local_codes = require('../local_codes');
 
 module.exports = function(app) {
@@ -8,8 +6,6 @@ module.exports = function(app) {
 	var env = app.get('env');
 
 	if (env === 'production') {
-
-		mongoose.connect('mongodb://' + local_codes.internal_ip + ':' + local_codes.data_port + '/gifProject');
 		
 		var server = app.listen(local_codes.port, local_codes.internal_ip, function(){
 			var host = server.address().address;
@@ -19,8 +15,6 @@ module.exports = function(app) {
 	} 
 
 	if (env === 'development') {
-
-		mongoose.connect('mongodb://localhost/gifProject'); //connect to mongodb
 
 		var server = app.listen(8888, function () {
 		  var host = server.address().address;
