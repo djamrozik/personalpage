@@ -13,7 +13,6 @@
     "mongoose": "~4.1.9",
     "nan": "~2.0.9",
     "gulp": "~3.9.0",
-    "livereload": "~0.3.7",
     "gulp-notify": "~2.2.0",
     "gulp-less": "~3.0.3",
     "gulp-plumber": "~1.0.1",

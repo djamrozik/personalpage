@@ -7,6 +7,7 @@
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
 
 	<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
@@ -15,18 +16,36 @@
 
 	<script src="/app/controllers/IndexCtrl.js"></script>
 	<script src="/app/services/resources.js"></script>
+	<script src="/app/directives/leftColumn.js"></script>
 	<script src="/app/app.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body ng-controller="IndexController as vm">
 
-	<div class="header-hero">
+	<div class="container-fluid">
+	    <div class="row">	    
+		    <div class="col-md-2 left-column-container">
 
-		<h1>Dan Jamrozik</h1>
-	
-		<h3>Full-stack web developer</h3>
+				<!-- angular directive serving as a template -->
+				<left-column></left-column>
 
+			</div>
+			<div class="col-md-8 main-content-container">
+				Some text here
+			</div>
+		</div>
 	</div>
 
 </body>
 </html>
+
+<!-- 
+
+Current notes
+
+	make the width of the column smaller? (too much free space when too side)
+
+
+ -->

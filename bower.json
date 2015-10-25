@@ -23,6 +23,7 @@
     "angular-resource": "~1.4.7",
     "angular-route": "~1.4.7",
     "angular-bootstrap": "~0.14.2",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "components-font-awesome": "~4.4.0"
   }
 }

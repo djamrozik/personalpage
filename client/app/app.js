@@ -1,7 +1,8 @@
 
 var app = angular.module('PortfolioWebsite', 
 	['PortfolioWebsite.controllers', 
-	 'PortfolioWebsite.factories',  
+	 'PortfolioWebsite.factories',
+	 'PortfolioWebsite.directives',  
 	 'ngRoute', 
 	 'ngResource',
 	 'ui.bootstrap']
