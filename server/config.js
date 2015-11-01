@@ -1,25 +1,33 @@
 
+var express     = require('express');
+var bodyParser  = require('body-parser');
+
 var local_codes = require('../local_codes');
 
 module.exports = function(app) {
 
 	var env = app.get('env');
 
+	//middleware
+	app.use(bodyParser.urlencoded({ extended: true }));
+	app.use(bodyParser.json());
+
+	//run the app (depending on dev or production)
 	if (env === 'production') {
 		
-		var server = app.listen(local_codes.port, local_codes.internal_ip, function(){
-			var host = server.address().address;
-			var port = server.address().port;
+		var serverProduction = app.listen(local_codes.port, local_codes.internal_ip, function(){
+			var host = serverProduction.address().address;
+			var port = serverProduction.address().port;
 			console.log('personalpage listening at http://%s:%s', host, port);
 		});
 	} 
 
 	if (env === 'development') {
 
-		var server = app.listen(8888, function () {
-		  var host = server.address().address;
-		  var port = server.address().port;
-		  console.log('personalpage listening at http://%s:%s', host, port);
+		var serverDevelopment = app.listen(8888, function () {
+		    var host = serverDevelopment.address().address;
+		    var port = serverDevelopment.address().port;
+		    console.log('personalpage listening at http://%s:%s', host, port);
 		});
 	}
 
@@ -29,4 +37,4 @@ module.exports = function(app) {
 	  console.log("Node NOT Exiting...");
 	});
 
-}
+};

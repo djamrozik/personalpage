@@ -24,6 +24,8 @@
     "moment": "~2.10.6"
   },
   "dependencies": {
-    "express": "~4.13.3"
+    "body-parser": "^1.14.1",
+    "express": "~4.13.3",
+    "nodemailer": "^1.8.0"
   }
 }

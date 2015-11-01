@@ -13,12 +13,10 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 //static files
 app.use(express.static('client')); 
 
+//Config and settings file. Should be before the routes
+require('./server/config')(app);
+
 //routes
 require('./server/routes')(app);
 
-/*
-Config and settings file. Leave as last because this will actually 
-start the server
-*/
-require('./server/config')(app);
 
