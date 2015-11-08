@@ -12,10 +12,10 @@
 <p class="name-info">Full-stack web developer</p>
 
 <ul class="column-links">
-	<li><a href="/home">Home</a></li>
-	<li><a href="/projects">Projects</a></li>
-	<li><a href="/skills">Skills</a></li> 
-	<li><a href="/contact">Contact</a></li>
+	<a ng-href="/"><li>Home</li></a>
+	<li ng-click="data.scrollToId('projects')">Projects</li>
+	<li ng-click="data.scrollToId('skills')">Skills</li> 
+	<li ng-click="data.scrollToId('contact')">Contact</li>
 </ul>
 
 <div class="icons-container">

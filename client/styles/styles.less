@@ -4,11 +4,21 @@ html, body {
 	height: 100%;
 }
 
+// root elements
+
 #compare {
 	margin: auto;
 	display: flex!important;
 	justify-content: center;
 	padding: 20px 0;
+}
+
+.contact-form {
+	margin-top: 3rem;
+
+	button[type="submit"] {
+		margin-top: 2rem;
+	}
 }
 
 .header {
@@ -17,6 +27,11 @@ html, body {
 		margin-top: 0;
 		font-size: 5.5rem;
 		margin-left: -3px;
+	}
+
+	h3 {
+		margin-top: 0;
+		font-size: 3rem;
 	}
 
 	span {
@@ -29,24 +44,25 @@ html, body {
 	}
 }
 
-.success-message {
-	margin-top: 30px;
-	font-weight: 600;
-	font-size: 1.15em;
+.input-wrapper {
+	margin: auto;
+	max-width: 600px;
+	text-align: center;
 
-	.success {
-		color: #0020C2;
-	}
-	.error {
-		color: red;
-	}
-}
+	.input-box {
+		text-align: left;
+		padding: 20px 0;
 
-.contact-form {
-	margin-top: 3rem;
+		.panel-row {
+			margin-bottom: 15px;
+			&.button-row {
+				text-align: center;
+			}
+		}
 
-	button[type="submit"] {
-		margin-top: 2rem;
+		input[type="text"] {
+			width: 60px;
+		}
 	}
 }
 
@@ -55,10 +71,11 @@ html, body {
 	background-color: #444;
 	color: white;
 	text-align: center;
-	position: relative;
+	position: fixed;
 	padding-right: 0!important;
 	padding-left: 0!important;
 	max-width: 225px;
+	min-width: 180px;
 
 	.name {
 		margin-top: 20px;
@@ -143,27 +160,31 @@ html, body {
 	padding-top: 2rem!important;
 	padding-left: 4rem!important;
 	max-width: 800px;
+	margin-left: 200px; //left-col
 }
 
-.input-wrapper {
-	margin: auto;
-	max-width: 600px;
-	text-align: center;
+.main-page {
 
-	.input-box {
-		text-align: left;
-		padding: 20px 0;
+	.main-info {
+		padding-bottom: 15px;
+		border-bottom: 1px solid #777;
+	}
+}
 
-		.panel-row {
-			margin-bottom: 15px;
-			&.button-row {
-				text-align: center;
-			}
-		}
+.new-row {
+	margin-top: 30px;
+}
 
-		input[type="text"] {
-			width: 60px;
-		}
+.success-message {
+	margin-top: 30px;
+	font-weight: 600;
+	font-size: 1.15em;
+
+	.success {
+		color: #0020C2;
+	}
+	.error {
+		color: red;
 	}
 }
 

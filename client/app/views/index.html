@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="/bower_components/angular-resource/angular-resource.min.js"></script>
 	<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
 
 	<script src="/app/controllers/IndexCtrl.js"></script>
 	<script src="/app/services/resources.js"></script>
@@ -25,15 +26,75 @@
 <body ng-controller="IndexController as vm">
 
 	<div class="container-fluid">
-	    <div class="row">	    
-		    <div class="col-md-2 left-column-container">
+	    <div class="row">
+
+		    <div class="left-column-container">
 
 				<!-- angular directive serving as a template -->
-				<left-column></left-column>
+				<left-column info="vm"></left-column>
 
 			</div>
+
 			<div class="col-md-8 main-content-container">
-				Some text here
+				
+				<div class="main-page">
+
+					<div class="main-info">
+						<h3>Welcome to my page!</h3>
+						<p>This is really the about me part of the page</p>
+					</div>
+
+					<div id="projects">
+						<div class="header new-row">
+							<h3>Projects</h3>
+						</div>
+						<p>add list of projects here</p>
+					</div>
+
+					<div id="skills">
+						<div class="header new-row">
+							<h3>Skills/Toolbox</h3>
+						</div>
+						<p>add a bunch of icons here for things I know. Do this next</p>
+					</div>
+
+					<div id="experience">
+						<div class="header new-row">
+							<h3>Work Experience/Other</h3>
+						</div>
+						<p>Should even include this section? Do this last. Just a basic list</p>
+					</div>
+
+					<div id="contact">
+
+						<div class="header new-row">
+							<h3>Contact</h3>
+							<p class="contact-info">If you need to contact me for whatever purposes, please don't hesitate to send a message below (or send an email directly to <span>djamrozik96@gmail.com</span>). Thanks!</p>
+						</div>
+						
+						<div class="contact-form">
+							
+							<form ng-submit="vm.submit(vm.message)">
+							    <div class="form-group">
+							        <label for="inputEmail">Your Email Address</label>
+							        <input type="email" ng-model="vm.message.email" class="form-control" id="inputEmail" placeholder="your email" required>
+							    </div>
+							   	<div class="form-group">
+							        <label for="inputTopic">Message Topic</label>
+							        <input type="text" class="form-control" ng-model="vm.message.topic" id="inputTopic" placeholder="message topic" required>
+							    </div>
+								<div class="form-group">
+									<label for="textareaMessage">Message</label>
+									<textarea class="form-control" ng-model="vm.message.message" id="textareaMessage" cols="30" rows="5" required></textarea>
+								</div>
+							    <button type="submit" class="btn btn-info">Send</button>
+							</form>
+						
+						</div>
+					</div>
+
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -43,9 +104,21 @@
 
 <!-- 
 
-Current notes
+Current notes/plans
 
-	make the width of the column smaller? (too much free space when too side)
+Make all into one page
+Put skills and experience together on the side bar
 
+Projects first
+Then skills/experience
+Then contact
+
+^Smooth scrolling with jQuery
+
+Put controllers together
+
+Maybe include some kind of graphic on the home page?
+Other than that, the basics should all be there and 
+look decent
 
  -->

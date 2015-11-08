@@ -15,10 +15,20 @@ body {
           justify-content: center;
   padding: 20px 0;
 }
+.contact-form {
+  margin-top: 3rem;
+}
+.contact-form button[type="submit"] {
+  margin-top: 2rem;
+}
 .header h1 {
   margin-top: 0;
   font-size: 5.5rem;
   margin-left: -3px;
+}
+.header h3 {
+  margin-top: 0;
+  font-size: 3rem;
 }
 .header span {
   font-weight: 700;
@@ -27,32 +37,34 @@ body {
   margin-top: 3rem;
   line-height: 30px;
 }
-.success-message {
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 1.15em;
+.input-wrapper {
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
 }
-.success-message .success {
-  color: #0020C2;
+.input-wrapper .input-box {
+  text-align: left;
+  padding: 20px 0;
 }
-.success-message .error {
-  color: red;
+.input-wrapper .input-box .panel-row {
+  margin-bottom: 15px;
 }
-.contact-form {
-  margin-top: 3rem;
+.input-wrapper .input-box .panel-row.button-row {
+  text-align: center;
 }
-.contact-form button[type="submit"] {
-  margin-top: 2rem;
+.input-wrapper .input-box input[type="text"] {
+  width: 60px;
 }
 .left-column-container {
   height: 100vh;
   background-color: #444;
   color: white;
   text-align: center;
-  position: relative;
+  position: fixed;
   padding-right: 0!important;
   padding-left: 0!important;
   max-width: 225px;
+  min-width: 180px;
   /*make height the same dynamically*/
 }
 .left-column-container .name {
@@ -127,22 +139,23 @@ body {
   padding-top: 2rem!important;
   padding-left: 4rem!important;
   max-width: 800px;
+  margin-left: 200px;
 }
-.input-wrapper {
-  margin: auto;
-  max-width: 600px;
-  text-align: center;
+.main-page .main-info {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #777;
 }
-.input-wrapper .input-box {
-  text-align: left;
-  padding: 20px 0;
+.new-row {
+  margin-top: 30px;
 }
-.input-wrapper .input-box .panel-row {
-  margin-bottom: 15px;
+.success-message {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.15em;
 }
-.input-wrapper .input-box .panel-row.button-row {
-  text-align: center;
+.success-message .success {
+  color: #0020C2;
 }
-.input-wrapper .input-box input[type="text"] {
-  width: 60px;
+.success-message .error {
+  color: red;
 }
