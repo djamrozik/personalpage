@@ -148,6 +148,44 @@ body {
 .new-row {
   margin-top: 30px;
 }
+#projects .header {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #777;
+}
+#projects .project {
+  height: 200px;
+  margin: 1em 0;
+  border-bottom: 1px solid #777;
+}
+#projects .project a {
+  text-decoration: none;
+}
+#projects .project .project-info {
+  margin-top: 1.3rem;
+}
+#projects .project .project-img {
+  text-align: center;
+  margin-top: 10px;
+}
+#projects .project .project-img img {
+  height: 150px;
+}
+#projects .project .project-tech {
+  font-weight: 700;
+}
+#projects .project .project-source {
+  font-weight: 700;
+  padding-top: 0.8rem;
+  display: inline-block;
+}
+#projects .project .project-title {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: black;
+}
+#projects .project .project-title:hover {
+  color: #555;
+}
 #skills .experience-bar {
   padding: 20px 0;
 }
