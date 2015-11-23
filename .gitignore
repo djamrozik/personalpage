@@ -3,3 +3,7 @@ local_codes.js
 node_modules
 
 client/bower_components
+
+old-site/node_modules
+old-site/local_codes.js
+old-site/client/bower_components
