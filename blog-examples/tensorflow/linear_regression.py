@@ -12,8 +12,8 @@ X = tf.placeholder("float")
 Y = tf.placeholder("float")
 
 # also used in operation later
-m = tf.Variable(np.random.randn(), name="slope")		# some people call this 'weight'
-b = tf.Variable(np.random.randn(), name="intercept")	# also, some people call this 'bias'
+m = tf.Variable(0., name="slope")		# some people call this 'weight'
+b = tf.Variable(0., name="intercept")	# also, some people call this 'bias'
 
 # this is just mX + b as defined in an operation
 predicted_value = tf.add(tf.mul(X, m), b)
