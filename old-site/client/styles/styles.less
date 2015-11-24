@@ -1,0 +1,297 @@
+
+html, body {
+	font-family: 'PT Sans', sans-serif;
+	height: 100%;
+}
+
+// root elements
+
+#compare {
+	margin: auto;
+	display: flex!important;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.contact-form {
+	margin-top: 3rem;
+	padding-bottom: 4rem;
+
+	button[type="submit"] {
+		margin-top: 2rem;
+	}
+}
+
+.header {
+	padding-top: 2rem;
+	border-top: 1px solid #777;
+
+	h1 {
+		margin-top: 0;
+		font-size: 5.5rem;
+		margin-left: -3px;
+	}
+
+	h3 {
+		margin-top: 0;
+		font-size: 3.5rem;
+		font-weight: bold;
+	}
+
+	span {
+		font-weight: 700;
+	}
+
+	.contact-info {
+		margin-top: 3rem;
+		line-height: 30px;
+	}
+}
+
+.input-wrapper {
+	margin: auto;
+	max-width: 600px;
+	text-align: center;
+
+	.input-box {
+		text-align: left;
+		padding: 20px 0;
+
+		.panel-row {
+			margin-bottom: 15px;
+			&.button-row {
+				text-align: center;
+			}
+		}
+
+		input[type="text"] {
+			width: 60px;
+		}
+	}
+}
+
+.left-column-container {
+	height: 100vh;
+	background-color: #444;
+	color: white;
+	text-align: center;
+	position: fixed;
+	padding-right: 0!important;
+	padding-left: 0!important;
+	max-width: 225px;
+	min-width: 180px;
+
+	.name {
+		margin-top: 20px;
+		font-size: 1.7em;
+	}
+
+	.name-info {
+		color: lightblue;
+	}
+
+	.column-links {
+		text-align: left;
+		margin-top: 40px;
+
+		li {
+			padding: 1rem 0 1rem .5rem;
+			list-style-type: none;
+			margin-left: -1.5rem;
+			&:hover {
+				background-color: black;
+				cursor: pointer;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+
+	.icons-container {
+		height: 7.5%;
+		margin-top: 4rem;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		
+		i {
+			margin: 1rem;
+			color: white;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	/*make height the same dynamically*/
+	.image-container {
+	    display: inline-block;
+	    position: relative;
+	    width: 50%; //set the width of the image
+	    margin-top: 2rem;
+
+	    &:after {
+	    	content: '';
+	    	display: block;
+	    	margin-top: 100%;
+	    }
+
+	    .image-left-col {
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		   	
+		   	.img-circle {
+				position: relative;
+				width: 100%;
+				height: 100%; //width and height are the same here
+			}
+
+		}
+	}
+
+}
+
+.main-content-container {
+	padding-top: 2rem!important;
+	padding-left: 4rem!important;
+	max-width: 800px;
+	margin-left: 200px; //left-col
+}
+
+.main-page {
+
+	.main-info {
+		padding-bottom: 10px;
+		
+		h3 {
+			font-weight: 700;
+		}
+	}
+}
+
+.new-row {
+	margin-top: 30px;
+}
+
+#projects {
+
+	.header {
+		padding-bottom: 15px;
+	}
+
+	.project {
+		height: 225px;
+		margin-bottom: 1em;
+		padding-top: 15px;
+		border: 1px solid lightgrey;
+		border-radius: 10px;
+		margin-left: 0;
+		
+		a {
+			text-decoration: none;
+		}
+
+		.project-info {
+			margin-top: 1.3rem;
+		}
+
+		.project-img {
+			text-align: center;
+			margin-top: 15px;
+			padding-left: 10%;
+
+			img {
+				height: 150px;
+				width: 300px;
+			}
+			.site-link {
+				padding-top: 10px;
+			}
+		}
+
+		.project-tech {
+			font-weight: 700;
+		}
+
+		.project-source {
+			font-weight: 700;
+			padding-top: 0.8rem;
+			display: inline-block;
+		}
+
+		.project-title {
+			font-size: 1.8em;
+			font-weight: 600;
+			color: black;
+
+			&:hover {
+				color: #555;
+			}
+		}
+	}
+}
+
+#skills {
+
+	.experience-bar {
+		padding: 20px 0;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 40px;
+		}
+		.experience-text {
+			position: absolute;
+			font-weight: 700;
+			font-size: 1.1em;
+			top: 20%;
+			left: 8%;
+		}
+	}
+
+	.skills-info {
+		margin: 20px 0;
+	}
+
+	.frameworks-row {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.languages-row {
+		margin-top: 20px;
+
+		img {
+			margin: 0 4.75%;
+		}
+	}
+
+	img {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.success-message {
+	margin-top: 30px;
+	font-weight: 600;
+	font-size: 1.15em;
+
+	.success {
+		color: #0020C2;
+	}
+	.error {
+		color: red;
+	}
+}
+

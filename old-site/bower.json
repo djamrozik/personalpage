@@ -1,0 +1,29 @@
+{
+  "name": "danjamrozik.me",
+  "description": "personal portfolio",
+  "main": "index.js",
+  "authors": [
+    "Daniel Jamrozik"
+  ],
+  "license": "BSD-2-Clause",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-resource": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angular-bootstrap": "~0.14.2",
+    "bootstrap": "~3.3.5",
+    "components-font-awesome": "~4.4.0"
+  }
+}
