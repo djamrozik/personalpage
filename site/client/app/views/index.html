@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+
+<html ng-app="PortfolioWebsite">
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
+	<link rel="stylesheet" href="/styles/font-awesome.min.css">
+
+	<script type="text/javascript" src="/scripts/angular.min.js"></script>
+	<script type="text/javascript" src="/scripts/angular-route.min.js"></script>
+	<script type="text/javascript" src="/scripts/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/scripts/ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+
+	<script src="/app/controllers/IndexCtrl.js"></script>
+	<script src="/app/services/resources.js"></script>
+	<script src="/app/directives/leftColumn.js"></script>
+	<script src="/app/app.js"></script>
+
+	<title>Dan Jamrozik</title>
+
+</head>
+
+<body ng-controller="IndexController as vm">
+
+	<div class="container-fluid">
+	    <div class="row">
+
+			<div class="left-column-container">
+
+				<!-- angular directive serving as a template -->
+				<left-column info="vm"></left-column>
+
+			</div>
+
+			<div class="col-md-8 main-content-container">
+				
+				<div class="main-page">
+
+					<div class="main-info">
+						<h2 class="welcome-text">Welcome to my page!</h2>
+						<p>A bit about me: I am a very passionate web developer as well an avid computer science student currently studying at the University of Illinois, Urbana/Champaign. I currently work as a front-end web developer at the DIA at UIUC and have worked at the ISWS as well. Projects I've worked on in my spare time and skills are all below.</p>
+						<p> Lastly, I am a huge fan of taking on side projects, so please feel free to contact me about any work! Thanks!</p>
+					</div>
+
+					<div id="projects">
+
+						<div class="header">
+							<h3>Projects</h3>
+						</div>
+
+						<div class="projects-list">
+						
+							<!-- gif-project -->
+							<div class="row project">
+								
+								<div class="col-md-6">
+									<a href="samplecode.io">
+										<span class="project-title">gif-project</span>
+									</a>
+									<div class="project-info">
+										Takes the url of a gif and reverses the gif on the back end. Uses ImageMagick and custom python code to reverse the gif. Returns with a newly reversed gif.
+									</div>
+
+									<div class="project-info" >
+										<span class="project-tech">Technologies: </span>
+										Django, AngularJS, SQLite 
+									</div>
+
+									<div class="project-info">
+										<span class="project-tech">Github: </span>
+										<a href="http://www.github.com/djamro2/samplecode">github.com/djamro2/samplecode</a>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="project-img">
+										<a href="http://www.samplecode.io">
+										<img src="/images/gif-project1.png" class="img img-thumbnail">
+										</a>
+										<a href="http://www.samplecode.io"><p class="site-link">samplecode.io</p></a>
+									</div>
+								</div>
+
+							</div>
+
+							<!-- dealgiraffe -->
+							<div class="row project">
+								
+								<div class="col-md-6">
+									<a href="http://www.dealgiraffe.com">
+										<span class="project-title">dealgiraffe</span>
+									</a>
+									<div class="project-info">
+										Uses the Amazon API to find the latest price drops and adds them to the site. Admin panel with passport.js to manage deals.
+									</div>
+
+									<div class="project-info" >
+										<span class="project-tech">Technologies: </span>
+										NodeJS, AngularJS, Express, MongoDB, passport.js
+									</div>
+
+									<div class="project-info">
+										<span class="project-tech">Github: </span>
+										<a href="http://www.github.com/djamro2/dealgiraffe">github.com/djamro2/dealgiraffe</a>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="project-img">
+										<a href="http://www.dealgiraffe.com">
+										<img src="/images/dealgiraffe1.png" class="img img-thumbnail">
+										</a>
+										<a href="http://www.dealgiraffe.com"><p class="site-link">dealgiraffe.com</p></a>
+									</div>
+								</div>
+
+							</div>
+
+							<!-- wrigleyvillepost -->
+							<div class="row project">
+								
+								<div class="col-md-6">
+									<a href="http://www.wrigleyvillepost.com">
+										<span class="project-title">wrigleyvillepost</span>
+									</a>
+									<div class="project-info">
+										Custom cms blog to write anything about the Chicago Cubs. Articles are templatized with express-handlebars. Go Cubs!
+									</div>
+
+									<div class="project-info" >
+										<span class="project-tech">Technologies: </span>
+										NodeJS, Express, express-handlebars, AngularJS
+									</div>
+
+									<div class="project-info">
+										<span class="project-tech">Github: </span>
+										<a href="http://www.github.com/djamro2/wrigleyvillepost">github.com/djamro2/wrigleyvillepost</a>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="project-img">
+										<a href="http://www.wrigleyvillepost.com">
+										<img src="/images/wrigleyvillepost1.png" class="img img-thumbnail">
+										</a>
+										<a href="http://www.wrigleyvillepost.com"><p class="site-link">wrigleyvillepost.com</p></a>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div id="skills">
+						<div class="header new-row">
+							<h3>Frameworks and Languages</h3>
+						</div>
+						<div class="experience-bar">
+							<!-- change font in experience bar? -->
+							<img src="/images/experience-bar.png" />
+							<span class="experience-text">More experience</span>
+						</div>
+						<div class="frameworks-row">
+							<img src="/images/nodejs-logo.png" class="img-circle">
+							<img src="/images/angular-logo.png" class="img-rounded">
+							<img src="/images/mongodb-logo.jpg" class="img-rounded">
+							<img src="/images/django-logo.png" class="img-rounded">
+							<img src="/images/bootstrap-logo.jpg" class="img-rounded">
+							<img src="/images/jquery-logo.png" class="img-rounded">
+						</div>
+						<div class="languages-row">
+							<img src="/images/js-logo.svg" class="img-circle">
+							<img src="/images/java-logo.png" class="img-circle">
+							<img src="/images/python-logo.png" class="img-circle">
+							<img src="/images/cpp-logo.svg" class="img-rounded">
+						</div>
+					</div>
+
+					<div id="contact">
+
+						<div class="header new-row">
+							<h3>Contact</h3>
+							<p class="contact-info">If you need to contact me for whatever purposes, please don't hesitate to send a message below (or send an email directly to <span>djamrozik96@gmail.com</span>). Thanks!</p>
+						</div>
+						
+						<div class="contact-form">
+							
+							<form ng-submit="vm.submit(vm.message)">
+							    <div class="form-group">
+							        <label for="inputEmail">Your Email Address</label>
+							        <input type="email" ng-model="vm.message.email" class="form-control" id="inputEmail" placeholder="your email" required>
+							    </div>
+							   	<div class="form-group">
+							        <label for="inputTopic">Message Topic</label>
+							        <input type="text" class="form-control" ng-model="vm.message.topic" id="inputTopic" placeholder="message topic" required>
+							    </div>
+								<div class="form-group">
+									<label for="textareaMessage">Message</label>
+									<textarea class="form-control" ng-model="vm.message.message" id="textareaMessage" cols="30" rows="5" required></textarea>
+								</div>
+							    <button type="submit" class="btn btn-info">Send</button>
+							</form>
+						
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>

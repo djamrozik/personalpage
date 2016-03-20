@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="PortfolioWebsite">
+<head>
+
+	<title>Mergely Sandbox</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+	<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-resource/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+
+	<!-- mergely dependencies and mergely-->
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/bower_components/mergely/codemirror.min.js"></script>
+	<link   rel="stylesheet" type="text/css" href="/bower_components/mergely/codemirror.css" />
+	<script type="text/javascript" src="/bower_components/mergely/mergely.min.js"></script>
+	<link   rel="stylesheet" type="text/css" href="/bower_components/mergely/mergely.css" />
+
+	<script src="/app/controllers/MergelySandboxCtrl.js"></script>
+	<script src="/app/services/resources.js"></script>
+	<script src="/app/directives/leftColumn.js"></script>
+	<script src="/app/app.js"></script>
+
+</head>
+<body ng-controller="MergelySandboxController as vm">
+
+	<div class="input-wrapper">
+		
+		<h1>Mergely Sandbox</h1>
+
+		<p>All html available <a href="https://github.com/djamro2/personalpage/blob/master/client/app/views/mergely-sandbox.html">here</a>, 
+		and all javascript (angular) is <a href="https://github.com/djamro2/personalpage/blob/master/client/app/controllers/MergelySandboxCtrl.js">here</a></p>
+
+		<div class="input-box">
+
+			<div class="panel panel-info">
+				<div class="panel-heading">Current Settings</div>
+				<div class="panel-body">
+				  
+					<div class="panel-row">
+						<input type="checkbox" ng-model="mSettings.line_numbers"> Line Numbers
+					</div>
+
+					<div class="panel-row">
+						<input type="checkbox" ng-model="mSettings.sidebar"> Sidebar
+					</div>
+
+					<div class="panel-row">
+						Editor Width: <input type="text" ng-model="mSettings.editor_width"> (include units)
+					</div>
+
+					<div class="panel-row">
+						...more to add later if needed
+					</div>
+
+					<div class="panel-row button-row">
+					<a download="diff.txt" ng-href="{{ urlDiff }}">
+						<button type="button" class="btn btn-default" >Download 'diff' file</button>
+					</a>
+					</div>
+
+		  		</div>
+			</div>
+
+		</div>
+
+		<p>Edit the text below!</p>
+
+	</div>
+
+	<div id="compare"></div>
+
+</body>
+</html>

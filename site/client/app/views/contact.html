@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="PortfolioWebsite">
+<head>
+
+	<title>Contact</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+
+	<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-resource/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+
+	<script src="/app/controllers/ContactCtrl.js"></script>
+	<script src="/app/services/resources.js"></script>
+	<script src="/app/directives/leftColumn.js"></script>
+	<script src="/app/app.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body ng-controller="ContactController as vm">
+
+	<div class="container-fluid">
+	    <div class="row">	    
+		    <div class="col-md-2 left-column-container">
+
+				<!-- angular directive serving as a template -->
+				<left-column></left-column>
+
+			</div>
+			<div class="col-md-8 main-content-container">
+				
+				<div class="header">
+					
+					<h1>Contact</h1>
+
+					<p class="contact-info">If you need to contact me for whatever purposes, please don't hesitate to send a message below (or send an email directly to <span>djamrozik96@gmail.com</span>). Thanks!</p>
+
+				</div>
+
+				<div class="contact-form">
+					
+					<form ng-submit="vm.submit(vm.message)">
+					    <div class="form-group">
+					        <label for="inputEmail">Your Email Address</label>
+					        <input type="email" ng-model="vm.message.email" class="form-control" id="inputEmail" placeholder="your email" required>
+					    </div>
+					   	<div class="form-group">
+					        <label for="inputTopic">Message Topic</label>
+					        <input type="text" class="form-control" ng-model="vm.message.topic" id="inputTopic" placeholder="message topic" required>
+					    </div>
+						<div class="form-group">
+							<label for="textareaMessage">Message</label>
+							<textarea class="form-control" ng-model="vm.message.message" id="textareaMessage" cols="30" rows="5" required></textarea>
+						</div>
+					    <button type="submit" class="btn btn-info">Send</button>
+					</form>
+
+				</div>
+
+				<div class="success-message" ng-show="vm.sendSuccess || vm.sendError">
+					<p ng-show="vm.sendSuccess" class="success">Message sent! I'll try to get back within 12hrs</p>
+					<p ng-show="vm.sendError" class="error">Error sending message. I'll try to fix this shortly!</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
