@@ -1,7 +1,14 @@
 
+// element styles
+
 html, body {
 	font-family: 'PT Sans', sans-serif;
 	height: 100%;
+}
+
+// reusable styles
+.flex {
+	 flex-grow: 1;
 }
 
 // root elements
@@ -11,6 +18,54 @@ html, body {
 	display: flex!important;
 	justify-content: center;
 	padding: 20px 0;
+}
+
+.collapse-navbar {
+	width: 100%;
+	background-color: #444;
+	margin-top: -40px; /* hide at first */
+	display: none;
+	height: 0;
+	line-height: 40px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+
+	.collapse-navbar-top {
+		display: flex;
+		flex-direction: row;
+		z-index: 2;
+
+		.navbar-my-name {
+			color: white;
+			font-weight: 700;
+			font-size: 1.7rem;
+			margin-left: 2rem;
+		}
+
+		.navbar-expand {
+			padding-right: 2rem;
+			color: white;
+			cursor: pointer;
+		}
+	}
+
+	.collapse-navbar-more {
+		background-color: #444;
+		display: none;
+		z-index: -1;
+
+		.navbar-more-list {
+			color: white;
+			list-style-type: none;
+			padding-bottom: 0.6rem;
+
+			li {
+				cursor: pointer;
+			}
+		}
+	}
 }
 
 .contact-form {
@@ -84,6 +139,7 @@ html, body {
 	padding-left: 0!important;
 	max-width: 225px;
 	min-width: 180px;
+	left: -200px; /* hide at first */
 
 	.name {
 		margin-top: 20px;
@@ -164,10 +220,9 @@ html, body {
 }
 
 .main-content-container {
-	padding-top: 2rem!important;
-	padding-left: 4rem!important;
+	padding-top: 1rem!important;
+	padding-left: 2.5rem!important;
 	max-width: 800px;
-	margin-left: 200px; //left-col
 }
 
 .main-page {

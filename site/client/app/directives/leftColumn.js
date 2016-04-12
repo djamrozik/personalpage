@@ -1,5 +1,4 @@
-/* global moment */
-/* global angular */
+
 'use strict';
 
 var directives = directives || angular.module('PortfolioWebsite.directives', []);

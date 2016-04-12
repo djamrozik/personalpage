@@ -3,6 +3,12 @@ body {
   font-family: 'PT Sans', sans-serif;
   height: 100%;
 }
+.flex {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
 #compare {
   margin: auto;
   display: -webkit-box!important;
@@ -14,6 +20,55 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 0;
+}
+.collapse-navbar {
+  width: 100%;
+  background-color: #444;
+  margin-top: -40px;
+  /* hide at first */
+  display: none;
+  height: 0;
+  line-height: 40px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.collapse-navbar .collapse-navbar-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 2;
+}
+.collapse-navbar .collapse-navbar-top .navbar-my-name {
+  color: white;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-left: 2rem;
+}
+.collapse-navbar .collapse-navbar-top .navbar-expand {
+  padding-right: 2rem;
+  color: white;
+  cursor: pointer;
+}
+.collapse-navbar .collapse-navbar-more {
+  background-color: #444;
+  display: none;
+  z-index: -1;
+}
+.collapse-navbar .collapse-navbar-more .navbar-more-list {
+  color: white;
+  list-style-type: none;
+  padding-bottom: 0.6rem;
+}
+.collapse-navbar .collapse-navbar-more .navbar-more-list li {
+  cursor: pointer;
 }
 .contact-form {
   margin-top: 3rem;
@@ -74,6 +129,8 @@ body {
   padding-left: 0!important;
   max-width: 225px;
   min-width: 180px;
+  left: -200px;
+  /* hide at first */
   /*make height the same dynamically*/
 }
 .left-column-container .name {
@@ -144,10 +201,9 @@ body {
   height: 100%;
 }
 .main-content-container {
-  padding-top: 2rem!important;
-  padding-left: 4rem!important;
+  padding-top: 1rem!important;
+  padding-left: 2.5rem!important;
   max-width: 800px;
-  margin-left: 200px;
 }
 .main-page .main-info {
   padding-bottom: 10px;

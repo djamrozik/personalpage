@@ -17,11 +17,24 @@ controllers.controller('IndexController', ['$scope',
 		//nothing yet
 	};
 
-	vm.scrollToId = function(id){
+	vm.scrollToId = function(id, fromTopNav){
+
+		var extra_offset = 0;
+
+		if (fromTopNav) {
+			extra_offset += 30;
+		}
+
 		//scroll to the element with jquery
 	    $('html, body').animate({
-	        scrollTop: $("#" + id).offset().top
+	        scrollTop: $("#" + id).offset().top - extra_offset
 	    }, 2000);
+
+		// close navbar-more if scroll from top nav
+		if (fromTopNav) {
+			$(".collapse-navbar-more").hide();
+		}
+
 	};
 
 	/**
