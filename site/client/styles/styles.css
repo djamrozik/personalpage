@@ -22,6 +22,9 @@ body {
 .contact-form button[type="submit"] {
   margin-top: 2rem;
 }
+.contact-form .button-container {
+  text-align: right;
+}
 .header {
   padding-top: 2rem;
   border-top: 1px solid #777;
@@ -98,8 +101,7 @@ body {
   color: white;
 }
 .left-column-container .icons-container {
-  height: 7.5%;
-  margin-top: 4rem;
+  max-height: 50px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -161,12 +163,12 @@ body {
   padding-bottom: 15px;
 }
 #projects .project {
-  height: 225px;
   margin-bottom: 1em;
   padding-top: 15px;
   border: 1px solid lightgrey;
   border-radius: 10px;
   margin-left: 0;
+  margin-right: 1rem;
 }
 #projects .project a {
   text-decoration: none;
@@ -177,7 +179,6 @@ body {
 #projects .project .project-img {
   text-align: center;
   margin-top: 15px;
-  padding-left: 10%;
 }
 #projects .project .project-img img {
   height: 150px;
@@ -214,8 +215,8 @@ body {
   position: absolute;
   font-weight: 700;
   font-size: 1.1em;
-  top: 20%;
-  left: 8%;
+  top: 17%;
+  left: 5.5%;
 }
 #skills .skills-info {
   margin: 20px 0;

@@ -5,19 +5,27 @@
 
 <head>
 
+	<!-- meta tags and stuff, focus on SEO -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<link rel="icon" type="image/png" href="/favicon.png" />
+
+	<!-- stylesheets -->
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
 	<link rel="stylesheet" href="/styles/font-awesome.min.css">
 
+	<!-- js dependencies -->
 	<script type="text/javascript" src="/scripts/angular.min.js"></script>
 	<script type="text/javascript" src="/scripts/angular-route.min.js"></script>
 	<script type="text/javascript" src="/scripts/angular-resource.min.js"></script>
 	<script type="text/javascript" src="/scripts/ui-bootstrap.min.js"></script>
 	<script type="text/javascript" src="/scripts/jquery.min.js"></script>
 
+	<!-- jquery code -->
+	<script type="text/javascript" src="/scripts/homepage.js"></script>
+
+	<!-- angular code -->
 	<script src="/app/controllers/IndexCtrl.js"></script>
 	<script src="/app/services/resources.js"></script>
 	<script src="/app/directives/leftColumn.js"></script>
@@ -39,7 +47,7 @@
 
 			</div>
 
-			<div class="col-md-8 main-content-container">
+			<div class="col-sm-8 main-content-container">
 				
 				<div class="main-page">
 
@@ -207,7 +215,9 @@
 									<label for="textareaMessage">Message</label>
 									<textarea class="form-control" ng-model="vm.message.message" id="textareaMessage" cols="30" rows="5" required></textarea>
 								</div>
-							    <button type="submit" class="btn btn-info">Send</button>
+								<div class="button-container">
+							    	<button type="submit" class="btn btn-info">Send</button>
+								</div>
 							</form>
 						
 						</div>

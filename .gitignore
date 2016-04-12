@@ -8,3 +8,9 @@ site/local_codes.js
 
 blog-examples/express/express_handlebars_1/node_modules
 
+gulpfile.js
+
+.idea
+.idea/
+.idea/*
+

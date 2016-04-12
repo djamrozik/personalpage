@@ -19,7 +19,4 @@ require('./server/config')(app);
 //routes
 require('./server/routes')(app);
 
-// todo: decide what to change about the site (try to aim for something simpler)
-// todo: make the site mobile friendly
-// todo: fix the font-awesome icons at the bottom of the left nav
 
