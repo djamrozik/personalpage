@@ -21,7 +21,7 @@ $(document).ready(function() {
         $(".collapse-navbar").css('height', '40px');
 
         // slide the main content down
-        $(".main-content-container").css('margin-top', '30px');
+        $(".main-page").css('padding-top', '30px');
 
     };
 
@@ -35,8 +35,8 @@ $(document).ready(function() {
             'margin-top': '-40px'
         }, 500);
 
-        $(".main-content-container").animate({
-            'margin-top': '0'
+        $(".main-page").animate({
+            'padding-top': '0'
         }, 500);
 
         // eventually hide the navbar completely
@@ -54,8 +54,9 @@ $(document).ready(function() {
         $(".collapse-navbar").css('display', 'block');
         $(".collapse-navbar").css('height', '40px');
 
-        $(".main-content-container").animate({
-            'margin-top': '30px'
+        console.log('running now');
+        $(".main-page").animate({
+            'padding-top': '30px'
         }, 500);
 
         // animate the top navbar
