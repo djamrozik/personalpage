@@ -2,9 +2,7 @@
 /* global angular */
 'use strict';
 
-var controllers = controllers || angular.module('PortfolioWebsite.controllers', []);
-
-controllers.controller('IndexController', ['$scope',
+app.controller('IndexController', ['$scope',
 	function($scope){
 
 	var vm = this;

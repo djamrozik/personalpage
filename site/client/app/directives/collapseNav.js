@@ -4,9 +4,7 @@
 
 'use strict';
 
-var directives = directives || angular.module('PortfolioWebsite.directives', []);
-
-directives.directive('collapseNav', function(){
+app.directive('collapseNav', function(){
 
     return {
         restrict: 'E',

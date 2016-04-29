@@ -1,9 +1,7 @@
 
 'use strict';
 
-var directives = directives || angular.module('PortfolioWebsite.directives', []);
-
-directives.directive('leftColumn', function(){
+app.directive('leftColumn', function(){
 
 	return {
 		restrict: 'E',

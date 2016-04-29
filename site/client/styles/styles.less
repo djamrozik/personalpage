@@ -11,6 +11,17 @@ html, body {
 	 flex-grow: 1;
 }
 
+.no-link-style {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
 // root elements
 
 #compare {
@@ -229,7 +240,11 @@ html, body {
 
 	.main-info {
 		padding-bottom: 10px;
-		
+
+		.main-info-first-text {
+			padding-top: 30px;
+		}
+
 		.welcome-text {
 			font-weight: 700;
 			font-size: 3rem;
@@ -290,6 +305,12 @@ html, body {
 				left: 0;
 				color: white;
 				padding: 1rem;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.text-overlay-right {
+				text-align: right;
 			}
 
 			.text-overlay-title {

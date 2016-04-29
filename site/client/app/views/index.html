@@ -27,11 +27,11 @@
 	<script type="text/javascript" src="/scripts/dynamic-image.js"></script>
 
 	<!-- angular code -->
+	<script src="/app/app.js"></script>
 	<script src="/app/controllers/IndexCtrl.js"></script>
 	<script src="/app/services/resources.js"></script>
 	<script src="/app/directives/leftColumn.js"></script>
 	<script src="/app/directives/collapseNav.js"></script>
-	<script src="/app/app.js"></script>
 
 	<title>Dan Jamrozik</title>
 
@@ -60,8 +60,8 @@
 				<div class="main-page">
 
 					<div class="main-info">
-						<h2 class="welcome-text">Welcome to my page!</h2>
-						<p>A bit about me: I am a very passionate web developer as well an avid computer science student currently studying at the University of Illinois, Urbana/Champaign. I currently work as a front-end web developer at the DIA at UIUC and have worked at the ISWS as well. Projects I've worked on in my spare time and skills are all below.</p>
+						<!--<h2 class="welcome-text">Welcome to my page!</h2>-->
+						<p class="main-info-first-text"> <strong>Welcome to my page!</strong> A bit about me: I am a passionate web developer as well an avid computer science student currently studying at the University of Illinois, Urbana/Champaign. I currently spend my time freelancing, building new projects, and working on schoolwork. This summer I will be interning at Yahoo in the publications deptartment. Projects I've worked on in my spare time and skills are below.</p>
 						<p> Lastly, I am a huge fan of taking on side projects, so please feel free to contact me about any work! Thanks!</p>
 					</div>
 
@@ -75,26 +75,29 @@
 
 							<div class="projects-list-left">
 
-								<div class="project-item expand-to-bottom-right">
-									<img src="/images/gif-project1.png" class="img">
+								<div class="project-item expand-to-bottom-right" id="project-1">
+									<img src="/images/stubaffairs_design.jpg" class="img">
 									<div class="black-overlay"></div>
 									<div class="text-overlay">
-										<p class="text-overlay-title">gif-project</p>
+										<p class="text-overlay-title">
+											StubAffairs
+										</p>
 										<p class="text-overlay-description">
-											This simple project takes an gif url as an input, and will
-											return a new image which has been reversed.
+											Ticket hosting website which provides venue owners with a simple solution to selling tickets.
 										</p>
 									</div>
 								</div>
 
-								<div class="project-item expand-to-top-right">
-									<img src="/images/gif-project1.png" class="img">
+								<div class="project-item expand-to-top-right" id="project-2">
+									<img src="/images/pace_social_capture.png" class="img">
 									<div class="black-overlay"></div>
 									<div class="text-overlay">
-										<p class="text-overlay-title">gif-project</p>
+										<p class="flex"></p>
+										<p class="text-overlay-title">
+											<a class="no-link-style" href="http://pacesocial.com">PaceSocial.com</a>
+										</p>
 										<p class="text-overlay-description">
-											This simple project takes an gif url as an input, and will
-											return a new image which has been reversed.
+											"The creative ad agency backed by data and engineering" - Helped build the website to promote client growth
 										</p>
 									</div>
 								</div>
@@ -103,159 +106,63 @@
 
 							<div class="project-list-right">
 
-								<div class="project-item expand-to-bottom-left">
-									<img src="/images/gif-project1.png" class="img">
+								<div class="project-item expand-to-bottom-left" id="project-3">
+									<img src="/images/gifmage_capture.png" class="img">
 									<div class="black-overlay"></div>
-									<div class="text-overlay">
-										<p class="text-overlay-title">gif-project</p>
+									<div class="text-overlay text-overlay-right">
+										<p class="text-overlay-title">
+											<a class="no-link-style" href="http://www.gifmage.com">gifmage</a>
+										</p>
 										<p class="text-overlay-description">
-											This simple project takes an gif url as an input, and will
-											return a new image which has been reversed.
+											Allows anonymous upload of image and basic statistical info about views on the image.
 										</p>
 									</div>
 								</div>
 
-								<div class="project-item expand-to-top-left">
-									<img src="/images/gif-project1.png" class="img">
+								<div class="project-item expand-to-top-left" id="project-4">
+									<img src="/images/kaushal_props_capture.png" class="img">
 									<div class="black-overlay"></div>
-									<div class="text-overlay">
-										<p class="text-overlay-title">gif-project</p>
+									<div class="text-overlay text-overlay-right">
+										<p class="flex"></p>
+										<p class="text-overlay-title">
+											<a class="no-link-style" href="http://www.kaushalproperties.com">KaushalProperties.com</a>
+										</p>
 										<p class="text-overlay-description">
-											This simple project takes an gif url as an input, and will
-											return a new image which has been reversed.
+											Professional website designed to increase leads on property sales and purchases.
 										</p>
 									</div>
 								</div>
 
 							</div>
-						
-							<!--&lt;!&ndash; gif-project &ndash;&gt;-->
-							<!--<div class="row project">-->
-								<!---->
-								<!--<div class="col-md-6">-->
-									<!--<a href="samplecode.io">-->
-										<!--<span class="project-title">gif-project</span>-->
-									<!--</a>-->
-									<!--<div class="project-info">-->
-										<!--Takes the url of a gif and reverses the gif on the back end. Uses ImageMagick and custom python code to reverse the gif. Returns with a newly reversed gif.-->
-									<!--</div>-->
-
-									<!--<div class="project-info" >-->
-										<!--<span class="project-tech">Technologies: </span>-->
-										<!--Django, AngularJS, SQLite -->
-									<!--</div>-->
-
-									<!--<div class="project-info">-->
-										<!--<span class="project-tech">Github: </span>-->
-										<!--<a href="http://www.github.com/djamro2/samplecode">github.com/djamro2/samplecode</a>-->
-									<!--</div>-->
-								<!--</div>-->
-
-								<!--<div class="col-md-6">-->
-									<!--<div class="project-img">-->
-										<!--<a href="http://www.samplecode.io">-->
-										<!--<img src="/images/gif-project1.png" class="img img-thumbnail">-->
-										<!--</a>-->
-										<!--<a href="http://www.samplecode.io"><p class="site-link">samplecode.io</p></a>-->
-									<!--</div>-->
-								<!--</div>-->
-
-							<!--</div>-->
-
-							<!--&lt;!&ndash; dealgiraffe &ndash;&gt;-->
-							<!--<div class="row project">-->
-								<!---->
-								<!--<div class="col-md-6">-->
-									<!--<a href="http://www.dealgiraffe.com">-->
-										<!--<span class="project-title">dealgiraffe</span>-->
-									<!--</a>-->
-									<!--<div class="project-info">-->
-										<!--Uses the Amazon API to find the latest price drops and adds them to the site. Admin panel with passport.js to manage deals.-->
-									<!--</div>-->
-
-									<!--<div class="project-info" >-->
-										<!--<span class="project-tech">Technologies: </span>-->
-										<!--NodeJS, AngularJS, Express, MongoDB, passport.js-->
-									<!--</div>-->
-
-									<!--<div class="project-info">-->
-										<!--<span class="project-tech">Github: </span>-->
-										<!--<a href="http://www.github.com/djamro2/dealgiraffe">github.com/djamro2/dealgiraffe</a>-->
-									<!--</div>-->
-								<!--</div>-->
-
-								<!--<div class="col-md-6">-->
-									<!--<div class="project-img">-->
-										<!--<a href="http://www.dealgiraffe.com">-->
-										<!--<img src="/images/dealgiraffe1.png" class="img img-thumbnail">-->
-										<!--</a>-->
-										<!--<a href="http://www.dealgiraffe.com"><p class="site-link">dealgiraffe.com</p></a>-->
-									<!--</div>-->
-								<!--</div>-->
-
-							<!--</div>-->
-
-							<!--&lt;!&ndash; wrigleyvillepost &ndash;&gt;-->
-							<!--<div class="row project">-->
-								<!---->
-								<!--<div class="col-md-6">-->
-									<!--<a href="http://www.wrigleyvillepost.com">-->
-										<!--<span class="project-title">wrigleyvillepost</span>-->
-									<!--</a>-->
-									<!--<div class="project-info">-->
-										<!--Custom cms blog to write anything about the Chicago Cubs. Articles are templatized with express-handlebars. Go Cubs!-->
-									<!--</div>-->
-
-									<!--<div class="project-info" >-->
-										<!--<span class="project-tech">Technologies: </span>-->
-										<!--NodeJS, Express, express-handlebars, AngularJS-->
-									<!--</div>-->
-
-									<!--<div class="project-info">-->
-										<!--<span class="project-tech">Github: </span>-->
-										<!--<a href="http://www.github.com/djamro2/wrigleyvillepost">github.com/djamro2/wrigleyvillepost</a>-->
-									<!--</div>-->
-								<!--</div>-->
-
-								<!--<div class="col-md-6">-->
-									<!--<div class="project-img">-->
-										<!--<a href="http://www.wrigleyvillepost.com">-->
-										<!--<img src="/images/wrigleyvillepost1.png" class="img img-thumbnail">-->
-										<!--</a>-->
-										<!--<a href="http://www.wrigleyvillepost.com"><p class="site-link">wrigleyvillepost.com</p></a>-->
-									<!--</div>-->
-								<!--</div>-->
-
-							<!--</div>-->
 
 						</div>
 
 					</div>
 
-					<div id="skills">
-						<div class="header new-row">
-							<h3>Frameworks and Languages</h3>
-						</div>
-						<div class="experience-bar">
-							<!-- change font in experience bar? -->
-							<img src="/images/experience-bar.png" />
-							<span class="experience-text">More experience</span>
-						</div>
-						<div class="frameworks-row">
-							<img src="/images/nodejs-logo.png" class="img-circle">
-							<img src="/images/angular-logo.png" class="img-rounded">
-							<img src="/images/mongodb-logo.jpg" class="img-rounded">
-							<img src="/images/django-logo.png" class="img-rounded">
-							<img src="/images/bootstrap-logo.jpg" class="img-rounded">
-							<img src="/images/jquery-logo.png" class="img-rounded">
-						</div>
-						<div class="languages-row">
-							<img src="/images/js-logo.svg" class="img-circle">
-							<img src="/images/java-logo.png" class="img-circle">
-							<img src="/images/python-logo.png" class="img-circle">
-							<img src="/images/cpp-logo.svg" class="img-rounded">
-						</div>
-					</div>
+					<!--<div id="skills">-->
+						<!--<div class="header new-row">-->
+							<!--<h3>Frameworks and Languages</h3>-->
+						<!--</div>-->
+						<!--<div class="experience-bar">-->
+							<!--&lt;!&ndash; change font in experience bar? &ndash;&gt;-->
+							<!--<img src="/images/experience-bar.png" />-->
+							<!--<span class="experience-text">More experience</span>-->
+						<!--</div>-->
+						<!--<div class="frameworks-row">-->
+							<!--<img src="/images/nodejs-logo.png" class="img-circle">-->
+							<!--<img src="/images/angular-logo.png" class="img-rounded">-->
+							<!--<img src="/images/mongodb-logo.jpg" class="img-rounded">-->
+							<!--<img src="/images/django-logo.png" class="img-rounded">-->
+							<!--<img src="/images/bootstrap-logo.jpg" class="img-rounded">-->
+							<!--<img src="/images/jquery-logo.png" class="img-rounded">-->
+						<!--</div>-->
+						<!--<div class="languages-row">-->
+							<!--<img src="/images/js-logo.svg" class="img-circle">-->
+							<!--<img src="/images/java-logo.png" class="img-circle">-->
+							<!--<img src="/images/python-logo.png" class="img-circle">-->
+							<!--<img src="/images/cpp-logo.svg" class="img-rounded">-->
+						<!--</div>-->
+					<!--</div>-->
 
 					<div id="contact">
 

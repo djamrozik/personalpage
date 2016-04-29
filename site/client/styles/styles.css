@@ -9,6 +9,15 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.no-link-style {
+  color: inherit;
+  text-decoration: none;
+}
+.no-link-style:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
 #compare {
   margin: auto;
   display: -webkit-box!important;
@@ -208,6 +217,9 @@ body {
 .main-page .main-info {
   padding-bottom: 10px;
 }
+.main-page .main-info .main-info-first-text {
+  padding-top: 30px;
+}
 .main-page .main-info .welcome-text {
   font-weight: 700;
   font-size: 3rem;
@@ -270,6 +282,18 @@ body {
   left: 0;
   color: white;
   padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#projects .projects-list .project-item .text-overlay-right {
+  text-align: right;
 }
 #projects .projects-list .project-item .text-overlay-title {
   font-weight: 700;

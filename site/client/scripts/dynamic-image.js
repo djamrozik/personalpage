@@ -8,6 +8,11 @@ $(document).ready(function(){
     // global variables for this session
     var z_index_counter = 1;
     var currently_busy = 0;
+    var currentExpandingId = null;
+
+    // dimension values
+    var original_width = -1;
+    var original_height = -1;
 
     // helper function to change the absolute values
     var set_position_bounds_change = function(myImage, container, bound_a, bound_b) {
@@ -79,27 +84,27 @@ $(document).ready(function(){
         }
 
         // get the original width and height
-        var width = +myImage.offsetWidth;
-        var height = +myImage.offsetHeight;
+        original_width = +myImage.offsetWidth;
+        original_height = +myImage.offsetHeight;
 
         // need to first set the container properties
-        $(container).css('width', width + 'px');
-        $(container).css('height', height + 'px');
+        $(container).css('width', original_width + 'px');
+        $(container).css('height', original_height + 'px');
 
         // change to absolute, change width and height
         $(myImage).css('position', 'absolute');
-        $(myImage).css('width', width + 'px');
-        $(myImage).css('height', height + 'px');
-        $(myImage).css('max-width', ((width * 2) + 28) + 'px');
-        $(myImage).css('max-height', ((height * 2) +14) + 'px');
-        $(myImage).css('min-width', (width) + 'px');
-        $(myImage).css('min-height', (height) + 'px');
+        $(myImage).css('width', original_width + 'px');
+        $(myImage).css('height', original_height + 'px');
+        $(myImage).css('max-width', ((original_width * 2) + 28) + 'px');
+        $(myImage).css('max-height', ((original_height * 2) +14) + 'px');
+        $(myImage).css('min-width', (original_width) + 'px');
+        $(myImage).css('min-height', (original_height) + 'px');
 
         // position the absolute elements based on how they should expand
         set_position_bounds(myImage, container);
 
         // set initial values for black overlay
-        set_overlay_values(container, width, height);
+        set_overlay_values(container, original_width, original_height);
 
     };
 
@@ -110,12 +115,10 @@ $(document).ready(function(){
 
         // add class to show that is in dynamic_mode
         $(myImage).addClass('dynamic_mode');
+        currentExpandingId = $(container).attr('id');
 
-        var current_width = +myImage.offsetWidth;
-        var current_height = +myImage.offsetHeight;
-
-        var final_width = ((current_width*2) + 28) + 'px';
-        var final_height = ((current_height*2) + 14) + 'px';
+        var final_width = ((original_width*2) + 28) + 'px';
+        var final_height = ((original_height*2) + 14) + 'px';
 
         // change size of image
         $(myImage).animate({
@@ -123,6 +126,7 @@ $(document).ready(function(){
             'height': final_height
         }, 300, function(){
             currently_busy = 0;
+            currentExpandingId = null;
         });
 
         // change size of black-overlay
@@ -137,6 +141,14 @@ $(document).ready(function(){
     var reverse_animation = function(container) {
 
         var myImage = $( $(container).children()[0] )[0];
+        var black_overlay = $(container).children()[1]
+        var thisImageId = $(container).attr('id');
+
+        // if this id is the same as the currentExpandingId, stop the animation on those things
+        if (currentExpandingId && thisImageId === currentExpandingId) {
+            $(myImage).stop();
+            $(black_overlay).stop();
+        }
 
         // remove class, or don't do anything if it is not there
         if ( $(myImage).hasClass('dynamic_mode') ) {
@@ -146,11 +158,8 @@ $(document).ready(function(){
             return;
         }
 
-        var current_width = +myImage.offsetWidth;
-        var current_height = +myImage.offsetHeight;
-
-        var final_width = ((current_width - 28)/2) + 'px';
-        var final_height = ((current_height - 14)/2) + 'px';
+        var final_width = original_width + 'px';
+        var final_height = original_height + 'px';
 
         // change size of image
         $(myImage).animate({
@@ -161,7 +170,6 @@ $(document).ready(function(){
         });
 
         // change size of black-overlay
-        var black_overlay = $(container).children()[1]
         $(black_overlay).animate({
             'width': final_width,
             'height': final_height
@@ -185,7 +193,14 @@ $(document).ready(function(){
     var hover_out_of_image = function() {
 
         if (currently_busy) {
-            return;
+            
+            // check to see if this the handler going out of the 'busy' image expanding
+            var thisId = $(this).attr('id');
+
+            if (!currentExpandingId || thisId != currentExpandingId) {
+                return;
+            }
+
         }
         currently_busy = 1;
 

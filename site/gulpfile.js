@@ -15,16 +15,16 @@ gulp.task('default', function() {
     // listen for changes
     livereload.listen();
 
-    // configure nodemon
-    nodemon({
-        // the script to run the app
-        script: 'index.js',
-        ext: 'js'
-    }).on('restart', function(){
-        // when the app has restarted, run livereload.
-        gulp.src('index.js');
-        //.pipe(livereload());
-    });
+    // // configure nodemon
+    // nodemon({
+    //     // the script to run the app
+    //     script: 'index.js',
+    //     ext: 'js'
+    // }).on('restart', function(){
+    //     // when the app has restarted, run livereload.
+    //     gulp.src('index.js');
+    //     //.pipe(livereload());
+    // });
 
     // watch less stylesheet and translate to css
     gulp.watch('./client/styles/styles.less', ['less']);

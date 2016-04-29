@@ -1,0 +1,31 @@
+{
+  "name": "personalpage",
+  "version": "1.0.0",
+  "description": "Personal blog site to write about web dev and machine learning",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-less": "^3.0.5",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-plumber": "^1.1.0",
+    "gulp-watch": "^4.3.5",
+    "nodemailer": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/djamro2/personalpage.git"
+  },
+  "author": "Dan Jamrozik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djamro2/personalpage/issues"
+  },
+  "homepage": "https://github.com/djamro2/personalpage#readme"
+}
