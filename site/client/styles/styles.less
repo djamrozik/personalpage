@@ -11,6 +11,10 @@ html, body {
 	 flex-grow: 1;
 }
 
+.img-hidden {
+	opacity: 0;
+}
+
 .no-link-style {
 	color: inherit;
 	text-decoration: none;
@@ -148,9 +152,8 @@ html, body {
 	position: fixed;
 	padding-right: 0!important;
 	padding-left: 0!important;
-	max-width: 225px;
-	min-width: 180px;
-	left: -200px; /* hide at first */
+	width: 180px;
+	left: -180px; /* hide at first */
 
 	.name {
 		margin-top: 20px;
@@ -233,6 +236,7 @@ html, body {
 .main-content-container {
 	padding-top: 0!important;
 	padding-left: 2.5rem!important;
+	padding-right: 2.5rem!important;
 	max-width: 800px;
 }
 
@@ -242,7 +246,7 @@ html, body {
 		padding-bottom: 10px;
 
 		.main-info-first-text {
-			padding-top: 30px;
+			padding-top: 20px;
 		}
 
 		.welcome-text {
@@ -268,23 +272,33 @@ html, body {
 
 		.projects-list-left {
 			flex-grow: 1;
-			padding-right: 14px;
+			padding-right: 7px;
 		}
 
 		.projects-list-right {
 			flex-grow: 1;
-			padding-left: 14px;
+			padding-left: 7px;
 		}
 
 		.project-item {
 			margin-bottom: 14px;
 			position: relative;
+			width: 100%;
 
-			img {
-				max-width: 100%;
+			.img-project {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				width: inherit;
 				border: 1px solid #444;
 				-webkit-filter: blur(5%);
 				filter: blur(5%);
+			}
+
+			.img-hidden {
+				width: inherit;
 			}
 
 			.black-overlay {
@@ -430,3 +444,25 @@ html, body {
 	}
 }
 
+/* any changes less than 560 px */
+@media (max-width: 560px) {
+
+
+	.projects-list {
+		flex-direction: column!important;
+		align-items: center;
+	}
+
+	.projects-list-left {
+		padding-right: 0!important;
+	}
+
+	.projects-list-right {
+		padding-left: 0!important;
+	}
+
+	.project-item {
+		max-width: 360px;
+	}
+
+}

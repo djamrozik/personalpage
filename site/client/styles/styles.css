@@ -9,6 +9,9 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.img-hidden {
+  opacity: 0;
+}
 .no-link-style {
   color: inherit;
   text-decoration: none;
@@ -136,9 +139,8 @@ body {
   position: fixed;
   padding-right: 0!important;
   padding-left: 0!important;
-  max-width: 225px;
-  min-width: 180px;
-  left: -200px;
+  width: 180px;
+  left: -180px;
   /* hide at first */
   /*make height the same dynamically*/
 }
@@ -212,13 +214,14 @@ body {
 .main-content-container {
   padding-top: 0!important;
   padding-left: 2.5rem!important;
+  padding-right: 2.5rem!important;
   max-width: 800px;
 }
 .main-page .main-info {
   padding-bottom: 10px;
 }
 .main-page .main-info .main-info-first-text {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .main-page .main-info .welcome-text {
   font-weight: 700;
@@ -246,24 +249,33 @@ body {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-right: 14px;
+  padding-right: 7px;
 }
 #projects .projects-list .projects-list-right {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-left: 14px;
+  padding-left: 7px;
 }
 #projects .projects-list .project-item {
   margin-bottom: 14px;
   position: relative;
+  width: 100%;
 }
-#projects .projects-list .project-item img {
-  max-width: 100%;
+#projects .projects-list .project-item .img-project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: inherit;
   border: 1px solid #444;
   -webkit-filter: blur(5%);
   filter: blur(5%);
+}
+#projects .projects-list .project-item .img-hidden {
+  width: inherit;
 }
 #projects .projects-list .project-item .black-overlay {
   position: absolute;
@@ -387,4 +399,28 @@ body {
 }
 .success-message .error {
   color: red;
+}
+/* any changes less than 560 px */
+@media (max-width: 560px) {
+  .projects-list {
+    -webkit-box-orient: vertical!important;
+    -webkit-box-direction: normal!important;
+    -webkit-flex-direction: column!important;
+        -ms-flex-direction: column!important;
+            flex-direction: column!important;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+  }
+  .projects-list-left {
+    padding-right: 0!important;
+  }
+  .projects-list-right {
+    padding-left: 0!important;
+  }
+  .project-item {
+    max-width: 360px;
+  }
 }

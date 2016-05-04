@@ -26,6 +26,8 @@ $(document).ready(function(){
         // change position of image
         $(myImage).css(bound_a, '0');
         $(myImage).css(bound_b, '0');
+        $(myImage).css(bound_a_op, 'inherit');
+        $(myImage).css(bound_b_op, 'inherit');
 
         // change the position of everything else
         $(black_overlay).css(bound_a_op, 'inherit');
@@ -58,53 +60,52 @@ $(document).ready(function(){
 
     };
 
-    // set the default values for the black overlay
-    var set_overlay_values = function(container, width, height) {
+    // need to ensure that absolute size of containers is updated resize. called by resize attached function
+    var resize_abs_size = function() {
 
-        var black_overlay = $(container).children()[1];
+        var project_count = 4; // make this number dynamic in the future
 
-        $(black_overlay).css('max-width', ((width*2) + 28) + 'px');
-        $(black_overlay).css('max-height', ((height*2) + 14) + 'px');
-        
+        for (var i = 1; i <= project_count; i++) {
+
+            // get elements selected
+            var image_id = '#project-' + String(i);
+            var image = $(image_id).children()[0];
+            var black_overlay = $(image_id).children()[1];
+
+            // change width and height attributes
+            $(image).css('width', 'inherit');
+            $(image).css('height', 'inherit');
+            $(black_overlay).css('width', '100%');
+            $(black_overlay).css('height', '100%');
+
+        }
+
     };
 
     // will convert the image to be absolute and still look the same
-    var change_img_to_abs = function(img, container) {
+    var set_init_values = function(img, container) {
 
         var myImage = $(img)[0];
+        var hiddenImage = $(container).children()[3];
 
         // update z-index values for this item
         $( $(container).children()[0] ).css('z-index', ++z_index_counter);
         $( $(container).children()[1] ).css('z-index', ++z_index_counter);
         $( $(container).children()[2] ).css('z-index', ++z_index_counter);
 
-        // no-op if already changed
-        if ( $(myImage).css('position') === 'absolute') {
-            return;
-        }
-
         // get the original width and height
-        original_width = +myImage.offsetWidth;
-        original_height = +myImage.offsetHeight;
+        original_width = +hiddenImage.offsetWidth;
+        original_height = +hiddenImage.offsetHeight;
 
-        // need to first set the container properties
-        $(container).css('width', original_width + 'px');
-        $(container).css('height', original_height + 'px');
-
-        // change to absolute, change width and height
-        $(myImage).css('position', 'absolute');
-        $(myImage).css('width', original_width + 'px');
-        $(myImage).css('height', original_height + 'px');
-        $(myImage).css('max-width', ((original_width * 2) + 28) + 'px');
-        $(myImage).css('max-height', ((original_height * 2) +14) + 'px');
-        $(myImage).css('min-width', (original_width) + 'px');
-        $(myImage).css('min-height', (original_height) + 'px');
+        // no-op if already changed
+        if ( $(myImage).hasClass('init-values-set')) {
+            return;
+        } else {
+            $(myImage).addClass('init-values-set');
+        }
 
         // position the absolute elements based on how they should expand
         set_position_bounds(myImage, container);
-
-        // set initial values for black overlay
-        set_overlay_values(container, original_width, original_height);
 
     };
 
@@ -117,7 +118,7 @@ $(document).ready(function(){
         $(myImage).addClass('dynamic_mode');
         currentExpandingId = $(container).attr('id');
 
-        var final_width = ((original_width*2) + 28) + 'px';
+        var final_width = ((original_width*2) + 14) + 'px';
         var final_height = ((original_height*2) + 14) + 'px';
 
         // change size of image
@@ -181,12 +182,19 @@ $(document).ready(function(){
     // then start the animation
     var hover_into_image = function() {
 
+        // only one item resizing at a time
         if (currently_busy) {
             return;
         }
         currently_busy = 1;
 
-        change_img_to_abs($(this).children()[0], this);
+        // make sure not in column format
+        if ( $(".projects-list").css('flex-direction') === 'column' ) {
+            currently_busy = 0;
+            return;
+        }
+
+        set_init_values($(this).children()[0], this);
         start_animation(this);
     };
 
@@ -209,6 +217,11 @@ $(document).ready(function(){
 
     // on hover set handlers
     $(".project-item").hover(hover_into_image, hover_out_of_image);
+
+    // set width and height to resize on screen resize
+    $( window ).resize(function() {
+        resize_abs_size();
+    });
 
 });
 

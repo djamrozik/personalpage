@@ -4,6 +4,10 @@
  */
 
 $(document).ready(function() {
+
+    // sizes in pixels
+    var collapse_breakpoint = 753;
+    var left_col_width = 180;
    
     /* check the window size to see if the sidenav should hide/show */
 
@@ -54,7 +58,6 @@ $(document).ready(function() {
         $(".collapse-navbar").css('display', 'block');
         $(".collapse-navbar").css('height', '40px');
 
-        console.log('running now');
         $(".main-page").animate({
             'padding-top': '30px'
         }, 500);
@@ -78,7 +81,7 @@ $(document).ready(function() {
 
         // simultaneously animate the main col
         $(".main-content-container").animate({
-            'margin-left': '200px',
+            'margin-left': String(left_col_width) + 'px',
             'margin-top': '0'
         }, 500);
 
@@ -94,7 +97,7 @@ $(document).ready(function() {
         $(".left-column-container").css('left', '0');
 
         // adjust main container
-        $(".main-content-container").css('margin-left', '200px');
+        $(".main-content-container").css('margin-left', String(left_col_width) + 'px');
 
     };
 
@@ -105,7 +108,7 @@ $(document).ready(function() {
 
         // animate the sidenav
         $(".left-column-container").animate({
-            left: '-200px',
+            left: '-' + String(left_col_width) + 'px',
         }, 500);
 
         // simultaneously animate the main col
@@ -145,7 +148,7 @@ $(document).ready(function() {
 
         var windowSize = $window.width();
 
-        if (windowSize >= 760) {
+        if (windowSize >= collapse_breakpoint) {
 
             // if transitioning from closed
             if (!show_sidenav && init !== true) {
