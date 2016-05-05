@@ -2,6 +2,7 @@
 'use strict';
 
 var express     = require('express');
+var handlebars = require('express-handlebars');
 
 var local_codes = require('./local_codes');
 var app         = express();
@@ -10,7 +11,11 @@ var app         = express();
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 //static files
-app.use(express.static('client')); 
+app.use(express.static('client'));
+
+// handlebars engine
+app.engine('handlebars', handlebars({defaultLayout: 'main_blog'}) );
+app.set('view engine', 'handlebars');
 
 //Config and settings file. Should be before the routes
 require('./server/config')(app);

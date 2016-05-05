@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+
+<html ng-app="PortfolioWebsite">
+
+<head>
+
+    <!-- meta tags and stuff, focus on SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Kadwa:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/font-awesome.min.css">
+
+    <!-- js dependencies -->
+    <script type="text/javascript" src="/scripts/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/scripts/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+
+    <!-- jquery code -->
+    <script type="text/javascript" src="/scripts/homepage.js"></script>
+    <script type="text/javascript" src="/scripts/dynamic-image.js"></script>
+
+    <!-- angular code -->
+    <script src="/app/app.js"></script>
+    <script src="/app/controllers/IndexCtrl.js"></script>
+    <script src="/app/services/resources.js"></script>
+    <script src="/app/directives/leftColumn.js"></script>
+    <script src="/app/directives/collapseNav.js"></script>
+
+    <title>Dan Jamrozik</title>
+
+</head>
+
+<body ng-controller="IndexController as vm">
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="collapse-navbar">
+
+            <collapse-nav info="vm"></collapse-nav>
+
+        </div>
+
+        <div class="left-column-container">
+
+            <left-column info="vm"></left-column>
+
+        </div>
+
+        <div class="main-content-container">
+
+            <div class="main-page">
+
+                <div class="main-info">
+
+                    <div class="main-banner">
+
+                        <img src="/images/rock_skip.jpg" class="img-circle" />
+
+                        <span class="main-quote">
+                            {{title}}
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div id="blog-content">
+                    {{{body}}}
+                </div>
+
+                <div id="comments-section">
+                    <span>Comments should be here</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
