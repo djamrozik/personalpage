@@ -1,0 +1,71 @@
+<div class="blog-content">
+
+    This blog post assumes that the reader has a limited knowledge of machine learning and TensorFlow. The simple example of a linear regression formula is a good pathway to learning both fields.
+
+    Here, I'll go through the finished code a section at a time and explain (to a newbie like me) what is happening. The finished code is below.
+
+    The goal here is to get a linear regression equation. Which is in the formula Y = mX + b where X is our input variable and Y is the output. To find this formula we simply need to find m and b.
+
+    The first thing we do in code is import all the necessary requirements, so make sure all the packages are installed. Obviously importing tensorflow, but also to numpy help with tough calculations and dealing with numbers.
+    <code></code>
+    <pre>import tensorflow as tf
+    import numpy as  np
+    </pre>
+    For the purposes of this demonstration, I'm going to be generating X and Y data. In an actual application, this could be some data you find and want to find the linear regression from. This is also called training data, in which you are training/teaching the machine about the right answer.
+    <pre>
+    trainX = np.asarray(np.linspace(0, 2, 30))
+    trainY = 2 * trainX + np.random.randn(trainX.shape[0]) * 0.33
+    </pre>
+    Let's define all the values we plan on setting. From our equation earlier, we need X, Y, m, and b. The way TensorFlow works is by defining operations first, and only substituting in real values later. So when we define our functions/models we will have to use variables that technically don't have real values yet. This part may be tough to think about it first because it differs from the usual ideology of programming, however, it will make sense with practice.
+
+    X and Y will be simple placeholders that get rewritten every training cycle. So let's define those as follows:
+    <pre>X = tf.placeholder("float")
+    Y = tf.placeholder("float")
+    </pre>
+    m and b will carry over from different training cycles, so these will be Variables that we will define and keep their value after cycles. Also, we initialize them to 0.0:
+    <pre>m = tf.Variable(0., name="slope")
+    b = tf.Variable(0., name="intercept")
+    </pre>
+    Now let's put all that together and make the operation!
+    <pre># this is just mX + b
+    predicted_value = tf.add(tf.mul(X, m), b)
+    </pre>
+
+    Alright, that's been pretty simple so far, but how do we improve our function as time goes on? That's where terminology like cost and gradient come into play. Cost is essentially the average distance squared our points are from the line, obviously we want this number to be as small as possible and we will minimize this in each training cycle. That value is squared because larger errors are more important to minimize. We will minimize the cost/distance with something called a <a href="http://tensorflow.org/api_docs/python/train.html#GradientDescentOptimizer">GradientDescentOptimizer</a> (which I'll have a separate post about soon). The GradientDescentOptimizer takes in two values, the function to optimize/find the minimum of and the learning rate associated with it.
+
+    <a href="https://www.youtube.com/watch?v=eikJboPQDT0&list=PLLH73N9cB21V_O2JqILVX557BST2cqJw4&index=9">This</a> is very helpful video on Gradient, but just think of it as finding the minimum of a function. In this case our function is the cost (described above) and we want to move around the graph (the rate at which we move is the learning rate), finding the smallest value. The learning rate simply depends on how exact you want your minimum to be and the range of x-values being input into your function. .01 works well for us in this case. So, the resulting code will look like so:
+
+    <pre>
+    # trainX.shape[0] is the number of values in trainX
+    cost = tf.reduce_sum(tf.pow(predicted_value - Y, 2)) / (2 * trainX.shape[0]) # avg distance squared
+
+    learning_rate = .01
+    minimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
+    </pre>
+
+    Now that we have all of our calculations set up, we can begin to run the model and input the data. First, we initialize all the variables (simply a TensorFlow thing)
+
+    <pre>
+    # init all the variables!
+    init = tf.initialize_all_variables()
+    </pre>
+
+    The way to run data in TensorFlow is through something called a Session. Once declared, we loop through all the values in our training data quite a bit of times (2500 in this case) and run the minimizer, feeding in X and Y in each cycle. So the final code should look this:
+
+    <pre>
+    with tf.Session() as sess:
+
+        sess.run(init)
+
+        for i in range(2500):
+            for(x, y) in zip(trainX, trainY):
+                sess.run(minimizer, feed_dict={X: x, Y: y})
+    </pre>
+
+    This is all the code we need to find our formula (the m and b values). We can add in some print statements to see how the data is changing. We can also use <code>matplotlib</code> to graph the data and see how the line is fitted to show that.
+
+    The final code is below, which has print and graph statements. If it takes a while to run, decrease the outer cycle number (currently at 2500) to 1000 and increase the learning rate to .05 If you have any other questions about TensorFlow, please let me know, but hopefully this helped!
+
+    <script src="http://gist-it.appspot.com/github/djamro2/personalpage/blob/master/blog-examples/tensorflow/linear_regression.py"></script>
+
+</div>

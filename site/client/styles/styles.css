@@ -44,6 +44,14 @@ body {
           justify-content: center;
   padding: 20px 0;
 }
+.blog-content-wrapper {
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+}
+.blog-content-wrapper .blog-timestamp {
+  text-align: right;
+  padding-bottom: 1.5rem;
+}
 .collapse-navbar {
   width: 100%;
   background-color: #444;
@@ -270,6 +278,12 @@ body {
   font-size: 2rem;
   max-width: 400px;
   text-align: center;
+}
+.main-page .main-info .main-banner .main-title {
+  padding-top: 3rem;
+}
+.main-page .main-info .main-banner .main-subtitle {
+  padding-top: .5rem;
 }
 .new-row {
   margin-top: 30px;

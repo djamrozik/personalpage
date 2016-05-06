@@ -1,0 +1,66 @@
+This blog post is meant to teach the reader how to set up express-handlebars in an express and nodejs environment. For more advanced express-handlebars topics, such as if statements, loops, and helper functions, I'll be sure to make a post on the topic soon.
+
+Now, let's begin with a basic express setup, from here I'll show you what code to add to get express-handlebars enabled. Alright, so let's say this is what you currently have: A simple route in express that sends an html file. We want to use express-handlebars to send a template instead.
+<pre>var express = require('express');
+var app = express();
+
+app.get('/', function(req, res){
+	res.sendFile(__dirname + '/home.html');
+});
+
+var server = app.listen(3000)
+</pre>
+From here, we can simply install express-handlebars by saying <code>npm install express-handlebars</code> Go ahead and add this in your code like so:
+<pre>var handlebars = require('express-handlebars');
+</pre>
+Now we need to enable express to use a view engine, and we need to enable handlebars as well. In this case, you'll notice we're going to be setting a default layout (which we will go over shortly). If a default layout is not defined, you can define it in the <code>render</code> function (next block of code) or not use one at all.
+<pre>// use the '/views/layouts/main.handlebars' file as the default layout
+app.engine('handlebars', handlebars({defaultLayout: 'main' }));
+
+app.set('view engine', 'handlebars');
+</pre>
+Awesome, now all we need to do in our <code>index.js</code> is change the <code>res.sendFile()</code> to <code>res.render</code> and pass in the name of the template. One of the purposes of the template is to be able to pass in data. So, for this tutorial, I'm simply going to be passing in the year to be rendered.
+<pre>//old: res.sendFile(__dirname + '/home.html');
+res.render('home', {year: new Date().getFullYear()}); 
+</pre>
+Now you may be wondering, how does the above code know where to find the <code>'home'</code> template? The answer lies within the conventional directory structure for express-handlebars. That directory should look something like this:
+<pre>+-- index.js
++-- views
+    +-- home.handlebars
+    +-- layouts
+        +-- main.handlebars 
+</pre>
+As you can tell, templates will be right in the <code>views/</code> folder and layouts need to be in the <code>views/layouts/</code> folder. If the template or layout you are defining is in a different folder, you can say so in the options or pass in the complete path.
+
+That covers the index.js part of it, what about the handlebars parts? Well first, let's describe what a layout and a template are. The best way to describe a layout is a small wrapper of code for the templates. For most people, this just covers <code>head</code> tag and maybe a navigation bar. That way, if you change something in your navigation bar, all the templates encompassed by the layout will be changed. So, one change will affect multiple pages, whereas before you would need to change each individual html file (if you didn't already have templating).
+
+As for templates, I like to think that they are simply html code that accept variables. You'll see in this example that the code takes in the current year, but in a more practical example, a template would take in a username, info about the user, settings, etc.
+
+For both layouts and templates, we use the handlebars/curly braces to signify where we should insert data. For the layout we will have <code>{{{body}}}</code> and for templates just double brances, so <code>{{yourVariableNameHere}}</code>
+
+This is the main.handlebars layout I'm using this example.
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;!-- some global resources here --&gt;
+     &lt;title&gt;Example App&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- this is where the template is loaded in --&gt;
+    {{{body}}}
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+Finally, here's what the home.handlebars template would look like:
+<pre>&lt;div&gt;
+
+ &lt;h3&gt;This is the home page rendered within the 'main' layout&lt;/h3&gt;
+
+ &lt;p&gt;The current year is {{year}}&lt;/p&gt;
+ &lt;p&gt;Layouts are useful for reusing code and having one change affect multiple pages&lt;/p&gt;
+ &lt;p&gt;Templates are useful for (again) reusing code and having to only pass in data to html. Easy to create dynamic content.&lt;/p&gt;
+
+&lt;/div&gt;</pre>
+All the code for this post should be accessible <a href="https://github.com/djamro2/personalpage/tree/master/blog-examples/express/express_handlebars_1">here</a>, as well as the finished and working <code>index.js</code> file
+
+Please comment below if there are any questions or something does not work! Thanks

@@ -1,10 +1,7 @@
 
-/* global process */
-/* global __dirname */
-
 var path = require('path');
 
-var blog_data = require('../views/blog_data');
+var blog_data = require('./blog_data');
 
 var MessageController = require('./controllers/MessageController');
 
@@ -12,17 +9,12 @@ module.exports = function(app){
 
 	//STATIC ROUTES//
 	
-	//homepage static html page
+	// homepage static html page
 	app.get('/', function(req, res){
 		res.sendFile(path.resolve(__dirname + '/../client/app/views/index.html'));
 	});
-
-	//contact - static html page
-	app.get('/contact', function(req, res){
-		res.sendFile(path.resolve(__dirname + '/../client/app/views/contact.html'));
-	});
 	
-	//mergely sandbox static html page
+	// mergely sandbox static html page
 	app.get('/mergely_sandbox', function(req, res){
 		res.sendFile(path.resolve(__dirname + '/../client/app/views/mergely-sandbox.html'));
 	});
@@ -41,7 +33,29 @@ module.exports = function(app){
 			return;
 		}
 
-		res.render(blog_id, blog_params);
+		res.render('blogs/' + blog_id, blog_params);
+	});
+
+	// the blog homepage, shows a list of blogs based off of the data file
+	app.get('/blog', function(req, res){
+
+		var blogs = {
+			title: 'Blogs List - Dan Jamrozik',
+			layout: 'blank_content'
+		};
+
+		res.render('blog_main', blogs);
+	});
+
+	// extras, send the jquery foursquare plugin
+	app.get('/extras/jquery_dynamic_foursquare_plugin', function(req, res) {
+
+		var params = {
+			title: 'jquery foursquare image slider',
+			layout: 'blank_content'
+		};
+
+		res.render('jquery_dynamic_foursquare_images', params);
 	});
 
 	//API ROUTES//

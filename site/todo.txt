@@ -1,0 +1,29 @@
+
+personalpage todo:
+    1. change to "I think this is a good place to put a quote"
+    2. direction of quotation
+    3. welcome text, 'this summer' line is weird
+    4. StubAffairs link needs to go somewhere
+    5. add more info on one specific line
+
+personalblog todo:
+    1. finish loading info for blog homepage
+    2. make sure links styled correctly in dropdown
+    3. test padding on dropdown
+    4. make sure dropdown closes when clicking an item
+    5. add in old blogs that were saved
+    6. update small things about styling in the old blogs (like codeblocks and padding)
+
+jquery open source image slider:
+    1. express-handlebars or static html?
+
+blog ideas:
+    1. How to upload images and save them with the MEAN stack
+        a. save for the future, might be a bit to write
+    2. How to make a timer/clock with ReactJS
+        a. do in the future, learn React first
+    3.
+
+overall:
+    1. Make a 404 page
+    2. More exposure to Twitter

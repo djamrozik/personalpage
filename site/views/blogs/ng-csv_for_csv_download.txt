@@ -1,0 +1,17 @@
+This blog post covers how to use an AngularJS package to serve a csv download using JSON or array data. The only dependency that this package requires is ng-santize, which you can get the latest version <a href="https://code.angularjs.org/1.5.0-beta.1/" target="_blank">here</a> (or use the appropriate package manager).
+
+Let's start with getting ng-csv itself. You can download the package manually <a href="https://github.com/asafdav/ng-csv/releases" target="_blank">here</a>, or you can do <code>bower install ng-csv</code> or <code>npm install ng-csv</code>
+
+Once you have the files locally, you can go ahead and add them to your angular dependencies. This means going to where you defined angular.module and adding both ngSanitize and ngCsv. An example would be
+
+<code> <span class="pl-k">var</span> app <span class="pl-k">=</span> angular.module(<span class="pl-s"><span class="pl-pds">'</span>myapp<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>ngSanitize<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>ngCsv<span class="pl-pds">'</span></span>])</code>
+
+After you have all your files and dependencies set up, you can go ahead and start using ng-csv.
+
+The key thing when it comes to ng-csv is placing the directive within a button element. The attribute of ng-csv should be equal to your json or array data. You also need to be sure to add a filename attribute. This is what the name of the file downloaded will be called. Also through in a type of button for this element. The finished button element should look like this
+<pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">ng-csv</span>=<span class="pl-s"><span class="pl-pds">"someDataVariableHere</span><span class="pl-pds">"</span></span> <span class="pl-e">filename</span>=<span class="pl-s"><span class="pl-pds">"download.csv</span><span class="pl-pds">"</span></span>&gt;Download&lt;/<span class="pl-ent">button</span>&gt;</pre>
+
+Now when someone clicks, 'Download', they will have the csv downloaded to their computer!
+
+For more info and options on this package, the <a href="https://github.com/asafdav/ng-csv" target="_blank">github page</a> has good documentation.</pre>
+&nbsp;

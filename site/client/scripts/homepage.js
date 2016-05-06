@@ -178,6 +178,17 @@ $(document).ready(function() {
 
     };
 
+    // if the url contains any keywords, scroll to that position
+    function check_for_scroll(url) {
+
+        if (url.indexOf('contact') > 0) {
+            $('html, body').animate({
+                scrollTop: $("#contact").offset().top - 30
+            }, 2000);
+        }
+
+    };
+
     // show navbar more when clicked
     $(document).on("click", "#navbar-expand", function() {
         if ($(".collapse-navbar-more").css('display') === 'none') {
@@ -192,5 +203,8 @@ $(document).ready(function() {
 
     // execute on change
     $(window).resize(checkWidth);
-    
+
+    // check to see if we should scroll to an element
+    check_for_scroll(window.location.href);
+
 });

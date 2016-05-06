@@ -14,9 +14,11 @@
 	<p class="name-info">Full-stack Web Developer</p>
 
 	<ul class="column-links">
-		<a ng-href="/"><li>HOME</li></a>
-		<li ng-click="data.scrollToId('projects')">PROJECTS</li>
-		<li ng-click="data.scrollToId('contact')">CONTACT</li>
+		<a ng-if="!home_mode" ng-href="/"><li>HOME</li></a>
+		<a ng-href="/blog"><li>BLOG</li></a>
+		<li ng-if="home_mode" ng-click="data.scrollToId('projects')">PROJECTS</li>
+		<li ng-if="home_mode" ng-click="data.scrollToId('contact')">CONTACT</li>
+		<a href="/#/contact"><li ng-if="blog_mode">CONTACT</li></a>
 	</ul>
 
 	<div class="icons-container">
