@@ -44,6 +44,8 @@ module.exports = function(app){
 			layout: 'blank_content'
 		};
 
+		blogs.blogs = blog_data.blog_data;
+
 		res.render('blog_main', blogs);
 	});
 

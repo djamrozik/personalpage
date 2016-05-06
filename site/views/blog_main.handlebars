@@ -1,5 +1,16 @@
 <div class="blog-list">
 
-    <p>This is a list of recent blogs</p>
+    {{#each blogs}}
+
+        <div class="blog-item-preview">
+            <p class="blog-item-preview-title">
+                <a class="no-link-style" href="/blog/{{id}}">{{title}}</a>
+            </p>
+            <p class="blog-item-preview-timestamp">{{timestamp}}</p>
+            <p class="blog-item-preview-text">{{previewText}}</p>
+            <p><a href="/blog/{{id}}">Read more</a></p>
+        </div>
+
+    {{/each}}
 
 </div>

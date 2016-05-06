@@ -1,0 +1,46 @@
+
+personalpage todo:
+    1. Not a huge fan of the 'welcome to my page' font
+    2. Should add more info about the projects on dynamic images
+    3. Make the text on the project slider a bit more readable
+    4. Stubaffairs link doesn't go anywhere
+    5. Doesn't feel very sleek/simple, improve that aspect
+    6. Layout is good, can be used for blogs
+
+blog todo:
+    1. Follow the same layout as the homepage, banners and resizing are good
+    2. Keep the banner, the sidenav, the collapse nav. Replace text with blog text. Replace contact with disqus
+    3. At first will not have a cms, it should be all custom
+    4. Make reusable classes for images (new row and center)
+    5. Add disqus to the bottom of the blog template.
+    6. Should it be a blog template or new html file everytime?
+        a. Could be an express-handlebars template
+            1. Unique url for each article
+            2. Any changes to anything besides article affects all
+            3. Only thing custom is the inner text html
+            4. Could set a field for image, title, and subtitle
+    7. Go with the express-handlebars method
+        a. use index.html as the base for the wrapper
+        b. custom html file for the inner text
+    8. Should each blog entry have a timestamp?
+        a. could add it as an optional entry to the handlebars template
+    9. In the future add a linker between html file, title, image, subtitle
+        a. don't think I want to add a cms in the future. Just keep adding on there
+
+open source image slider todo:
+    1. finish up on the personalpage so that it looks nice
+    2. Should I include extra info?
+        a. could be optional for the next step
+    3. Start /extras/four_square_image_slider.html file
+    4. Optimize to ensure the html is easy to use and put into other projects
+        a. get rid of dummy image from html
+        b. label every class well, no copying over
+        c. add a variant amount of images
+        d. add an option of when to change to column format
+    5. Error checking (like making sure jquery is loaded, images are included, etc...)
+    6. Upload to github in it's own project, make downloadable as a plugin
+    7. Finish up the /extras/four_square_image_slider.html file
+        a. add links to github, my twitter
+    8. Add good documentation
+    9. Publicize!
+        a. /r/webdev, HH Design, Hackathon Hackers, /r/jquery, hacker news jquery plugins
