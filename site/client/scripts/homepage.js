@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     // sizes in pixels
     var collapse_breakpoint = 753;
-    var left_col_width = 180;
+    var left_col_width = 200;
    
     /* check the window size to see if the sidenav should hide/show */
 

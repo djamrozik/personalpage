@@ -15,11 +15,22 @@ body {
 .no-link-style {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 .no-link-style:hover {
   color: inherit;
   text-decoration: none;
-  cursor: pointer;
+}
+.no-link-style:visited {
+  color: inherit;
+  text-decoration: none;
+}
+.no-link-style:active {
+  color: inherit;
+  text-decoration: none;
+}
+.underline {
+  text-decoration: underline;
 }
 #compare {
   margin: auto;
@@ -42,7 +53,7 @@ body {
   height: 0;
   line-height: 40px;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   left: 0;
 }
@@ -139,8 +150,8 @@ body {
   position: fixed;
   padding-right: 0!important;
   padding-left: 0!important;
-  width: 180px;
-  left: -180px;
+  width: 200px;
+  left: -200px;
   /* hide at first */
   /*make height the same dynamically*/
 }
@@ -213,19 +224,23 @@ body {
 }
 .main-content-container {
   padding-top: 0!important;
-  padding-left: 2.5rem!important;
-  padding-right: 2.5rem!important;
+  padding-left: 3.5rem!important;
+  padding-right: 3.5rem!important;
   max-width: 800px;
 }
 .main-page .main-info {
   padding-bottom: 10px;
+  font-family: 'PT Sans', sans-serif;
 }
 .main-page .main-info .main-info-first-text {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .main-page .main-info .welcome-text {
   font-weight: 700;
   font-size: 3rem;
+}
+.main-page .main-info .banner-text {
+  font-size: 1.6rem;
 }
 .main-page .main-info .main-banner {
   display: -webkit-box;
@@ -253,7 +268,7 @@ body {
   padding-top: 2rem;
   font-weight: 700;
   font-size: 2rem;
-  max-width: 300px;
+  max-width: 400px;
   text-align: center;
 }
 .new-row {
@@ -272,6 +287,7 @@ body {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-family: 'Catamaran', sans-serif;
 }
 #projects .projects-list .projects-list-left {
   -webkit-box-flex: 1;
@@ -313,7 +329,7 @@ body {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.6);
-  opacity: .65;
+  opacity: .85;
 }
 #projects .projects-list .project-item .text-overlay {
   position: absolute;
@@ -332,6 +348,7 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-weight: 700;
 }
 #projects .projects-list .project-item .text-overlay-right {
   text-align: right;
