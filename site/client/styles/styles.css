@@ -305,6 +305,9 @@ body {
 #projects .header {
   padding-bottom: 15px;
 }
+#projects .no-border-top {
+  border-top: none!important;
+}
 #projects .projects-list {
   display: -webkit-box;
   display: -webkit-flex;
