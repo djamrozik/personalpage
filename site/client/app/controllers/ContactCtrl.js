@@ -17,11 +17,8 @@ controllers.controller('ContactController', ['$scope', 'MessageService',
 		//nothing yet
 	};
 
-	/**
-	* Send the message to the backend, where it can be email to me
-	*/
+	// Send the message to the backend, where it can be email to me
 	vm.submit = function(message){
-
 		MessageService.save(message, function(response){
 			vm.sendSuccess = false;
 			vm.sendError   = true;
@@ -29,7 +26,6 @@ controllers.controller('ContactController', ['$scope', 'MessageService',
 			vm.sendSuccess = false;
 			vm.sendError   = true;
 		});
-
 	};
 
 	vm.init();

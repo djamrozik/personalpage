@@ -9,6 +9,14 @@
 
 module.exports.blog_data = {
 
+    webpackHotMiddleware_for_express: {
+        previewText: "Hot loading is one of the best advantages of webpack, no more having to recompile after each small change. This framework integrates well with express and is perfect for developing with ReactJS",
+        title: 'webpack-hot-middleware for use with an express server',
+        timestamp: 'July 2nd, 2016',
+        image_name: 'rock_skip.jpg',
+        id: 'webpackHotMiddleware_for_express'
+    },
+
     linear_regression_tensorflow: {
         previewText: "For this blog post, it's assumed that the reader has a limited knowledge of machine learning and TensorFlow. The simple example of a linear regression formula is a good pathway to learning both fields. In this article, I'll go through the finished code a section at a time and explain (to a newbie like me) what is happening.",
         title: 'Simple Linear Regression with TensorFlow',
