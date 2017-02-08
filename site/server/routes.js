@@ -2,7 +2,7 @@
 var path = require('path');
 
 var blog_data = require('./blog_data');
-
+var photography_data = require('./photography_data');
 var MessageController = require('./controllers/MessageController');
 
 module.exports = function(app){
@@ -47,6 +47,16 @@ module.exports = function(app){
 			layout: 'blank_content'
 		};
 		res.render('jquery_dynamic_foursquare_images', params);
+	});
+
+	// the photography homepage, load all the photos I can here
+	app.get('/photography', function(req, res){
+		var params = {
+			title: 'Photography - Dan Jamrozik',
+			layout: 'blank_content'
+		};
+		params.photoAlbums = photography_data.photography_data;
+		res.render('photography_main', params);
 	});
 
 	//API ROUTES//

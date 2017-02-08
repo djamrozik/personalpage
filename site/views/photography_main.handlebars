@@ -1,0 +1,13 @@
+<div class="photography">
+    {{#each photoAlbums}}
+        <div class="album-title">{{albumName}}</div>
+        <div class="album">
+            {{#each photos}}
+                <span class="photo">
+                    <img src="{{link}}" alt="{{caption}}" />
+                    <span class="caption">{{caption}}</span>
+                </span>
+            {{/each}}
+        </div>
+    {{/each}}
+</div>

@@ -302,6 +302,42 @@ body {
 .new-row {
   margin-top: 30px;
 }
+.photography {
+  padding-top: 25px;
+}
+.photography .album {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.photography .album .photo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 75px;
+}
+.photography .album .photo img {
+  height: 350px;
+  width: auto;
+}
+.photography .album .photo .caption {
+  position: absolute;
+  top: 355px;
+  text-align: center;
+}
+.photography .album-title {
+  font-weight: 600;
+  font-size: 1.85rem;
+  padding-bottom: 20px;
+}
 #projects .header {
   padding-bottom: 15px;
 }
