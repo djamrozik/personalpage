@@ -250,6 +250,11 @@ body {
   padding-right: 3.5rem!important;
   max-width: 800px;
 }
+.main-content-container-full {
+  padding-top: 0!important;
+  padding-left: 1.5rem!important;
+  padding-right: 3.5rem!important;
+}
 .main-page .main-info {
   padding-bottom: 10px;
   font-family: 'PT Sans', sans-serif;
@@ -310,6 +315,14 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .photography .album .photo {
   display: -webkit-box;
@@ -322,7 +335,8 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 75px;
+  padding-bottom: 95px;
+  margin: 0 15px;
 }
 .photography .album .photo img {
   height: 350px;
@@ -332,11 +346,13 @@ body {
   position: absolute;
   top: 355px;
   text-align: center;
+  width: 100%;
 }
 .photography .album-title {
   font-weight: 600;
   font-size: 1.85rem;
   padding-bottom: 20px;
+  margin-left: 15px;
 }
 #projects .header {
   padding-bottom: 15px;

@@ -53,7 +53,7 @@ module.exports = function(app){
 	app.get('/photography', function(req, res){
 		var params = {
 			title: 'Photography - Dan Jamrozik',
-			layout: 'blank_content'
+			layout: 'blank_content_full'
 		};
 		params.photoAlbums = photography_data.photography_data;
 		res.render('photography_main', params);

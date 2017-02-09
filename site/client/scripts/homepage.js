@@ -14,6 +14,12 @@ $(document).ready(function() {
     var $window = $(window);
     var show_sidenav = false;
 
+    // different containers for photography
+    var main_content_container = ".main-content-container";
+    if ($(location).attr('href').indexOf('/photography') > -1) {
+        main_content_container = ".main-content-container-full";
+    }
+
     /*
      * Immediately show the navbar
      */
@@ -80,7 +86,7 @@ $(document).ready(function() {
         }, 500);
 
         // simultaneously animate the main col
-        $(".main-content-container").animate({
+        $(main_content_container).animate({
             'margin-left': String(left_col_width) + 'px',
             'margin-top': '0'
         }, 500);
@@ -97,7 +103,7 @@ $(document).ready(function() {
         $(".left-column-container").css('left', '0');
 
         // adjust main container
-        $(".main-content-container").css('margin-left', String(left_col_width) + 'px');
+        $(main_content_container).css('margin-left', String(left_col_width) + 'px');
 
     };
 
@@ -112,7 +118,7 @@ $(document).ready(function() {
         }, 500);
 
         // simultaneously animate the main col
-        $(".main-content-container").animate({
+        $(main_content_container).animate({
             'margin-left': '0'
         }, 500);
 
@@ -128,7 +134,7 @@ $(document).ready(function() {
 
         // find the offset and move the main page
         var offset_height = $(".collapse-navbar-more").height();
-        $(".main-content-container").css('margin-top', (offset_height + 20) + 'px');
+        $(main_content_container).css('margin-top', (offset_height + 20) + 'px');
 
     };
 
@@ -138,7 +144,7 @@ $(document).ready(function() {
     function hideNavbarMore() {
 
         $(".collapse-navbar-more").css('display', 'none');
-        $(".main-content-container").css('margin-top', '0');
+        $(main_content_container).css('margin-top', '0');
 
     };
 
