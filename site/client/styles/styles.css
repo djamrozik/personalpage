@@ -335,7 +335,7 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 95px;
+  padding-bottom: 145px;
   margin: 0 15px;
 }
 .photography .album .photo img {

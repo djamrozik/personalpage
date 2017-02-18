@@ -7,6 +7,28 @@
 module.exports.photography_data = [
 
     {
+        albumName: 'MDIA - Assignment 3 (Nature)',
+        photos: [
+            {
+                link: 'https://lh3.googleusercontent.com/4_iXMiCXclcU2IazADKtPtk1oOEQzNz7l1nab7xGZKPfk52FlA1gJzTyhGHqSwto_0FmdsfZgXm7PBVb447JCHr6SpUt8jp8ZE8LNPY1G7FMZhU01N8sSxikmGEeiw-HiIOeeHiA7fLu-C32geocMrYWXvnzUZ87guCiK1U_E5fanfti25qXeQN1pUlrnX3Bxe_njxkV_hGr-jZFGlnahwTrXGA-srd82lwm8kyG49jcwElyfmrhA1gYpJrcsPr18Z_1CWZ0-vw88PgkUlHs2y9L7T1Sd02HodVxzf2AjZSMHYThIa41B2684KKSIn04Y0QoNf9rMzefd9O9IPp7K9CiGpsXP7X-BOaCi5NsHZh8cYqruZ4VioLaT2Z_ZxMDUanZo0loIZ2u3XjnLqozkX3i_Xi2WBWeqew4SEBn-f2rU7v3FvpgIaRzSCaktjd_Nqo9v4aia8lF6P5G0qiVYifOZySDNlyGQIky6kdN62q1N5aOyWwLZJs8vA5WqSanqZS6E_1bpR8JTGUT9aQ8vYB6icI3swWFjPngL0cp21nQZcTuJicE0mn2jPqTYwJKxx9olQaDoRwmVP0LRPP79rtofzTVvtE-medovQPZKu-TybZRbvL_=w479-h638-no',
+                caption: 'Sunset during a spring evening with clear skies. Taken south of the Japan House looking west-southwest. 2/17/2017. Keywords: Sky, sunset, tree-tops, spring, orange'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/hTKKdLVldFuklDBIl3f6aiJcyibwMNHVZxXnMfeiI_5LEUmS5zfk1_o1KssgoU7o82Fy3xswEi51VpfnfrUlfzHu88-N23ZXEhvjLBeJw2YTrXmxbK-IIeLy9umEStKzwgXHSvxSu1QEXGydgpu3MgdvAe69jNgi5b9BMMQXpmqNaoRTMajWxxW6wVGji-jMgs6DBqQd0ImVOu9Cybmq5X_Saq-9C1feYkao8kpPjdXffXMaKacCXvzllIJc9K7-t3FU_mJslF__msZOECJi17W6iBBoicfoRmHQGEjfejmbFcBoIfWHDeIhZS3jLW1wjvG3rgbSxDaJTwV8MSXdVweUOSFoFzDa-fr4yEatUfv03X6G7F_CHweGc_cDQAp-5bOY-ZvXfCDpjF8C9pqsOtDiIBCqRFTgEACFqh43YaFcI8YQX6rYprOMuXeDnNzW5aV2RO4ved3DG8DWHZHY_25CrcTEgi9hj4M1k3U3AVDzg0oThLOnBMygluIJTUFUjV2-u3x8Kq4_uY-kwfWMlewc1dIPKJZK3Tn8rVoVIbRBcMEx32M4uj5hf4jF_ftkvml-qrkbF7dzavTQwCq8A-q1kMhSVHx7vPxQ-_N8JnRh47vuFr5k=w479-h638-no',
+                caption: 'Close up of nature, species of plant unknown, 2/17/2017. Picture taken inside of the Idea Garden southeast of campus. Keywords: Idea Garden, plant, close-up, detailed'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/0gzsiutrH2WT7MLOu3Ya6fpc4MCCwMerAUoS_ahRg0Rq5nhSXlJSLwF0tMoMP6-sV8x4XIQWRa_9WAdzghHBPtMLZ89bmTdGWl5a0FehbaCGAu6NcU2FIegsCYIZKMzrMM7HPJqtV9p-h-Kv6pcv1cT3W0pnXtlUzjYxItj2liIMlq6MwZAf69L9jDS6q98KyG2iHpXyQGhqJWSWQIftUEWct6HGFlB1h10uXKXEWFu9w6mVvyugClEITuFfshQbgnO8GiLYmLOSmqSj0EUfp0BO6JQBlZncvlW5pXQ8EQF9bMAw4zHY1WCb6_gBj67qjNQtHOEopH7iz3wvTcbc3ooqBwec4EFetf3ExOUSLaCRw7XBCt0inYp-aHNG1E6n0bLFrHQ7taIm1PdsV9yApMq-suzOOxwfQVEP9FUDh8_ZeAJ9bgV3kxgWchuMLd98tqIUHsX_SOcfQxGYaHEAgOrEA7lFunj6sr3jv1UJr_ShODRkeXiTF9lFLa66jd9j0Va_9UKLrOcPvybSzvIRdaVQew90wFF79Fem-dhEII_VNewIGHZ3uIV0lacgikupiKDVzD6cI4WITlNytF4Y7ATJV1hr4Msw35R-NrxnD_6-TMJM=w479-h638-no',
+                caption: 'Picture of an urban landscape. Taken during one of the few snowstorms during early February. Picture shot from the 3rd floor window on the west staircase inside the Main Library. Taken on February 8th, 2017. Keywords: Snow, urban, Wright St., midwest'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/uleuIBgbgN27Z2fqlr4Qty-l22EI_15N_w7UPckpnRn0QGmH_w0zCDCFPdduD7SZGp-Yr0fEvdPxQVOk6mauOnNcZbaB1eza2Ko9pRUM-zI3SOwZ7HgzYzExIkrjLYtZlcZs1hW_B0qr2cMDeFqPbrF2_9bFvACw6HvbbNwUE_YBwkmRKQeExe_BmqWqmpqg1QBA5Ypw8z9ATQbY48rObkjviyUz2MkrlccNcdTiMKgsVIv_8pzJoX8TZLTdJ5PneF1czSpDXqVcWMgfLzyVvDYLWOj8hYpXUG1sEY1tc7GCYHoR9T42IQz3Rp5djwUlnOMK_iUzwtLXh_sehEjP_7OfJH6iIw7AbwGA9920cpHevFsARjrkoox6uwiEwovaN6cFBuMVG0ao7EjxkarzEtPbvO_Cnk-FHu_4cIMH7xrNJjHAprWZw5fy0I7HLNI8lQf2ni-zEUSU0_9_62955P8mXRZgOSgJ9Mr67YMqxvJWGtusHHeZf2NLiNr1GsamyJsOnYULfmUdH15x6yD0NRECL0UuBH4f0FTZ69s429wrWfPpNIZ75Iupc4EWdIlYuTC-9060t4S6Ykf-Aqm6YKXrwHX8wH_dp-B2jPA4gdzFNiA1Unj8=w479-h638-no',
+                caption: 'Geese wading in the pond at the Japan Gardens southeast of campus. Taken on February 17th, 2017. Kewywords: Geese, animal, pond, Japan Gardens'
+            }
+        ]
+    },
+
+    {
         albumName: 'MDIA 293 - Assignment 2 (People)',
         photos: [
             {
@@ -22,6 +44,6 @@ module.exports.photography_data = [
                 caption: 'Group photo: (left to right) Remy Crowleyfarenga, Jeeth Suresh, and Tristan Schramer, taken during a Green Observer meeting in YMCA, 02/08/2017'        
             }
         ]
-    },
+    }
 
 ];
