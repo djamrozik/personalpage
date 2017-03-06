@@ -7,6 +7,48 @@
 module.exports.photography_data = [
 
     {
+        albumName: 'MDIA - Assignment 4 (Documenting a Process) - Sending an item sold on Amazon/Ebay',
+        photos: [
+            {
+                link: 'https://lh3.googleusercontent.com/dGxwWXupM4r1sxbBd3E7B0PnVXjGALV3THES1ftmonPG8FlkZnrmJkRg_k-QBf10nO650oH5h7EcHCO8-AjqpaqC-ydXlgkvDWq7dUHc-BMgPJQGbkSFAKrWXOJpRAVPjx37LGRcheXU2Ev9DiBZTzJ7XvgTeWv52th3tk7uPMW8JrJooQW_ldPPkZ7bcPG4aOYcfaS44POcSojK00uDMpHacrpRNnr0C2vOz5lJ9lV1kMyH97e1kIrN3flTw0eM8EtCJYhGs6eGhlNHzliXYbvmFRcmnwlAs7X1Wv_M0FCASft48t6ZuBjGPSnGyJOwyrZtROEPqOw4liL399cQ0kyA9XPBGrhDtYldQf5fnvZ75Ph0fvYkxr_q8sIIdUJNEE7ewHsdNNwI1Mb52g5aJMUCEbXh01LR1LVMExZ7Q9jkrituKsoCV1r7W4LWEZprQijJ8V8c3pDYUOstUq9FlxkYmdqralpOBGNA0jzn9nHeB2UxIXGhJ1hetq_9ifsZ2wCPAYTz8wDlKiZAG5GvCIOOqVjbV-PMZfYZVGDX5u0-Ba9vj3LOgr6MAHIIkoJBXHBwNlCuMUdKjdyDDbyVsSvX2R7A7X7WbMui1ul56brQjP-a2HOK=w1202-h901-no',
+                caption: 'All items needed to fulfill an order sold on Amazon. Some kind of package needed to contain the item, with return address and sending address on it. Packing slip to be placed inside. The item itself (green dog leash in this case). And shipping supplies to tape addresses on if needed. 3/5/2017, taken in my apartment.'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/GQOSBllt0JoOZZ3sqGYkLdKBen2mABwdRbCBRLOevJlvtASYqu5AlhgKamCa5rbs35u5LdqOOAo9eLnzfdLQTuNOOZcCxg8qZU-7cyoNdpNYWB2J1Zs1gwTWtE19rLbYEx5Yyi5o5D7D4YRk-j87cZPoVZgRaOaCPRP7LqIw9Mr4LaSLp7UGnTJ344KGBOacP62Ns28MC2HlqLrrrnUMRr0Wf2ZHbzy5ed2uovDT91Vu-QuBGyi9Nx27qwsFbCw4RFOBJSt4iB_wLW7v9AJvPKqqIlng8WbQq-JBMJeBZ9CEi36a1TgmXPrAVgaJxqJmjpotOBVaM7hs6qUye98GPWFXskd6ixOVB_py-5UTAbyy-7cu1YexRx--1Aplh4nf9k9MI628lP-LE_xGTJUY_9JA1EqYHZsIisuHSjVLhoBbqTZidOjun19gZP8lTpLaDWV8NLZhFSGt6NB-w-6racMg5S7kPoyZMFG9dfpONinfBPRkSPA7XIA_Vs4n1sBdABQIVl0lq1s9yo1fMi3gCYMBMO5J0NEzDvn_dxigDCECBMnUyXXNDNNXAdZvISLkfvjjie92qkyEuXBp5Bp9yvpetXpL_geuogFBJpouAdosy7n2ajLh=w676-h901-no',
+                caption: 'First step, getting an email notification than an item has sold and needs to be shipped'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/sdU9bAGq35QrO8wmZc5XFrqBAi7JxXRwzWXrN0cDwTPUSvRmF5guWGB6It8YEwYfXK7t02IGMJZ812jiAml2hVJMztzALpKZ9N7_6RtrrbIqbV3d7no8kKgaRVlCywZ2GT6ZjMft-etWt5v6uJK3Ji8gxJ3HbGaPx4CgyBfoqT5FnzNBZyRqaOBijEhIxwX0-New5StPe7sKTmV-vm7ZkAMWtwGWxVYcBsHv0YCI61m8miSPG6H8P5C3Ch8E5ENky62Di5dU-YvRF9JgxB746TpOZDYpIavrs0L_rvbbWS4WiYiJPRGgQClD8vou71_8L-QC3pmMGp1uOLWR8NZHH-kvuuOEsrpWfve_QfxEgl6TOLTwqyL9F0LmZ3zZLs9bBvXoQgukljjQV4gvPUgdtFYs57sa5bOu2vPhPbi5Fz-sd133ubv4AsyCxGpPDP_u7kfnl_bWXcUWbUEgjeTTI55Z8dFbjIXnYvfyGHgSo7XEnqckhEoJ3lCQpWV83Jpma7Q8S7CfyPXg3GUn-971U-XQ31pc5k3MviLGews4oQnhlQtQRg4xvwE4qVm4iCD3kyM0V3Mbxu1ITVT1-l0keE1lYxbM5pntSO9Z7GYcJ1MPvQ2tEYxE=w713-h950-no',
+                caption: 'Take the item that was purchased, ensuring color and size constraints. In this case we are shipping a green dog leash'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/b2McFy-ozhK-9t5djGWF7V3J1YjlS_hbqOHwKenjAgimNFZlgjmJFsKrllLgYDmb_H-KCOXUh9N7AIeNBkQYYskh0_2eK9P5uYrMudRHToXtuKqmiujtRBtoltJYb20reaUX3E_dBEgvx0pVU3WGoSlbOH-sVMiqK_vCcC1jLLenpWUd9WgtHWgXzt49j3D44OjPRPGN9Q6ep4Z64M1TVN_EeRW3HXvyww5DUSL3oTHYpHuhlg2SgRn4lA7NWHadPYy9E5neKnjNm2loAAHhnNFIsdV1Wrhn2t-x7sjiV0o0rcFuV45anBwfd1uB1QYaK8yjwCaZv2T8E9OTWsFi1eav3co6orxx7Rdt4hhDgWe9gaXP3wHPQHCw1LSgCgXQ8HGcAgopy0z3g93y8eZA3KUjA05VzA9pVGEScl8YSfOG2cDLe8X-yfgcHFTZ_6VXOW5N5qEs5TjlTSFJifhGfiV7y4bZVVdKrdB-oopga3yZt99UsOnCy3eJbretHCBqbXo2FEI9J-l5DZz26GZdQaKfqqVz4VRsivRB2Uj5H5dEvxLi-ri7uN2xvrNx6FZBnx8Ea_ibX0AuJz06lKwnwNq3XJY4M79TvozhFdVFMzfcOwJ4=w713-h950-no',
+                caption: 'Putting the leash in a well-sized envelope. Light enough to keep costs down, but study enough not to damage'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/iowvRYisXe7_muHVnrW_rD0Tz96VU_cXMbOL5ZgIPF6pVkEG10xGdXqQEGcUcw3zfrwEDkxoK7oDlp1k5AaxzWvM8TIiJMLmo1QoPdhDmi6_KnQEs1Uuf_-z-qIk50kmGF___6zC1lt4q0UwmONavcWVF4C6K38LTxGqEVk-LqJuKtrVWW0ZyG6LC0fZjp76jQjlrmEWGbw6XuBmifA1c7HehLhGmCBzJi9Ak9KQe_DKm3ijLYodUoAsQKzR8wMSCsYEE6Lwlns8o3uoOwZVLReV82fT0ZNOl-9M_QXPfdBEbXPeHUlUML1GYei9FVOFp3JCZZedbkl0l8X99Sjf4lDyrYz70Lnd5r9zD4G4YwVELMF1UqN5QAjh2LnH0xPSb43gAJcXyHEN_QeYwglj8TcFlIUNX4gLj2Hras5zyf0OTV1Boq0gQq7IBmSTRFTL-xFxsydr2n1IemyFGaN8NjH6cKGs9N0NrT079CBUQNgVCyUIFseqV2ubgiDZlzIi-YaqIfXIsFdOyVMBwkm7S9b7UY1ZoA5XGi-I5vijzVom0h22XMqkvkvBa3Jxs_mLU2ZeQIRB3EXDBnTBOHJ1S0kQ04eV8BmIYpDJB4Nz_JhqxKQSjzBt=w676-h901-no',
+                caption: 'Printing the packing slip for the associated item - print two, one to be put inside and one to paste the address on the envelope'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/f3SABn_dZhM6nYIdxdpbgNH-KJxFzGBGgVuTM7BlFWa2x-OlMbTiRYXWL0cMI4AlZnyhIZT3Dr1fEcblvSfKruKHFPmEtzHYZI2alMkb3HELaiCpOknnJqTiKN33YiO2F5K8eJzTrrSSGavLgNmNfl9RqHWKTB1pmuMULCMvQkBNKfr701G06Gbl-8SBsOe5igdVbl2VxLgrvVUeEIfNakhwwdqNJpITkqImWLguE72MKpwbjSw3vMms5Gii29ROJWmIGoi0o3VAlI7IcPT-XG-lykm6DKI-_897tJ9Y47hHQs5Y7fIByNdHmohE2-ez8nKyZSgtvC-J-6FTNJ0nXsZoCc-FuLz-bFa6T6lFDW56JOwpqGzQw9Cciw6GAyKqhko4UgeEZ_3jTW5ejW1tbrZkjgz8oMQLVB7XjdKYgrqT8qOuQrRcRwzesjC2fI-2us3Mzxgo_9G0CNt7k8BMb9nGaw_RuhLZBunUbi-EFqLrMo4Asv5hOkcEfhoycOO7iXk5xVvejZzc1O9kxWikXAtXMpkz0280lbkGbs4ShM6hb85Q7rDIlta9PTqbQr9qY6eOsWLmzX4neMn4S97N-NGthUmOeIn2yqZE5Kkb7URNLf9-y4lG=w676-h901-no',
+                caption: 'Retrieving the printed packing slips from the printer. At this step it may also be useful to print a return address to put on the envelope'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/L3sjPvQbovu6FWnt_ZzVTpUdw1EDfp3-i9Sg19VXAxpZ-yJb2BfMLoNUFy3Zc1ZNPoRuGiFLBFtI3iboKwM8NdC2E-eUcsG6gTHCq5qjLEba9_MO_XaOHGF6ixojAJl9ix4CKk5ihAUYrtOyUIvKoq0FNGmOhoWiYacFwRHxsnpgQ51cwf-uscC_8Lx7x6ZoQEEblLXobwtw2f8EcaDaC6KmNofXN9WPEbk8c_BzquJMuXN8_dd6OR8fKJTQuyP4MmfWiRha86z9dGutx7DTRET2D_8HPo825gf6wY7ohfkOXmU6lSdSX9BfooqAXqdgOH9vqvaH6fc3_wjTyzphVvFBNtO9vSUvUDPWQZyMPE1-0KoivR2OGCqJ1MxUpOch3NF47ggDR3RSUpb6u_KNUcztjqy7gubBspJp67ZrjF9BedCp5pHZKhZbyeoo1esGL_Z0ORNb4gfetZBPUAYr1xE0NGOYEnzWWh_bVkd-99pjH4HyMiQ8u4FG2MkiAlkQvyEsLiOhiPJJAmMrYfRNDcCbmG_pV1nNkOVbR2TofTG0SpTq0slSM8Qjf5mUMKz6_2P4atExtMfTqLKFGBFdV2uQCJ4f1jbToPkMeE9qsMRvV65A=w713-h950-no',
+                caption: 'It is important to emphasize that one packing slip must go inside of the package itself'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/v6mbCtZyMNkMgPONpJxZTGOoAHC0ogTqvF_7cxUQHPvY4lbhu6n-C6AbCNU8X7PI5QcCOxjqt3pvmXjiXdz2z63x5X3NMIqtjQaCYnU7lylk-MQKNHXoBbKFLMQZlSJcODIpJD59ivVPKY6XwY3d5Ds5GoqBSfQgSRFMI7vG4lvVIVyMDsZvXvdcuo0DtLFZdC_w3ENjf1NUHwq92cWH3-yoTNDIy2jGKQcKTMMpxqITtXF59F4I0rATFSkaup0E13aBJ2ql9NVPMe4YGNkkUCqIvs5PMkwqYeVXIcclbDiNQdNXC51DfVo2EBJENVUi_xaAOgDzDEJZHaehTG6ClCUVWsdKNMRtBoFP2f88nDHc6ZVBlsLiY8JVGqugF5H327ExllgiR40tkf_zQ0-qknUhkJTkN5ODfH_HqegG0gwIDovV3EgYebsDb7hsfj56-FaQSJHLqNaSNaK9nIdZZyYvHC-_UgODYYmFpJq7izt6i7wpF7BsaFPKDBiBe02bCfCBmKBbC-mehwLUbaYdAKyLlp2C7VAgq7XZzapyQL2x8moEk47tD81OAfdINQLkexh04dHF_JDue0OFkBJhe33KTk16exar9ZxKGHBkwXE3_1UF=w676-h901-no',
+                caption: 'Cutting out and taping the return address and receiving address on the envelope. Some may prefer at this stage to have a printer which prints labels that will stick on the envelope'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/ZpXnG6jvkKefiT1fKiYfRCLoAqZX6Rsfkp6TOY81jezVNj0UxgC5fq2l-HxuIfogwaT9uqnTTtV4beSnqqTmjFV9nDTxWzj7bCYMBb7-eeb3eFiDbW5yIXLjL41xse-dazeQsTYcerUHE1qdjlglXZMfCXRJrqhCorlEVmSS5L348246s-UNvJV-xDbFGXOaciioGZ8DAqqHp4DZDT67hbvKlTHRP507ubaOK7oUC8Td5nuzEvC3fYkAxDZYV6cbVZoV84A0nfWpNuxNurmykmU_KbzHAcRjoaW3mSsxFOPaXSSz4ya2tx3zhu1DXmKv36QNgjrGGnj8cZIFWsT3zPCBadF28vO-26Lsi1JHnkef7xoHe0RVSFbbivnbs4iOPdUHhU1Zl-OFhvHYJo3skF7zmdaj46PLsSTj1kJrwecjw1mAGpHerde-n9DNefezLsQRou3hr_dReD5DX76tGj1r3ZGVLh_shPVPZKpcLv-oN5_idq5UbNCG2Lz1R1XACRFqI2O15mS0HCs6S7esihfsnDBWxc1DH0yfYHHH-pF659OQewGmNF1jVihItmEmYrqpLq2VEaXqA23qWe0ZqBZGVJ1bD1zVmgxfnzDUZtx_l-W0uI5G=w676-h901-no',
+                caption: 'Taking the package and sending it out through the correct delivery service'
+            }
+        ]
+    },
+
+    {
         albumName: 'MDIA - Assignment 3 (Nature)',
         photos: [
             {
