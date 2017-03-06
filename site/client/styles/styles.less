@@ -53,6 +53,24 @@ html, body {
 	padding: 20px 0;
 }
 
+#large-image {
+	position: fixed;
+	display: none; /* flex when activated */
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .7);
+
+	img {
+		position: absolute;
+		max-height: 75%;
+		border: 1px solid black;
+	}
+}
+
 .blog-content-wrapper {
 	padding-top: 1.5rem;
 	padding-bottom: 4rem;
@@ -368,6 +386,7 @@ html, body {
 			flex-direction: column;
 			padding-bottom: 145px;
 			margin: 0 15px;
+			cursor: pointer;
 
 			img {
 				height: 350px;

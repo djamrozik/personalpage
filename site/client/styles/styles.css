@@ -44,6 +44,30 @@ body {
           justify-content: center;
   padding: 20px 0;
 }
+#large-image {
+  position: fixed;
+  display: none;
+  /* flex when activated */
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#large-image img {
+  position: absolute;
+  max-height: 75%;
+  border: 1px solid black;
+}
 .blog-content-wrapper {
   padding-top: 1.5rem;
   padding-bottom: 4rem;
@@ -337,6 +361,7 @@ body {
           flex-direction: column;
   padding-bottom: 145px;
   margin: 0 15px;
+  cursor: pointer;
 }
 .photography .album .photo img {
   height: 350px;
