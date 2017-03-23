@@ -7,6 +7,24 @@
 module.exports.photography_data = [
 
     {
+        albumName: 'MDIA - Assignment 5 (Architecture)',
+        photos: [
+            {
+                link: 'https://lh3.googleusercontent.com/0YQwVLyc2cvnMW6zcIzpS4f3cGxEe71iayFDa26tUoF-63PCmBHS6LnkNRrYXaurOEvgTzpgEBZh636UZwn9HBCSbDWDquwe-kdmGAEJq1AFBJoX9WiZOOVKxSH2N7BqjUVqGXHXBszDWilzyYJ7vcMAiKVzDvsO261KXTd-9cPf6UdVkMjKwyL1uP3CWhFvJxv10CQ7wjXW5iSE0mA3VkJC31Bh6HixsMwDbTN5v61EzknnPDQTomCGn5GQOYsVpgDILHBuFiuiT08L2oKCfbJtsyA2m-5xnWScfSENxeyhcjSXed4ZCIKZ3uHl4lVhztbTFug9Vb7pPKZnULB_rFK7M7PvFr4OlmpPnLLgByyaTlqVJwQ7XdN5i7ygqyz4zzmKY1TRtKUHlSlVKETXDZCq7cYD14zuVPLrw9Qx3THjtFbpWI1tHOxhYbA5Uh20apXwfX_dE5tU1y0sCXxoInmnQYxqY9L4r7_59oRJi5M9dU0bRgTmjwk4e9p9wHb7kEgglLLI6wlyurE9bBO1qv7tlpyOPQMEqdnp1BNuC1ACLN5MtiHKG12EKSfyAF4lkOkAMav8jlwbbc2d795-1jgs2AzfS4kUyx3lYvoQ7iYiZ5qj56HR=w479-h638-no',
+                caption: 'The M building at Moraine Valley Community College, with a structure of pillars in the foreground. This building is regular compared to others on campus, but stands out to me in symmetry and color choice. Taken on 3/22/2017. Keywords: MVCC, Pillars, Symmetry'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/wHGxp0IiRwrp27vpst_82pFQQ-xh-D14M4s5GkTw5GP6yhNtJw1xknGuYZ1rzcPTWhzZDHVj0VafLjNXARwtpNviJKlNEe5exQRrSQf7tEnq7w5U7WRs3KRL3WfTAEN-_GtDWw4iz7TwpghluiAwfw4oVjews-6hk994ZKO7k7MiK8UBKh4Hg35QoUrUmaWFVRXI6Su-D4z6KutVRuh1x3v1ILBymVrlwbklPE0JlTaIvSxzs_F5Vbr4h4ZkHLSxh6c4lOr4yrF0aRbfTTxUHyBAjNmxRdYBVBwaPoSFRXNEAQ3_RPDh0JzTF0ikfvLIFSftgG7p4Tb22NVvVJTUDQPy5a8LeCa35hkagMbAA4_xl9F0KEKzWReLAdVNKIF8-85zblPi2s2WguXMiQtXfxj2guZifyMvQEO0hGDx9Yyr6fK2IbehyFcM_MH1qjJ8U0fWerh8JyqYvUSv7X5HIyvmNfNO3fE1P1fGWB7EheGAfXxOKBHSUx-RdSVKNzNP4KjLezeYvOx0HWK76GPhRGk105mRvav9QCucroV8zZ8N7RcBI1GRaMmnTVsLIPGjrst9Cthl3lH6dc45pPbk3gdyWmzcRvkazTprnUeZ0gArKT0LMDkB=w479-h638-no',
+                caption: 'The east side of the M building, depicting more symmetry shown in the building. Also contrasting colors of the "frame" against the brick wall. Taken 3/22/2017. Keywords: East side M building, brick wall, symmetry'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/nuHDTXA9qq2Ag0MFGq758hAAk3IeH6-bfUCS5WgAqM8K4rGz8ss4QLlFB2kH-EwcUgYuyFvC1EjnWgCi4czCV5CO2lTIpUFi3tK777pfQ7Opa5Fd__dC9wMExg6q3hpQVk-adXMCPLYpjUJtLJY0bMUZSVykw9FB3tMwSrNeXPk-OXL2zkXo6xSSlaeti0BYZF3whsWIyhEM8ekepFOuEGozM__W5BNFppj0XRt50M86tUasvp_8srzK31CU-1cV9AaNsOMzh8zRUEJI54SS-sGt5e24jyZfw7x2rLwtlrdyoVNcqrW_5Gfki-5RKXiRC1TIY34hoGHrOpZtL5cfpGqVvhNHoqca2dCzfHx8TvjkM0wx3OrXTo77Y0zI_ovBuLp-pvyLn1tTYbZQP1aeut4QxGMz44rQB1mX1Havgm40GPqBExmtQcNFPFKMb8FvtLRvppRFWIT_7E3xLK8l3xMLRGCtzZJ2ojaVnanY_S0AcYe8GB8N5G0LNgBuUuSkaaH6tXC0dlKBE0xJUcWDxUXW2sZGnfPVRUP9P6TT-gZvx6fMEDrc8ZZiANAtLgru_NqeZVYb38ptkA18EE-EfQR8CkMR77lKAet61N3F4EZ6F07E=w479-h638-no',
+                caption: 'The south side of the M building, along with the building information. Taken on 3/22/2017. Keywords: MVCC, Building Information, College'
+            }
+        ]
+    },
+
+    {
         albumName: 'MDIA - Assignment 4 (Documenting a Process) - Sending an item sold on Amazon/Ebay',
         photos: [
             {
