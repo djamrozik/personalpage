@@ -7,6 +7,20 @@
 module.exports.photography_data = [
 
     {
+        albumName: 'MDIA - Assignment 6 (Illustrate Trust)',
+        photos: [
+            {
+                link: 'https://lh3.googleusercontent.com/pz6p5UmErNVCP8Mh5PXSZi_sO8ykHrLAgHnZYWLYpCJowl9lkbN6CMv1hLYAlwVuRjs_Z5Uwacitqj08sFcjjyQtoeIbQVi9cWiSmtIM209YauNS25i1TzBb8vOLoEsp5kgW0mSvFtTWafOrDjlfFm2oNsNbDBLP5yjJmE27tmabVbmoYMKqk3SwpztUISYvZv1P0lvT6sB1260xDv6_ZYpDo6b5M9bLk6bI1jANGkWQCscO0wwy2uunbV20Q2c31DUYC8hFGAAim2lMGrcyECOt3pDVDuzcFL2z7ZybZujV4nJQ0lDev_d8h_Cvji0PB9GzOSxSrKMW_RsNuQ-lt9tnQ_Lz2HbGsU_PHe6g06r_R5eRGMjeY0OZE56sg39QLkYftl-a1r3ty7LfkjbXYx5NS1RxQeqzFfI1ZSJAy1H78BZ4HmsFG8TVvWT8PtgYQgbLdcK_pLFWpBxSeQlZS4Albpru29Fi4006BwKxWSOi8KltFCoQbAoDoaUEZmmRD0udVjy6L6yahXQzl5iGirQMfC_YAw8KtfMEmZ492Lmh6pA0GWHWAYjZirdW5LpIdIQckXA9WRC0Ik0ef28QaLviO_Drf_hfVWL-4Isp7lI_zXFI62LK=w919-h695-no',
+                caption: 'A couple of geese who trust that the person walking by will not attack them. Taken on 3/16/17 as I was walking by the southwes corner of the Siebel building in Urbana. Keywords: Geese, Siebel, trust, street'
+            },
+            {
+                link: 'https://lh3.googleusercontent.com/SXRjiMmSgNFYJ86pMOQ9w6gfAdPOq2YPAOky-16r1aEXN-I-yTcMegvfTD3S_lM8PIcWLS7KlcaeE_f_AozKgITo2r9Phyznr1KdV598BIUN-jqOhLCeC1eWqzzPDNM4uGkGSQS16ujLXcoydVqTTdCR7vLgSecIP6qonx3qa84j07EGdDwdnVvN2pvvohtYv-gFajRnwwXHJA2-jMBtwL17ZQ77orqjm0K22bElIi2-QhuqHoar3jdElQv942ndz1H0_94OKQG9v3y-IHfsLq0pk3cTtYubPwa4MY_cOkumSExjiRWk18jv90zMsXArLScfxEJ50sfoqIDiBRbIhf1fmL16JyDKbqlFn8AUPuP-kudPgp3wc2pDwk0iQmDf99Q97HyZPtOYylEcECP4qnNQ6upxwe6k9EnQAMid1J4DEu0h3uVt1XtW2-I5a47SEQSiKM_qktTSUC-dIeUp5K-lC0Pd_MrOHl9wqUXaAaJ66SsXl64QZrCh3r4N4ONW8wxdFfZ7K8H5CrFPzf565l5r0auJfwkAsSHVURVBSFNLaR8WIxmTiwZALsNdZlU2cnVdUepGk3SnIAHgulQeZEGzwtLROFDvJmZ4loo0eYAogRFveyqw=w494-h695-no',
+                caption: "This picture was already used in a practicum, but I used it here because my dog (Skipy) has an expression illustrating happiness, trust, contentness. Taken in my backyard in Hickory Hills, Il on 3/24/17. Keywords: Dog, happy, trust"
+            }
+        ]
+    },
+
+    {
         albumName: 'MDIA - Assignment 5 (Architecture)',
         photos: [
             {

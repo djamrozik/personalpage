@@ -4,7 +4,6 @@
 var express     = require('express');
 var handlebars = require('express-handlebars');
 
-var local_codes = require('./local_codes');
 var app         = express();
 
 //environment defaults to development
