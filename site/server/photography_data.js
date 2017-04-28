@@ -7,6 +7,36 @@
 module.exports.photography_data = [
 
     {
+        albumName: 'MDIA - Assignment 7 (Event)',
+        photos: [
+            {
+                link: 'https://s3.amazonaws.com/mdia-photos/event0.jpg',
+                caption: 'The CS@Illinois - WCS Spring banquet being set up, no guests yet! Taken in Siebel Center, Urbana, IL, USA on 4/27/2017. Keywords: Siebel, WCS, banquet'
+            },
+            {
+                link: 'https://s3.amazonaws.com/mdia-photos/event1.jpg',
+                caption: 'A closer shot of the event being set up, tables have been set. Taken in Siebel Center, Urbana, IL, USA on 4/27/2017. Keywords: catering, tables, empty'
+            },
+            {
+                link: 'https://s3.amazonaws.com/mdia-photos/event2.jpg',
+                caption: 'The electronic screen prepared for the event, also thanking corporate sponsors. Siebel, Urbana, IL, USA on 4/27/2017. Keywords: screen, monitors, corporate'
+            },
+            {
+                link: 'https://s3.amazonaws.com/mdia-photos/event4.jpg',
+                caption: 'The food area being prepped for guests. Siebel, Urbana, IL, USA on 4/27/2017. Keywords: food, catering, plates'
+            },
+            {
+                link: 'https://s3.amazonaws.com/mdia-photos/event6.jpg',
+                caption: 'An overall picture of all of the guests seated and taking part in the event. Location: Siebel, Urbana, IL, USA on 4/27/2017. Keywords: guests, full, Siebel lounge'
+            },
+            {
+                link: 'https://s3.amazonaws.com/mdia-photos/event9.jpg',
+                caption: 'Mid-range photo from the other side of Siebel while the event is taking place. Urbana, IL, USA on 4/27/2017. Keywords: waitress, endless, tunnel, professional'
+            },
+        ]
+    },
+
+    {
         albumName: 'MDIA - Assignment 6 (Illustrate Trust)',
         photos: [
             {
