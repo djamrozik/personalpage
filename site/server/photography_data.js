@@ -7,6 +7,16 @@
 module.exports.photography_data = [
 
     {
+        albumName: 'MDIA - Assignment 8 (Free Choice)',
+        photos: [
+            {
+                link: 'https://s3.amazonaws.com/mdia-photos/train_underground.jpg',
+                caption: 'The grey of each surface in this setting adds to a cold and emotionless atmosphere depicting parts of life as an ant in a city. Taken on February 11th, 2017 in Union Station, Chicago, IL, USA. Keywords: Train, underground, Metra, cold, grey'
+            }
+        ]
+    },
+
+    {
         albumName: 'MDIA - Assignment 7 (Event)',
         photos: [
             {
