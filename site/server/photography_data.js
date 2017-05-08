@@ -7,6 +7,16 @@
 module.exports.photography_data = [
 
     {
+        albumName: 'MDIA - Assignment 9 (Self Portrait)',
+        photos: [
+            {
+                link: 'https://s3.amazonaws.com/mdia-photos/self.jpg',
+                caption: 'An image of how you would like to be seen. I chose this image because it is somewhat lively and professional. Taken near Engineering Hall, Urbana, IL, USA on May 6th, 2017. Keywords: Self, engineering, professional, content'
+            }
+        ]
+    },
+
+    {
         albumName: 'MDIA - Assignment 8 (Free Choice)',
         photos: [
             {
