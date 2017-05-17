@@ -93,31 +93,31 @@ module.exports.photography_data = [
         photos: [
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170306_000122.jpg',
-                caption: 'All items needed to fulfill an order sold on Amazon. Some kind of package needed to contain the item, with return address and sending address on it. Packing slip to be placed inside. The item itself (green dog leash in this case). And shipping supplies to tape addresses on if needed. 3/5/2017, taken in my apartment.'
+                caption: 'All items needed to fulfill an order sold on Amazon. Some kind of package needed to contain the item, with return address and sending address on it. Packing slip to be placed inside. The item itself (green dog leash in this case). And shipping supplies to tape addresses. Taken in my apartment, 903 S 1st St, Champaign, IL, USA - 3/5/2017'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/order_email_blurred.jpg',
-                caption: 'First step, getting an email notification than an item has sold and needs to be shipped'
+                caption: 'First step, getting an email notification than an item has sold and needs to be shipped. Taken on a work computer in Grainger Library, Champaign, IL, USA on 3/5/2017'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170305_233405.jpg',
-                caption: 'Take the item that was purchased, ensuring color and size constraints. In this case we are shipping a green dog leash'
+                caption: 'Take the item that was purchased, ensuring color and size constraints. In this case we are shipping a green dog leash. This step and packing steps were done in my apartment on 3/5/2017'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170305_233429.jpg',
-                caption: 'Putting the leash in a well-sized envelope. Light enough to keep costs down, but study enough not to damage'
+                caption: 'Putting the leash in a well-sized envelope. Light enough to keep costs down, but sturdy enough not to damage during shipping. The packaging should look as professional as possible'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170305_235936.jpg',
-                caption: 'Printing the packing slip for the associated item - print two, one to be put inside and one to paste the address on the envelope'
+                caption: 'Printing the packing slip for the associated item - print two, one to be put inside and one to paste the address on the envelope. Taken at a work computer in Grainger Library (address above)'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170304_122009.jpg',
-                caption: 'Retrieving the printed packing slips from the printer. At this step it may also be useful to print a return address to put on the envelope'
+                caption: 'Retrieving the printed packing slips from a printer at Grainger Library. At this step it may also be useful to print a return address to put on the envelope'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170305_234325.jpg',
-                caption: 'It is important to emphasize that one packing slip must go inside of the package itself'
+                caption: 'It is important to emphasize that one packing slip must go inside of the package itself, for the customer to read the order'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170306_000138.jpg',
@@ -125,7 +125,7 @@ module.exports.photography_data = [
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170304_125319.jpg',
-                caption: 'Taking the package and sending it out through the correct delivery service'
+                caption: 'Taking the package and sending it out through the correct delivery service. Pictured the USPS Office in Campustown - 302 E Green St, Champaign, IL, USA'
             }
         ]
     },
@@ -135,19 +135,19 @@ module.exports.photography_data = [
         photos: [
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170217_172943.jpg',
-                caption: 'Sunset during a spring evening with clear skies. Taken south of the Japan House looking west-southwest. 2/17/2017. Keywords: Sky, sunset, tree-tops, spring, orange'
+                caption: 'Sunset during a spring evening with clear skies. Taken south of the Japan House (Champaign, IL, USA) looking west-southwest on 2/17/2017. Keywords: Sky, sunset, tree-tops, spring, orange'
             },
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170217_171857.jpg',
-                caption: 'Close up of nature, species of plant unknown, 2/17/2017. Picture taken inside of the Idea Garden southeast of campus. Keywords: Idea Garden, plant, close-up, detailed'
+                link: 'https://s3.amazonaws.com/mdia-photos/backyard_flower.png',
+                caption: 'A close-up of a white and red tulip in my backyard, with part of the garden and fence in the background as a contrast. Taken on 5/17/2017 in Hickory Hills, IL, USA. Keywords: Tulip, garden, fence, still, calm'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170208_161201.jpg',
-                caption: 'Picture of an urban landscape. Taken during one of the few snowstorms during early February. Picture shot from the 3rd floor window on the west staircase inside the Main Library. Taken on February 8th, 2017. Keywords: Snow, urban, Wright St., midwest'
+                caption: 'Picture of an urban landscape. Taken during one of the few snowstorms during early February. Picture shot from the 3rd floor window on the west staircase inside the Main Library, Urbana, IL, USA. Taken on February 8th, 2017. Keywords: Snow, urban, Wright St., midwest'
             },
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170217_172452.jpg',
-                caption: 'Geese wading in the pond at the Japan Gardens southeast of campus. Taken on February 17th, 2017. Kewywords: Geese, animal, pond, Japan Gardens'
+                link: 'https://s3.amazonaws.com/mdia-photos/geese_cropped.jpg',
+                caption: 'Geese swimming in the pond while the sun sets at the Japan Gardens (Champaign, IL, USA) southeast of campus. Taken on February 17th, 2017. Kewywords: Geese, animal, pond, Japan Gardens'
             }
         ]
     },
@@ -156,16 +156,16 @@ module.exports.photography_data = [
         albumName: 'MDIA 293 - Assignment 2 (People)',
         photos: [
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170208_164712.jpg',
-                caption: "Taking a picture of someone you don't know: Vivek Kaushik, who was playing the piano in the Union basement, 02/08/2017"        
+                link: 'https://s3.amazonaws.com/mdia-photos/person_you_dont_know.jpg',
+                caption: "Taking a picture of someone you don't know: Vivek Kaushik, who was playing the piano in the Union basement, 02/08/2017. Illini Union, Champaign, IL, USA"
             },
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170201_132736.jpg',
-                caption: 'Taking a picture of someone you know: Humza Boxwalla, my roommate, before the business career fair. Taken in the apartment on 02/01/2017'        
+                link: 'https://s3.amazonaws.com/mdia-photos/someone_you_know_cropped.jpg',
+                caption: 'Taking a picture of someone you know: Humza Boxwalla, my roommate, before the business career fair. Taken on 02/01/2017 in my apartment, 903 S 1st St, Champaign, IL, USA'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170208_182726.jpg',
-                caption: 'Group photo: (left to right) Remy Crowleyfarenga, Jeeth Suresh, and Tristan Schramer, taken during a Green Observer meeting in YMCA, 02/08/2017'        
+                caption: 'A fun group photo of friends at Green Observer: (left to right) Remy Crowleyfarenga, Jeeth Suresh, and Tristan Schramer. Taken during a Green Observer on 02/08/2017. Located at the University YMCA building, Urbana, IL, USA'
             }
         ]
     }
