@@ -60,12 +60,12 @@ module.exports.photography_data = [
         albumName: 'MDIA - Assignment 6 (Illustrate Trust)',
         photos: [
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/geese_cropped.png',
-                caption: 'A couple of geese who trust that the person walking by will not attack them. Taken on 3/16/17 as I was walking by the southwes corner of the Siebel building in Urbana. Keywords: Geese, Siebel, trust, street'
+                link: 'https://s3.amazonaws.com/mdia-photos/siebel_geese.png',
+                caption: 'A couple of geese who trust that the person walking by will not attack them (which is rare for geese!). Taken on 3/16/17 as I was walking by the southwest corner of the Siebel building in Urbana, IL, USA. Keywords: Geese, Siebel, trust, street'
             },
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/skipy.jpg',
-                caption: "This picture was already used in a practicum, but I used it here because my dog (Skipy) has an expression illustrating happiness, trust, contentness. Taken in my backyard in Hickory Hills, Il on 3/24/17. Keywords: Dog, happy, trust"
+                link: '	https://s3.amazonaws.com/mdia-photos/skipy_normal.jpg',
+                caption: "My dog (Skipy) lounging about in my backyard. He has an expression illustrating happiness, trust, contentness. Taken in my backyard in Hickory Hills, IL, USA on 3/24/17. Keywords: Dog, happy, trust"
             }
         ]
     },
@@ -74,16 +74,16 @@ module.exports.photography_data = [
         albumName: 'MDIA - Assignment 5 (Architecture)',
         photos: [
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170322_165625.jpg',
-                caption: 'The M building at Moraine Valley Community College, with a structure of pillars in the foreground. This building is regular compared to others on campus, but stands out to me in symmetry and color choice. Taken on 3/22/2017. Keywords: MVCC, Pillars, Symmetry'
+                link: 'https://s3.amazonaws.com/mdia-photos/architecture_3.jpg',
+                caption: "I went to photograph a building at Moraine Valley Community College (MVCC) and the T building caught my eye as I found it an interesting blend of brutalist and modern architecture. That's shown in this case by the bleak concrete wall and brick on the left side, and the wall of glass on the right side. T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017. Keywords: MVCC, brutalist, modern, grass"
             },
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170322_170057.jpg',
-                caption: 'The east side of the M building, depicting more symmetry shown in the building. Also contrasting colors of the "frame" against the brick wall. Taken 3/22/2017. Keywords: East side M building, brick wall, symmetry'
+                link: 'https://s3.amazonaws.com/mdia-photos/architecture_2.jpg',
+                caption: 'The southwest facing side shows a brick wall hidden by trees and other greenery. The T building is used for utility works (water, electric) or a mix of technology classes. The concrete enclosement contains pumps to go along for the T building. Southwest side of T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017: Keywords: Concrete, green, brick, bleak'
             },
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170322_170030.jpg',
-                caption: 'The south side of the M building, along with the building information. Taken on 3/22/2017. Keywords: MVCC, Building Information, College'
+                link: 'https://s3.amazonaws.com/mdia-photos/architecture_1.jpg',
+                caption: 'The east side of the building which is used as the main entrance. The entrance features a modern orange statue (background) and some information for visitors. The mix of glass and brick continues the theme of an architectural style that is both brutalist and modern. East side of T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017: Keyword: Statue, entrance, T building'
             }
         ]
     },
@@ -135,7 +135,7 @@ module.exports.photography_data = [
         photos: [
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/IMG_20170217_172943.jpg',
-                caption: 'Sunset during a spring evening with clear skies. Taken south of the Japan House (Champaign, IL, USA) looking west-southwest on 2/17/2017. Keywords: Sky, sunset, tree-tops, spring, orange'
+                caption: 'Sunset during a spring evening with clear skies. Taken south of the Japan House (Urbana, IL, USA) looking west-southwest on 2/17/2017. Keywords: Sky, sunset, tree-tops, spring, orange'
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/backyard_flower.png',
@@ -147,7 +147,7 @@ module.exports.photography_data = [
             },
             {
                 link: 'https://s3.amazonaws.com/mdia-photos/geese_cropped.jpg',
-                caption: 'Geese swimming in the pond while the sun sets at the Japan Gardens (Champaign, IL, USA) southeast of campus. Taken on February 17th, 2017. Kewywords: Geese, animal, pond, Japan Gardens'
+                caption: 'Geese swimming in the pond while the sun sets at the Japan Gardens (Urbana, IL, USA) southeast of campus. Taken on February 17th, 2017. Keywords: Geese, animal, pond, Japan Gardens'
             }
         ]
     },
@@ -160,7 +160,7 @@ module.exports.photography_data = [
                 caption: "Taking a picture of someone you don't know: Vivek Kaushik, who was playing the piano in the Union basement, 02/08/2017. Illini Union, Champaign, IL, USA"
             },
             {
-                link: 'https://s3.amazonaws.com/mdia-photos/someone_you_know_cropped.jpg',
+                link: 'https://s3.amazonaws.com/mdia-photos/known_person.jpg',
                 caption: 'Taking a picture of someone you know: Humza Boxwalla, my roommate, before the business career fair. Taken on 02/01/2017 in my apartment, 903 S 1st St, Champaign, IL, USA'
             },
             {
