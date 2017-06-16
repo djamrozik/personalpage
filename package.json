@@ -1,7 +1,7 @@
 {
   "name": "personalpage",
-  "version": "1.0.0",
-  "description": "Personal blog site to write about web dev and machine learning",
+  "version": "1.1.0",
+  "description": "Personal site to share my portfolio and blogs",
   "main": "index.js",
   "dependencies": {
     "express": "^4.13.4",

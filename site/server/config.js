@@ -20,7 +20,7 @@ module.exports = function(app) {
 		port = local_codes.port;
 		ip = local_codes.internal_ip;
 	} else  {
-		port = 3030;
+		port = 8000;
 		ip = 'localhost';
 	}
 

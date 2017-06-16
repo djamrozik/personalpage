@@ -1,10 +1,10 @@
 
 'use strict';
 
-var express     = require('express');
+var express = require('express');
 var handlebars = require('express-handlebars');
 
-var app         = express();
+var app = express();
 
 //environment defaults to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -21,6 +21,3 @@ require('./server/config')(app);
 
 //routes
 require('./server/routes')(app);
-
-
-
