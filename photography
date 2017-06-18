@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+
+<html ng-app="PortfolioWebsite">
+
+<head>
+
+    <!-- meta tags and stuff, focus on SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Kadwa:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/font-awesome.min.css">
+
+    <!-- js dependencies -->
+    <script type="text/javascript" src="/scripts/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/scripts/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+
+    <!-- jquery code -->
+    <script type="text/javascript" src="/scripts/homepage.js"></script>
+    <script type="text/javascript" src="/scripts/dynamic-image.js"></script>
+    <script type="text/javascript" src="/scripts/photography.js"></script>
+
+    <!-- angular code -->
+    <script src="/app/app.js"></script>
+    <script src="/app/controllers/IndexCtrl.js"></script>
+    <script src="/app/services/resources.js"></script>
+    <script src="/app/directives/leftColumn.js"></script>
+    <script src="/app/directives/collapseNav.js"></script>
+
+    <!-- google analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68428821-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <title>Photography - Dan Jamrozik</title>
+
+</head>
+
+<body ng-controller="IndexController as vm">
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="collapse-navbar">
+
+            <collapse-nav info="vm" mode="{mode: 'blog'}"></collapse-nav>
+
+        </div>
+
+        <div class="left-column-container">
+
+            <left-column info="vm" mode="{mode: 'blog'}"></left-column>
+
+        </div>
+
+        <div class="main-content-container-full">
+
+            <div class="main-page">
+
+                <div class="blog-content-wrapper">
+                    <div class="photography">
+        <div class="album-title">MDIA - Assignment 9 (Self Portrait)</div>
+        <div class="album">
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/self.jpg" alt="An image of how you would like to be seen. I chose this image because it is somewhat lively and professional. Taken near Engineering Hall, Urbana, IL, USA on May 6th, 2017. Keywords: Self, engineering, professional, content" />
+                    <span class="caption">An image of how you would like to be seen. I chose this image because it is somewhat lively and professional. Taken near Engineering Hall, Urbana, IL, USA on May 6th, 2017. Keywords: Self, engineering, professional, content</span>
+                </span>
+        </div>
+        <div class="album-title">MDIA - Assignment 8 (Free Choice)</div>
+        <div class="album">
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/train_underground.jpg" alt="The grey of each surface in this setting adds to a cold and emotionless atmosphere depicting parts of life as an ant in a city. Taken on February 11th, 2017 in Union Station, Chicago, IL, USA. Keywords: Train, underground, Metra, cold, grey" />
+                    <span class="caption">The grey of each surface in this setting adds to a cold and emotionless atmosphere depicting parts of life as an ant in a city. Taken on February 11th, 2017 in Union Station, Chicago, IL, USA. Keywords: Train, underground, Metra, cold, grey</span>
+                </span>
+        </div>
+        <div class="album-title">MDIA - Assignment 7 (Event)</div>
+        <div class="album">
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/event0.jpg" alt="The CS@Illinois - WCS Spring banquet being set up, no guests yet! Taken in Siebel Center, Urbana, IL, USA on 4/27/2017. Keywords: Siebel, WCS, banquet" />
+                    <span class="caption">The CS@Illinois - WCS Spring banquet being set up, no guests yet! Taken in Siebel Center, Urbana, IL, USA on 4/27/2017. Keywords: Siebel, WCS, banquet</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/event1.jpg" alt="A closer shot of the event being set up, tables have been set. Taken in Siebel Center, Urbana, IL, USA on 4/27/2017. Keywords: catering, tables, empty" />
+                    <span class="caption">A closer shot of the event being set up, tables have been set. Taken in Siebel Center, Urbana, IL, USA on 4/27/2017. Keywords: catering, tables, empty</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/event2.jpg" alt="The electronic screen prepared for the event, also thanking corporate sponsors. Siebel, Urbana, IL, USA on 4/27/2017. Keywords: screen, monitors, corporate" />
+                    <span class="caption">The electronic screen prepared for the event, also thanking corporate sponsors. Siebel, Urbana, IL, USA on 4/27/2017. Keywords: screen, monitors, corporate</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/event4.jpg" alt="The food area being prepped for guests. Siebel, Urbana, IL, USA on 4/27/2017. Keywords: food, catering, plates" />
+                    <span class="caption">The food area being prepped for guests. Siebel, Urbana, IL, USA on 4/27/2017. Keywords: food, catering, plates</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/event6.jpg" alt="An overall picture of all of the guests seated and taking part in the event. Location: Siebel, Urbana, IL, USA on 4/27/2017. Keywords: guests, full, Siebel lounge" />
+                    <span class="caption">An overall picture of all of the guests seated and taking part in the event. Location: Siebel, Urbana, IL, USA on 4/27/2017. Keywords: guests, full, Siebel lounge</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/event9.jpg" alt="Mid-range photo from the other side of Siebel while the event is taking place. Urbana, IL, USA on 4/27/2017. Keywords: waitress, endless, tunnel, professional" />
+                    <span class="caption">Mid-range photo from the other side of Siebel while the event is taking place. Urbana, IL, USA on 4/27/2017. Keywords: waitress, endless, tunnel, professional</span>
+                </span>
+        </div>
+        <div class="album-title">MDIA - Assignment 6 (Illustrate Trust)</div>
+        <div class="album">
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/siebel_geese.png" alt="A couple of geese who trust that the person walking by will not attack them (which is rare for geese!). Taken on 3/16/17 as I was walking by the southwest corner of the Siebel building in Urbana, IL, USA. Keywords: Geese, Siebel, trust, street" />
+                    <span class="caption">A couple of geese who trust that the person walking by will not attack them (which is rare for geese!). Taken on 3/16/17 as I was walking by the southwest corner of the Siebel building in Urbana, IL, USA. Keywords: Geese, Siebel, trust, street</span>
+                </span>
+                <span class="photo">
+                    <img src="	https://s3.amazonaws.com/mdia-photos/skipy_normal.jpg" alt="My dog (Skipy) lounging about in my backyard. He has an expression illustrating happiness, trust, contentness. Taken in my backyard in Hickory Hills, IL, USA on 3/24/17. Keywords: Dog, happy, trust" />
+                    <span class="caption">My dog (Skipy) lounging about in my backyard. He has an expression illustrating happiness, trust, contentness. Taken in my backyard in Hickory Hills, IL, USA on 3/24/17. Keywords: Dog, happy, trust</span>
+                </span>
+        </div>
+        <div class="album-title">MDIA - Assignment 5 (Architecture)</div>
+        <div class="album">
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/architecture_3.jpg" alt="I went to photograph a building at Moraine Valley Community College (MVCC) and the T building caught my eye as I found it an interesting blend of brutalist and modern architecture. That&#x27;s shown in this case by the bleak concrete wall and brick on the left side, and the wall of glass on the right side. T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017. Keywords: MVCC, brutalist, modern, grass" />
+                    <span class="caption">I went to photograph a building at Moraine Valley Community College (MVCC) and the T building caught my eye as I found it an interesting blend of brutalist and modern architecture. That&#x27;s shown in this case by the bleak concrete wall and brick on the left side, and the wall of glass on the right side. T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017. Keywords: MVCC, brutalist, modern, grass</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/architecture_2.jpg" alt="The southwest facing side shows a brick wall hidden by trees and other greenery. The T building is used for utility works (water, electric) or a mix of technology classes. The concrete enclosement contains pumps to go along for the T building. Southwest side of T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017: Keywords: Concrete, green, brick, bleak" />
+                    <span class="caption">The southwest facing side shows a brick wall hidden by trees and other greenery. The T building is used for utility works (water, electric) or a mix of technology classes. The concrete enclosement contains pumps to go along for the T building. Southwest side of T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017: Keywords: Concrete, green, brick, bleak</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/architecture_1.jpg" alt="The east side of the building which is used as the main entrance. The entrance features a modern orange statue (background) and some information for visitors. The mix of glass and brick continues the theme of an architectural style that is both brutalist and modern. East side of T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017: Keyword: Statue, entrance, T building" />
+                    <span class="caption">The east side of the building which is used as the main entrance. The entrance features a modern orange statue (background) and some information for visitors. The mix of glass and brick continues the theme of an architectural style that is both brutalist and modern. East side of T Building at MVCC, 9000 College Pkwy, Palos Hills, IL, USA - 5/18/2017: Keyword: Statue, entrance, T building</span>
+                </span>
+        </div>
+        <div class="album-title">MDIA - Assignment 4 (Documenting a Process) - Sending an item sold on Amazon/Ebay</div>
+        <div class="album">
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170306_000122.jpg" alt="All items needed to fulfill an order sold on Amazon. Some kind of package needed to contain the item, with return address and sending address on it. Packing slip to be placed inside. The item itself (green dog leash in this case). And shipping supplies to tape addresses. Taken in my apartment, 903 S 1st St, Champaign, IL, USA - 3/5/2017" />
+                    <span class="caption">All items needed to fulfill an order sold on Amazon. Some kind of package needed to contain the item, with return address and sending address on it. Packing slip to be placed inside. The item itself (green dog leash in this case). And shipping supplies to tape addresses. Taken in my apartment, 903 S 1st St, Champaign, IL, USA - 3/5/2017</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/order_email_blurred.jpg" alt="First step, getting an email notification than an item has sold and needs to be shipped. Taken on a work computer in Grainger Library, Champaign, IL, USA on 3/5/2017" />
+                    <span class="caption">First step, getting an email notification than an item has sold and needs to be shipped. Taken on a work computer in Grainger Library, Champaign, IL, USA on 3/5/2017</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170305_233405.jpg" alt="Take the item that was purchased, ensuring color and size constraints. In this case we are shipping a green dog leash. This step and packing steps were done in my apartment on 3/5/2017" />
+                    <span class="caption">Take the item that was purchased, ensuring color and size constraints. In this case we are shipping a green dog leash. This step and packing steps were done in my apartment on 3/5/2017</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170305_233429.jpg" alt="Putting the leash in a well-sized envelope. Light enough to keep costs down, but sturdy enough not to damage during shipping. The packaging should look as professional as possible" />
+                    <span class="caption">Putting the leash in a well-sized envelope. Light enough to keep costs down, but sturdy enough not to damage during shipping. The packaging should look as professional as possible</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170305_235936.jpg" alt="Printing the packing slip for the associated item - print two, one to be put inside and one to paste the address on the envelope. Taken at a work computer in Grainger Library (address above)" />
+                    <span class="caption">Printing the packing slip for the associated item - print two, one to be put inside and one to paste the address on the envelope. Taken at a work computer in Grainger Library (address above)</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170304_122009.jpg" alt="Retrieving the printed packing slips from a printer at Grainger Library. At this step it may also be useful to print a return address to put on the envelope" />
+                    <span class="caption">Retrieving the printed packing slips from a printer at Grainger Library. At this step it may also be useful to print a return address to put on the envelope</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170305_234325.jpg" alt="It is important to emphasize that one packing slip must go inside of the package itself, for the customer to read the order" />
+                    <span class="caption">It is important to emphasize that one packing slip must go inside of the package itself, for the customer to read the order</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170306_000138.jpg" alt="Cutting out and taping the return address and receiving address on the envelope. Some may prefer at this stage to have a printer which prints labels that will stick on the envelope" />
+                    <span class="caption">Cutting out and taping the return address and receiving address on the envelope. Some may prefer at this stage to have a printer which prints labels that will stick on the envelope</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170304_125319.jpg" alt="Taking the package and sending it out through the correct delivery service. Pictured the USPS Office in Campustown - 302 E Green St, Champaign, IL, USA" />
+                    <span class="caption">Taking the package and sending it out through the correct delivery service. Pictured the USPS Office in Campustown - 302 E Green St, Champaign, IL, USA</span>
+                </span>
+        </div>
+        <div class="album-title">MDIA - Assignment 3 (Nature)</div>
+        <div class="album">
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170217_172943.jpg" alt="Sunset during a spring evening with clear skies. Taken south of the Japan House (Urbana, IL, USA) looking west-southwest on 2/17/2017. Keywords: Sky, sunset, tree-tops, spring, orange" />
+                    <span class="caption">Sunset during a spring evening with clear skies. Taken south of the Japan House (Urbana, IL, USA) looking west-southwest on 2/17/2017. Keywords: Sky, sunset, tree-tops, spring, orange</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/backyard_flower.png" alt="A close-up of a white and red tulip in my backyard, with part of the garden and fence in the background as a contrast. Taken on 5/17/2017 in Hickory Hills, IL, USA. Keywords: Tulip, garden, fence, still, calm" />
+                    <span class="caption">A close-up of a white and red tulip in my backyard, with part of the garden and fence in the background as a contrast. Taken on 5/17/2017 in Hickory Hills, IL, USA. Keywords: Tulip, garden, fence, still, calm</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170208_161201.jpg" alt="Picture of an urban landscape. Taken during one of the few snowstorms during early February. Picture shot from the 3rd floor window on the west staircase inside the Main Library, Urbana, IL, USA. Taken on February 8th, 2017. Keywords: Snow, urban, Wright St., midwest" />
+                    <span class="caption">Picture of an urban landscape. Taken during one of the few snowstorms during early February. Picture shot from the 3rd floor window on the west staircase inside the Main Library, Urbana, IL, USA. Taken on February 8th, 2017. Keywords: Snow, urban, Wright St., midwest</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/geese_cropped.jpg" alt="Geese swimming in the pond while the sun sets at the Japan Gardens (Urbana, IL, USA) southeast of campus. Taken on February 17th, 2017. Keywords: Geese, animal, pond, Japan Gardens" />
+                    <span class="caption">Geese swimming in the pond while the sun sets at the Japan Gardens (Urbana, IL, USA) southeast of campus. Taken on February 17th, 2017. Keywords: Geese, animal, pond, Japan Gardens</span>
+                </span>
+        </div>
+        <div class="album-title">MDIA 293 - Assignment 2 (People)</div>
+        <div class="album">
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/person_you_dont_know.jpg" alt="Taking a picture of someone you don&#x27;t know: Vivek Kaushik, who was playing the piano in the Union basement, 02/08/2017. Illini Union, Champaign, IL, USA" />
+                    <span class="caption">Taking a picture of someone you don&#x27;t know: Vivek Kaushik, who was playing the piano in the Union basement, 02/08/2017. Illini Union, Champaign, IL, USA</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/known_person.jpg" alt="Taking a picture of someone you know: Humza Boxwalla, my roommate, before the business career fair. Taken on 02/01/2017 in my apartment, 903 S 1st St, Champaign, IL, USA" />
+                    <span class="caption">Taking a picture of someone you know: Humza Boxwalla, my roommate, before the business career fair. Taken on 02/01/2017 in my apartment, 903 S 1st St, Champaign, IL, USA</span>
+                </span>
+                <span class="photo">
+                    <img src="https://s3.amazonaws.com/mdia-photos/IMG_20170208_182726.jpg" alt="A fun group photo of friends at Green Observer: (left to right) Remy Crowleyfarenga, Jeeth Suresh, and Tristan Schramer. Taken during a Green Observer on 02/08/2017. Located at the University YMCA building, Urbana, IL, USA" />
+                    <span class="caption">A fun group photo of friends at Green Observer: (left to right) Remy Crowleyfarenga, Jeeth Suresh, and Tristan Schramer. Taken during a Green Observer on 02/08/2017. Located at the University YMCA building, Urbana, IL, USA</span>
+                </span>
+        </div>
+</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="large-image">
+            <img src="">
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

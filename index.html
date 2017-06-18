@@ -68,7 +68,7 @@
   						</div>
   						<p class="main-info-first-text banner-text">
   							<strong>Welcome to my page!</strong>
-  							I am a passionate web developer and computer science student
+  							I'm a passionate web developer and computer science student
   							currently studying at the University of Illinois, Urbana/Champaign.
   							I've been able to work as a web developer with UIUC, DockSocial, Yahoo,
   							and now Justworks. (check out my linkedin for more info)
@@ -143,18 +143,37 @@
   						</div>
 
   						<div class="contact-form">
-  							<form ng-submit="vm.submit(vm.message)">
+  							<form action="https://formspree.io/danjamrozik@gmail.com" method="POST">
   							    <div class="form-group">
   							        <label for="inputEmail">Your Email Address</label>
-  							        <input type="email" ng-model="vm.message.email" class="form-control" id="inputEmail" placeholder="your email" required>
+  							        <input type="email"
+                                ng-model="vm.message.email"
+                                class="form-control"
+                                id="inputEmail"
+                                placeholder="your email"
+                                name="email"
+                                required
+                        />
   							    </div>
   							   	<div class="form-group">
   							        <label for="inputTopic">Message Topic</label>
-  							        <input type="text" class="form-control" ng-model="vm.message.topic" id="inputTopic" placeholder="message topic" required>
+  							        <input type="text"
+                                class="form-control"
+                                ng-model="vm.message.topic"
+                                id="inputTopic"
+                                placeholder="message topic"
+                                name="subject"
+                        />
   							    </div>
   								<div class="form-group">
   									<label for="textareaMessage">Message</label>
-  									<textarea class="form-control" ng-model="vm.message.message" id="textareaMessage" cols="30" rows="5" required></textarea>
+  									<textarea class="form-control"
+                                ng-model="vm.message.message"
+                                id="textareaMessage"
+                                cols="30" rows="5"
+                                name="message"
+                                required>
+                    </textarea>
   								</div>
   								<div class="button-container">
   							    	<button type="submit" class="btn btn-info">Send</button>
