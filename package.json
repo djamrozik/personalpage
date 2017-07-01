@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "server": "python -m SimpleHTTPServer",
-    "upload": "aws s3 sync ./public s3://danjamrozik.com"
+    "upload": "aws s3 sync . s3://danjamrozik.com --exclude '.git/*' --exclude 'node_modules/*'"
   },
   "repository": {
     "type": "git",
