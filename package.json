@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "python -m SimpleHTTPServer",
+    "upload": "aws s3 sync ./public s3://danjamrozik.com"
   },
   "repository": {
     "type": "git",
