@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html ng-app="PortfolioWebsite">
+
+<head>
+    <!-- meta tags and stuff, focus on SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Kadwa:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/font-awesome.min.css">
+
+    <!-- js dependencies -->
+    <script type="text/javascript" src="/scripts/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/scripts/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+
+    <!-- jquery code -->
+    <script type="text/javascript" src="/scripts/homepage.js"></script>
+    <script type="text/javascript" src="/scripts/dynamic-image.js"></script>
+
+    <!-- angular code -->
+    <script src="/app/app.js"></script>
+    <script src="/app/controllers/IndexCtrl.js"></script>
+    <script src="/app/services/resources.js"></script>
+    <script src="/app/directives/leftColumn.js"></script>
+    <script src="/app/directives/collapseNav.js"></script>
+
+    <!-- google analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68428821-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <title>Reddit Oath2 in Javascript</title>
+</head>
+
+<body ng-controller="IndexController as vm">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="collapse-navbar">
+        <collapse-nav info="vm" mode="{mode: 'blog'}"></collapse-nav>
+      </div>
+      <div class="left-column-container">
+        <left-column info="vm" mode="{mode: 'blog'}"></left-column>
+      </div>
+      <div class="main-content-container">
+        <div class="main-page">
+          <div class="main-info">
+            <div class="main-banner">
+              <img src="/images/rock_skip.jpg" class="img-circle" />
+              <span class="main-quote main-title">
+                Reddit Oath2 in Javascript
+              </span>
+              <span class="main-subtitle">
+                August 18th, 2017
+              </span>
+            </div>
+          </div>
+          <div class="blog-content-wrapper">
+            <div class="blog-content">
+              
+              <strong>Note:</strong> This article is purely for obtaining <em>script</em> tokens. Any apps
+              which need to log users in, or use a redirect URI, I would recommend
+              <a href="https://www.npmjs.com/package/passport-reddit">
+                passport-reddit
+              </a>
+
+              <br /><br />
+
+              I recently found myself in a position where I had to access
+              <a href="https://www.reddit.com/dev/api/">
+                reddit's api
+              </a>
+              manually in Javascript, but couldn't find any examples where this was done with Javascript
+              (though, if you have the ability, I would recommend using a wrapper like <a href="https://github.com/not-an-aardvark/snoowrap">snoowrap</a>).
+              So, the hope is that this serves as a good example.
+
+              <br /><br/>
+              The first task is obtaining all the necessary information. This would mean getting a 
+              username, password, app_client_id, and app_client_secret. If you haven't made
+              an app on reddit to obtain the client_id and client_secret, you can do that
+              by going to 'preferences', then 'apps'.
+
+              <br /><br />
+              After obtaining all of that, the code below will obtain an access_token when run.
+              This uses the package <a href="https://www.npmjs.com/package/request">request</a> to make the POST request, but the standard 'http' library
+              will suffice as well. (Also, you shouln't be using this on the front-end because the client_secret is 
+              meant to be secret)
+
+              <br /><br />
+
+              <script src="https://gist.github.com/djamrozik/88f1931db79c6310f44d3304cf05c0e2.js"></script>
+
+              Now we have an access token!
+
+              <br /><br />
+              And finally, we can use that access_token in a request to the API. This is a simple
+              example of that kind of call (this is also using the 'request' module).
+
+              <br/><br/>
+              <script src="https://gist.github.com/djamrozik/c1939b229e669aa2c37e0b3f12df111e.js"></script>
+
+            </div>
+          </div>
+          <div id="comments-section">
+            <div id="disqus_thread"></div>
+            <script>
+              /**
+                * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                */
+
+              var disqus_config = function () {
+                  //this.page.url = 'danjamrozik.me/blog/linear_regression_tensorflow'; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = 'reddit_oath2_javascript'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+
+              (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//danjamrozik.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
