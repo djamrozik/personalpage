@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>D3.js Example - Enter and Exit</title>
+</head>
+<body>
+    <p>Chart with elements that match the amount of data items</p>
+    <div id="regular-chart">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <p>Chart with not enough elements (only added elements are selected)</p>
+    <div id="undersized-chart">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <p>Chart which starts with no elements</p>
+    <div id="empty-chart">
+    </div>
+
+    <p>Chart with too many elements</p>
+    <div id="oversized-chart">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- scripts -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="enter_and_exit.js"></script>
+</body>
+</html>

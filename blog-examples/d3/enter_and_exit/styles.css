@@ -1,0 +1,10 @@
+
+/* just some styling for each bar */
+.bar {
+    height: 30px;
+    background: #4cae4c;
+    margin-top: 20px;
+    padding-left: 5px;
+    line-height: 30px;
+    width: 0; /* no width be default */
+}
