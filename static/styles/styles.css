@@ -366,7 +366,7 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 145px;
+  padding-bottom: 30px;
   margin: 0 15px;
   cursor: pointer;
 }
@@ -384,6 +384,9 @@ body {
   font-weight: 600;
   font-size: 1.85rem;
   padding-bottom: 20px;
+  margin-left: 15px;
+}
+.photography .ending-note {
   margin-left: 15px;
 }
 #projects .header {

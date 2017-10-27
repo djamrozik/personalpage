@@ -8,7 +8,7 @@
 	</div>
 
 	<p class="name">
-		<a class="no-link-style" href="/">Dan Jamrozik</a>
+		<a class="no-link-style" href="/">Daniel Jamrozik</a>
 	</p>
 
 	<p class="name-info">Full-stack Developer</p>
@@ -17,6 +17,9 @@
 		<a ng-if="!home_mode" ng-href="/"><li>HOME</li></a>
 		<a ng-href="/blog.html"><li>BLOG</li></a>
 		<li ng-if="home_mode" ng-click="data.scrollToId('projects')">PROJECTS</li>
+		<li>
+			<a ng-href="/photography.html">PHOTOGRAPHY</a>
+		</li>
 		<li ng-if="home_mode" ng-click="data.scrollToId('contact')">CONTACT</li>
 		<a href="/#/contact"><li ng-if="blog_mode">CONTACT</li></a>
 	</ul>
