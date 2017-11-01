@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html ng-app="PortfolioWebsite" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <!-- meta tags and stuff, focus on SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Kadwa:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/static/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/blog_content_styles.css">
+    <link rel="stylesheet" href="/static/styles/font-awesome.min.css">
+
+    <!-- js dependencies -->
+    <script type="text/javascript" src="/static/scripts/angular.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/angular-route.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.min.js"></script>
+
+    <!-- jquery code -->
+    <script type="text/javascript" src="/static/scripts/homepage.js"></script>
+    <script type="text/javascript" src="/static/scripts/dynamic-image.js"></script>
+
+    <!-- angular code -->
+    <script src="/app/app.js"></script>
+    <script src="/app/controllers/IndexCtrl.js"></script>
+    <script src="/app/services/resources.js"></script>
+    <script src="/app/directives/leftColumn.js"></script>
+    <script src="/app/directives/collapseNav.js"></script>
+
+    <!-- google analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68428821-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <title>enter() and exit() in d3.js</title>
+
+</head>
+
+<body ng-controller="IndexController as vm">
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="collapse-navbar">
+
+            <collapse-nav info="vm" mode="{mode: 'blog'}"></collapse-nav>
+
+        </div>
+
+        <div class="left-column-container">
+
+            <left-column info="vm" mode="{mode: 'blog'}"></left-column>
+
+        </div>
+
+        <div class="main-content-container">
+
+            <div class="main-page">
+
+                <div class="main-info">
+
+                    <div class="main-banner">
+
+                        <img src="/static/images/rock_skip.jpg" class="img-circle" />
+
+                        <span class="main-quote main-title">
+                            enter() and exit() in d3.js
+                        </span>
+
+                        <span class="main-subtitle">
+                            October 27th, 2017
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="blog-content-wrapper">
+                    <div class="blog-content">
+                        <!-- background and intro -->
+                        <p class="section-title">Introduction</p>
+                        <p>
+                            Binding data to DOM elements is one of the most important features in d3.js. It makes
+                            data visualization possible and easy. But what happens when the amount of data items that
+                            we have does not match the amount of DOM elements? In this article
+                            we explore how enter() and exit() solve those situations in d3.js
+                        </p>
+
+                        <!-- source code -->
+                        <p class="section-title">Source code and example</p>
+                        <p>
+                            This article will go through some examples, where the source code is available
+                            code
+                            <a href="https://github.com/djamrozik/personalpage/tree/master/blog-examples/d3/enter_and_exit">here</a>
+                            and the working example is available
+                            <a href="http://danjamrozik.com/blog-examples/d3/enter_and_exit/">here</a>.
+                        </p>
+
+                        <!-- regular example and situation -->
+                        <p class="section-title">Regular Example</p>
+                        <p class="code-info">
+                            The first situation we'll talk about is a simple case where enter() and exit()
+                            are not required. We will be working with 3 data items:
+                        </p>
+
+                        <pre>var data = [120, 150, 95];</pre>
+
+                        <p class="code-info">
+                            And 3 DOM elements to match that data:
+                        </p>
+                        <pre>&lt;div id="regular-chart"&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                        <p>
+                            Our goal here is to bind each of the data items to each DOM element. After doing that
+                            we want to change the width of the div based on data item. So the first <code>.bar</code>
+                            should be 120px long, and so on.
+                        </p>
+
+                        <p>
+                            In this case what we need to do is use basic d3 functions to select all of the DOM elements,
+                            bind the data to each element, and apply a style() function to change the
+                            width (to match the data). The following javascript will be able to do this:
+                        </p>
+
+                        <pre>d3.select("#regular-chart").selectAll("div")
+    .data(data)
+    .style("width", function(d) {
+        return d + "px";
+    })
+    .text(function(d) {
+        return d;
+    });</pre>
+
+                        <p>
+                            As expected, the width of each bar will match the corresponding
+                            data item (I should also mention I have styles for each <code>.bar</code>
+                            in <code>styles.css</code>,
+                            the only thing not set yet is the width):
+                        </p>
+
+                        <p class="center">
+                            <img class="blog-image center-image"
+                                 src="https://i.imgur.com/u8M2Keb.png"
+                                 alt="regular example with no enter() or exit()"
+                            >
+                        </p>
+
+                        <p class="section-title">
+                            More data items then elements
+                        </p>
+                        <p class="code-info">
+                            Now, we'll explore a situation where we need to use enter() because there
+                            are more data items than DOM elements. In this imaginary example the data is the
+                            same as above, but we accidentally have 2 DOM elements, like so:
+                        </p>
+
+                        <pre>&lt;div id="regular-chart"&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                        <p>
+                            The problem is that only two bars we'll be shown, but we want three,
+                            because we have 3 data items. We can solve this by first calling bind() like we
+                            did above, to bind our data to the current selection. Now at this point
+                            it's easy to see that there are data items which cannot be bound to an element
+                            (in this case the last data item). So the next thing we can do is call enter(), and
+                            this will select all of the data items which are not bound to an element.
+                            This is called a "subselection" and we can perform actions to append or insert
+                            the missing data, and then carry on with our selection as normal.
+                            This is how that code would look:
+                        </p>
+
+                        <pre>d3.select("#undersized-chart").selectAll("div")
+    .data(data)
+    .enter().append("div")
+    .attr("class", "bar")
+    .style("width", function(d) {
+        return d + "px";
+    })
+    .text(function(d) {
+        return d;
+    });</pre>
+
+                        <p>
+                            The only thing different about this code from the first example is the addition of
+                            <code>.enter().append("div")</code>. As mentioned above, this will select the
+                            data items not bound to DOM elements. So in the output, only the third bar will have
+                            it's width changed accordingly. When we call <code>.style()</code> this is only
+                            performing that function on our current selection, which is the newly appended
+                            element. This is how that would look.
+                        </p>
+
+                        <p class="center">
+                            <img class="blog-image center-image"
+                                 src="https://i.imgur.com/L1VUyaw.png"
+                                 alt="example with not enough DOM elements"
+                            >
+                        </p>
+
+                        <p>
+                            If we wanted to change the width of all of the bars, we would have to write
+                            <code>.style()</code> for each selection. If that seems inefficient, you're
+                            right! This is how it's usually done:
+                        </p>
+
+                        <p class="section-title">
+                            Starting with no DOM elements
+                        </p>
+                        <p>
+                            Typically, most data visualizations in d3.js will start with no DOM elements
+                            to begin with (except the container), and then using <code>.enter().append()</code>
+                            to create each element. This was we only have one selection to work with:
+                            This is how the html looks just for clarity:
+                        </p>
+
+                        <pre>&lt;div id="empty-chart"&gt;
+&lt;/div&gt;</pre>
+
+                        <p>
+                            Now the code we use will be exactly the same as above,
+                            except for the id of the chart:
+                        </p>
+
+                        <pre>d3.select("#empty-chart").selectAll("div")
+    .data(data)
+    .enter().append("div")
+    .attr("class", "bar")
+    .style("width", function(d) {
+        return d + "px";
+    })
+    .text(function(d) {
+        return d;
+    });</pre>
+
+                        <p>
+                            And our result will look as expected, with 3 bars of the correct width:
+                        </p>
+
+                        <p class="center">
+                            <img class="blog-image center-image"
+                                 src="https://i.imgur.com/S72qIyU.png"
+                                 alt="example with not no DOM elements"
+                            >
+                        </p>
+
+                        <p>
+                            Sidenote: you may have noticed that in the code above, we
+                            say <code>.select("#empty-chart").selectAll("div")</code>, or select
+                            all <code>div</code> elements, but how can it do that when the chart
+                            starts off as empty? This is a tricky concept in d3 enter() and exit()
+                            functions that can be described as "time-travel" to know that you
+                            will be creating div elements. If we didn't have that line the statement
+                            wouldn't work because .bind() would try to bind data to the chart
+                            instead of the <code>div</code> elements that don't exist (yet!).
+                        </p>
+
+                        <p class="section-title">
+                            More elements than data items. Using exit()
+                        </p>
+                        <p>
+                            Lastly, I haven't described what <code>.exit()</code> does yet. As you can
+                            imagine it is the exact opposite of <code>.enter()</code>. As we've seen
+                            <code>.enter()</code> will select all data items with no DOM element bound
+                            to it, but <code>.exit()</code> on the other hand will select all DOM elements
+                            not bound to any data.
+                        </p>
+
+                        <p>
+                            In order to have a situation where DOM elements are not bound to data, we will have
+                            more DOM elements than data items. The data will be the same as in the last examples,
+                            but now we will have 5 DOM elements (it can be any number above 3). Our goal will
+                            be to remove any elements not bound to data. This is how the html will look:
+                        </p>
+
+                        <pre>&lt;div id="regular-chart"&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;div class="bar"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                        <p>
+                            And of course, the javascript:
+                        </p>
+
+                        <pre>d3.select("#oversized-chart").selectAll("div")
+    .data(data)
+    .style("width", function(d) {
+        return d + "px";
+    })
+    .text(function(d) {
+        return d;
+    })
+    .exit().remove();</pre>
+
+                        <p>
+                            In the code above, we selected all the elements with <code>.bar</code> as
+                            a class, then changed the width and text accordingly. After doing so
+                            <code>.exit()</code> was called to select only the elements with no
+                            data tied to them. Calling <code>.remove()</code> removed every item
+                            from that subselection, and our data looks as expected:
+                        </p>
+
+                        <p class="center">
+                            <img class="blog-image center-image"
+                                 src="https://i.imgur.com/S72qIyU.png"
+                                 alt="example with more DOM elements that data items"
+                            >
+                        </p>
+
+                        <p>
+                            That covers everything that I meant to explain about <code>.enter()</code>
+                            and <code>.exit()</code> in d3.js. I hope it was helpful!
+                        </p>
+                    </div>
+                </div>
+
+                <div id="comments-section">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                         * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                         * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                         */
+
+                        var disqus_config = function () {
+                            //this.page.url = 'danjamrozik.me/blog/ng_csv_for_csv_download'; // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.identifier = 'd3_enter_exit'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = '//danjamrozik.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

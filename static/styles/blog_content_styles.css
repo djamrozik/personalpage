@@ -1,0 +1,41 @@
+
+.blog-content .blog-image {
+    max-width: 250px;
+    height: auto;
+}
+
+.blog-content .center {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-content .center-image {
+    margin: 10px auto;
+}
+
+.blog-content p {
+    margin-bottom: 16px;
+    margin-top: 4px;
+    font-size: 1.6rem;
+}
+
+.blog-content p.section-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+
+.blog-content .text-section {
+    margin: 12px 0;
+    display: inline-block;
+}
+
+.code-info {
+    padding-bottom: 8px;
+    margin-bottom: 0!important;
+}
+
+pre {
+    margin-bottom: 12px;
+}
