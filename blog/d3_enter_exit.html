@@ -96,9 +96,9 @@
                         <p class="section-title">Introduction</p>
                         <p>
                             Binding data to DOM elements is one of the most important features in d3.js. It makes
-                            data visualization possible and easy. But what happens when the amount of data items that
-                            we have does not match the amount of DOM elements? In this article
-                            we explore how enter() and exit() solve those situations in d3.js
+                            data visualization possible and easy. But what happens when the amount of data items does
+                            not match the amount of DOM elements? In this article we explore how enter()
+                            and exit() solve those situations in d3.js.
                         </p>
 
                         <!-- source code -->
@@ -129,8 +129,9 @@
     &lt;div class="bar"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
                         <p>
-                            Our goal here is to bind each of the data items to each DOM element. After doing that
-                            we want to change the width of the div based on data item. So the first <code>.bar</code>
+                            Our goal here is to bind each of the data items to each DOM element, we can do this
+                            with <code>.data()</code>. After doing that we want to change the width of
+                            each <code>.bar</code> based on data item. So the first <code>.bar</code>
                             should be 120px long, and so on.
                         </p>
 
@@ -152,8 +153,7 @@
                         <p>
                             As expected, the width of each bar will match the corresponding
                             data item (I should also mention I have styles for each <code>.bar</code>
-                            in <code>styles.css</code>,
-                            the only thing not set yet is the width):
+                            in <code>styles.css</code>, the only thing not set yet is the width):
                         </p>
 
                         <p class="center">
@@ -169,7 +169,7 @@
                         <p class="code-info">
                             Now, we'll explore a situation where we need to use enter() because there
                             are more data items than DOM elements. In this imaginary example the data is the
-                            same as above, but we accidentally have 2 DOM elements, like so:
+                            same as above, but we only have 2 DOM elements, like so:
                         </p>
 
                         <pre>&lt;div id="regular-chart"&gt;
@@ -178,14 +178,14 @@
 &lt;/div&gt;</pre>
 
                         <p>
-                            The problem is that only two bars we'll be shown, but we want three,
-                            because we have 3 data items. We can solve this by first calling bind() like we
-                            did above, to bind our data to the current selection. Now at this point
+                            The problem is that with the example above only two bars would be shown, but we want three,
+                            because we have 3 data items. We can solve this by first calling data() like we
+                            did above, to bind our data to the current selection. At this point
                             it's easy to see that there are data items which cannot be bound to an element
                             (in this case the last data item). So the next thing we can do is call enter(), and
                             this will select all of the data items which are not bound to an element.
                             This is called a "subselection" and we can perform actions to append or insert
-                            the missing data, and then carry on with our selection as normal.
+                            the missing data, and then carry on with that selection as normal.
                             This is how that code would look:
                         </p>
 
@@ -227,8 +227,8 @@
                         </p>
                         <p>
                             Typically, most data visualizations in d3.js will start with no DOM elements
-                            to begin with (except the container), and then using <code>.enter().append()</code>
-                            to create each element. This was we only have one selection to work with:
+                            to match the data. Most data visualizations use <code>.enter().append()</code>
+                            to manually create each element. This way, we only have one selection to work with:
                             This is how the html looks just for clarity:
                         </p>
 
@@ -269,7 +269,7 @@
                             starts off as empty? This is a tricky concept in d3 enter() and exit()
                             functions that can be described as "time-travel" to know that you
                             will be creating div elements. If we didn't have that line the statement
-                            wouldn't work because .bind() would try to bind data to the chart
+                            wouldn't work because data() would try to bind data to the chart
                             instead of the <code>div</code> elements that don't exist (yet!).
                         </p>
 
@@ -280,7 +280,7 @@
                             Lastly, I haven't described what <code>.exit()</code> does yet. As you can
                             imagine it is the exact opposite of <code>.enter()</code>. As we've seen
                             <code>.enter()</code> will select all data items with no DOM element bound
-                            to it, but <code>.exit()</code> on the other hand will select all DOM elements
+                            to them, but <code>.exit()</code> on the other hand will select all DOM elements
                             not bound to any data.
                         </p>
 
