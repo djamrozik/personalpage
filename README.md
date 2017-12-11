@@ -2,4 +2,6 @@
 
 Personal blog site to write about web dev and machine learning
 
-All coding examples from blog are in /blog-examples.
+All coding examples from blog are in `/blog-examples`
+
+The blog posts themselves are in `/blog`

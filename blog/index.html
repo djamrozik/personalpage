@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- meta tags and stuff, focus on SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+
+  <!-- stylesheets -->
+  <link href='https://fonts.googleapis.com/css?family=Kadwa:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/static/styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
+  <link rel="stylesheet" href="/static/styles/font-awesome.min.css">
+
+  <!-- js dependencies -->
+  <script type="text/javascript" src="/static/scripts/ui-bootstrap.min.js"></script>
+  <script type="text/javascript" src="/static/scripts/jquery.min.js"></script>
+
+  <!-- jquery code -->
+  <script type="text/javascript" src="/static/scripts/homepage.js"></script>
+  <script type="text/javascript" src="/static/scripts/dynamic-image.js"></script>
+
+  <!-- google analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date();
+      a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+      a.async = 1; a.src = g;m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-68428821-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <title>Blogs List - Dan Jamrozik</title>
+</head>
+
+<body>
+  <div class="container-fluid" id="vue-app">
+    <div class="row">
+      <collapse-nav mode="'blog'"></collapse-nav>
+
+      <left-column mode="'blog'"></left-column>
+
+      <div class="main-content-container">
+        <div class="main-page">
+          <div class="blog-content-wrapper">
+            <div class="blog-list">
+              <div class="blog-item-preview">
+                <p class="blog-item-preview-title">
+                  <a class="no-link-style" href="/blog/d3_enter_exit.html">
+                    enter() and exit() in d3.js
+                  </a>
+                </p>
+                <p class="blog-item-preview-timestamp">October 27th, 2017</p>
+                <p class="blog-item-preview-text">
+                    When starting out with d3.js, one confusing concept that most people face is
+                    with the enter() and exit() functions. This article goes over that
+                    concept and provides and in-depth example.
+                </p>
+                <p>
+                  <a href="/blog/d3_enter_exit.html">Read more</a>
+                </p>
+              </div>
+
+              <div class="blog-item-preview">
+                <p class="blog-item-preview-title">
+                  <a class="no-link-style" href="/blog/reddit_oauth2_javascript.html">
+                    Obtaining a token with Reddit's OAuth2 API in Javascript
+                  </a>
+                </p>
+                <p class="blog-item-preview-timestamp">August 18th, 2017</p>
+                <p class="blog-item-preview-text">
+                  Obtaining a token manually with Reddit's OAuth2 can be confusing, this
+                  article goes through the process of how to do this in Javascript.
+                </p>
+                <p>
+                  <a href="/blog/reddit_oauth2_javascript.html">Read more</a>
+                </p>
+              </div>
+
+              <div class="blog-item-preview">
+                <p class="blog-item-preview-title">
+                    <a class="no-link-style" href="/blog/webpackHotMiddleware_for_express.html">webpack-hot-middleware for
+                    use with an express server</a>
+                </p>
+                <p class="blog-item-preview-timestamp">July 2nd, 2016</p>
+                <p class="blog-item-preview-text">Hot loading is one of the best advantages of webpack, no more having to
+                    recompile after each small change. This framework integrates well with express and is perfect for
+                    developing with ReactJS</p>
+                <p><a href="/blog/webpackHotMiddleware_for_express.html">Read more</a></p>
+              </div>
+
+              <div class="blog-item-preview">
+                <p class="blog-item-preview-title">
+                    <a class="no-link-style" href="/blog/linear_regression_tensorflow.html">Simple Linear Regression with
+                    TensorFlow</a>
+                </p>
+                <p class="blog-item-preview-timestamp">May 6th, 2016</p>
+                <p class="blog-item-preview-text">For this blog post, it&#x27;s assumed that the reader has a limited
+                    knowledge of machine learning and TensorFlow. The simple example of a linear regression formula is a
+                    good pathway to learning both fields. In this article, I&#x27;ll go through the finished code a section
+                    at a time and explain (to a newbie like me) what is happening.</p>
+                <p><a href="/blog/linear_regression_tensorflow.html">Read more</a></p>
+              </div>
+
+              <div class="blog-item-preview">
+                <p class="blog-item-preview-title">
+                    <a class="no-link-style" href="/blog/setting_up_express_handlebars.html">Setting up express
+                    handlebars</a>
+                </p>
+                <p class="blog-item-preview-timestamp">May 6th, 2016</p>
+                <p class="blog-item-preview-text">This blog post is meant to teach how to set up express-handlebars in an
+                    express and nodejs environment. For more advanced express-handlebars topics, such as if statements,
+                    loops, and helper functions, there should be a part 2 to this article soon.</p>
+                <p><a href="/blog/setting_up_express_handlebars.html">Read more</a></p>
+              </div>
+
+              <div class="blog-item-preview">
+                <p class="blog-item-preview-title">
+                    <a class="no-link-style" href="/blog/ng_csv_for_csv_download.html">Using ng-csv to download csv
+                    files</a>
+                </p>
+                <p class="blog-item-preview-timestamp">May 6th, 2016</p>
+                <p class="blog-item-preview-text">Covering how to use an AngularJS package to serve a csv download using
+                    JSON or array data. The only dependency that this package requires is ng-santize and ...</p>
+                <p><a href="/blog/ng_csv_for_csv_download.html">Read more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- vue build -->
+  <script src="/static/dist/build.js"></script>
+</body>
+</html>
