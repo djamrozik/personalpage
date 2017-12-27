@@ -11,7 +11,6 @@ class RootComponent extends Component {
      <div className="RootComponent">
          <div className="container-fluid">
             <div className="row">
-
                 <div className="collapse-navbar">
                     <collapse-nav info="vm"></collapse-nav>
                 </div>
