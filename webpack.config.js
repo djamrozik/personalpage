@@ -1,54 +1,113 @@
 
-const path = require("path");
-const autoprefixer = require("autoprefixer");
-const LiveReloadPlugin = require("webpack-livereload-plugin");
+const path = require('path');
+const webpack = require('webpack');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
-    entry: "./src/index.jsx",
-    output: {
-        path: path.resolve("static/build"),
-        filename: "build.js"
+  entry: './src/main.js',
+  output: {
+    path: path.resolve(__dirname, './static/dist'),
+    publicPath: '/static/dist/',
+    filename: 'build.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader?indentedSyntax'
+        ],
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
+            // the "scss" and "sass" values for the lang attribute to the right configs here.
+            // other preprocessors should work out of the box, no loader config like this necessary.
+            'scss': [
+              'vue-style-loader',
+              'css-loader',
+              'sass-loader'
+            ],
+            'sass': [
+              'vue-style-loader',
+              'css-loader',
+              'sass-loader?indentedSyntax'
+            ]
+          }
+          // other vue-loader options go here
+        }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]'
+        }
+      }
+    ]
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
     },
-    module: {
-        loaders: [
-            { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
-            { test: /\.jsx$/, loader: "babel-loader", exclude: /node_modules/ },
-            {
-                test: /\.scss$/,
-                use: [
-                    {
-                        loader: require.resolve('style-loader')
-                    },
-                    {
-                        loader: require.resolve('css-loader'),
-                        options: {
-                            importLoaders: 1
-                        }
-                    },
-                    {
-                        loader: require.resolve('sass-loader'),
-                    },
-                    {
-                        loader: require.resolve('postcss-loader'),
-                        options: {
-                            ident: 'postcss',
-                            plugins: () => [
-                                require('postcss-flexbugs-fixes'),
-                                autoprefixer({
-                                    browsers: [
-                                        '>1%',
-                                        'last 4 versions',
-                                        'Firefox ESR',
-                                        'not ie < 9',
-                                    ],
-                                    flexbox: 'no-2009',
-                                }),
-                            ],
-                        },
-                    },
-                ]
-            },
-        ]
-    },
-    plugins: [new LiveReloadPlugin()]
+    extensions: ['*', '.js', '.vue', '.json']
+  },
+  devServer: {
+    historyApiFallback: true,
+    noInfo: true,
+    overlay: true
+  },
+  performance: {
+    hints: false
+  },
+  devtool: '#eval-source-map',
+  plugins: [
+    new LiveReloadPlugin()
+  ]
 };
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.devtool = '#source-map';
+  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    })
+  ])
+}

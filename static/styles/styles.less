@@ -19,6 +19,22 @@ html, body {
 	opacity: 0;
 }
 
+.input-error {
+	border-color: red;
+}
+
+.input-row {
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+
+	& > span.error {
+		font-size: 12px;
+		color: red;
+		margin-top: 8px;
+	}
+}
+
 .no-link-style {
 	color: inherit;
 	text-decoration: none;
@@ -91,7 +107,6 @@ html, body {
 }
 
 .blog-list {
-
 	.blog-item-preview {
 		padding-top: 2rem;
 
@@ -102,54 +117,6 @@ html, body {
 
 		.blog-item-preview-timestamp {
 			padding-bottom: 1rem;
-		}
-	}
-}
-
-.collapse-navbar {
-	width: 100%;
-	background-color: #444;
-	margin-top: -40px; /* hide at first */
-	display: none;
-	height: 0;
-	line-height: 40px;
-	position: fixed;
-	z-index: 999;
-	top: 0;
-	left: 0;
-
-	.collapse-navbar-top {
-		display: flex;
-		flex-direction: row;
-		z-index: 2;
-
-		.navbar-my-name {
-			color: white;
-			font-weight: 700;
-			font-size: 1.7rem;
-			margin-left: 2rem;
-		}
-
-		.navbar-expand {
-			padding-right: 2rem;
-			color: white;
-			cursor: pointer;
-		}
-	}
-
-	.collapse-navbar-more {
-		background-color: #444;
-		display: none;
-		z-index: -1;
-
-		.navbar-more-list {
-			color: white;
-			list-style-type: none;
-			padding-bottom: 0.6rem;
-
-			li {
-				cursor: pointer;
-			}
 		}
 	}
 }
@@ -221,97 +188,6 @@ html, body {
 	}
 }
 
-.left-column-container {
-	height: 100vh;
-	background-color: #444;
-	color: white;
-	text-align: center;
-	position: fixed;
-	padding-right: 0!important;
-	padding-left: 0!important;
-	width: 200px;
-	left: -200px; /* hide at first */
-
-	.name {
-		margin-top: 20px;
-		font-size: 1.7em;
-		letter-spacing: .85px;
-	}
-
-	.name-info {
-		color: lightblue;
-	}
-
-	.column-links {
-		text-align: left;
-		margin-top: 40px;
-
-		li {
-			padding: 1rem 0 1rem .5rem;
-			list-style-type: none;
-			margin-left: -1.5rem;
-			letter-spacing: 1.1px;
-			&:hover {
-				background-color: black;
-				cursor: pointer;
-			}
-		}
-
-		a {
-			text-decoration: none;
-			color: white;
-		}
-	}
-
-	.icons-container {
-		max-height: 50px;
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-
-		i {
-			margin: 1rem;
-			color: white;
-
-			&:hover {
-				cursor: pointer;
-			}
-		}
-	}
-
-	/*make height the same dynamically*/
-	.image-container {
-	    display: inline-block;
-	    position: relative;
-	    width: 50%; //set the width of the image
-	    margin-top: 2rem;
-
-	    &:after {
-	    	content: '';
-	    	display: block;
-	    	margin-top: 100%;
-	    }
-
-	    .image-left-col {
-		    position: absolute;
-		    top: 0;
-		    bottom: 0;
-		    left: 0;
-		    right: 0;
-
-		   	.img-circle {
-				position: relative;
-				width: 100%;
-				height: 100%; //width and height are the same here
-			}
-
-		}
-	}
-
-}
-
 .main-content-container {
 	padding-top: 0!important;
 	padding-left: 3.5rem!important;
@@ -326,7 +202,6 @@ html, body {
 }
 
 .main-page {
-
 	.main-info {
 		padding-bottom: 10px;
 		font-family: 'Roboto', sans-serif;
@@ -423,7 +298,6 @@ html, body {
 }
 
 #projects {
-
 	.header {
 		padding-bottom: 15px;
 	}
@@ -574,7 +448,6 @@ html, body {
 }
 
 #skills {
-
 	.experience-bar {
 		padding: 20px 0;
 		position: relative;
@@ -630,8 +503,6 @@ html, body {
 
 /* any changes less than 560 px */
 @media (max-width: 560px) {
-
-
 	.projects-list {
 		flex-direction: column!important;
 		align-items: center;
@@ -648,5 +519,4 @@ html, body {
 	.project-item {
 		max-width: 360px;
 	}
-
 }
